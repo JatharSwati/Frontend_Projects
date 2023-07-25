@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Media </title>
+        <style>
+            h1
+            {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center">
+
+            <div>
+                <h1>Video</h1>
+                <button onclick="playPause()">Play/Pause</button> 
+                <button onclick="makeBig()">Big</button>
+                <button onclick="makeSmall()">Small</button>
+                <button onclick="makeNormal()">Normal</button>
+                <br><br>
+                <video id="video1" width="500" controls autoplay muted>
+                    <source src="../Videos/Harrdy_Sandhu.mp4" type="video/mp4">
+                    <source src="Harrdy_Sandhu.ogg" type="video/ogg">
+                </video>
+            </div>
+            
+            <br><br>
+
+            <div>
+                <h1>Audio</h1>
+                <audio controls autoplay muted>           
+                    <source src="../Audio/Ghagar Gheun Nighali kartiki.mp3" type="audio/mpeg">
+                    <source src="../Audio/Ghagar Gheun Nighali kartiki.ogg" type="audio/ogg">
+                </audio><br><br>
+            </div>
+
+            <div>
+                <h1>Object</h1>
+                <object data="HTML_Responsive.html" width="100%" height="400px"></object><br><br>
+                <object data="../Images/JCOE1.jpg" width="50%" height="400px"></object><br><br>
+            </div>
+
+            <div>
+                <h1>Embed</h1>
+                <embed src="../Images/JCOE Logo.ico">
+                <embed src="Form.html" width="80%" height="400px"><br><br>
+            </div>
+        </div>
+    </body>
+
+    <script> 
+        var myVideo = document.getElementById("video1"); 
+        
+        function playPause() 
+        { 
+            if (myVideo.paused) 
+                myVideo.play(); 
+            else 
+                myVideo.pause(); 
+        } 
+        
+        function makeBig() 
+        { 
+            myVideo.width = 800; 
+        } 
+        
+        function makeSmall()
+        { 
+            myVideo.width = 300; 
+        } 
+        
+        function makeNormal() 
+        { 
+            myVideo.width = 400; 
+        } 
+    </script> 
+</html>

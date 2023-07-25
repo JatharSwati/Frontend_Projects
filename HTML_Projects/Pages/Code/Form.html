@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Form </title>
+			<style>
+				.div2
+				{
+					background-color:lavender;
+					margin: 50px 300px;
+					padding: 15px;
+				}
+				
+				fieldset
+				{
+					margin:20px;
+					padding: 15px;
+				}	
+				
+				
+			</style>
+	</head>
+	<body>
+		<div style="background-color:white;">
+			<div class="div2">
+				<h1 style="text-align: center;">Jaihind College Of Engineering</h1>
+				<h3 style="text-align: center;">Student Registration Form</h3>
+				<form target="_blank" method="post">
+					<fieldset>
+						<legend>Personal Information</legend>
+							<table style="align-items: center;">
+							
+								<tr>
+									<td><label for="fname">Student Name:</label></td>
+									<td><input type="text" id="sname" name="sname" placeholder="sname"></td>
+								</tr>
+								
+								<tr>
+									<td><label for="lname">Father Name:</label></td>
+									<td><input type="text" id="fname" name="fname" placeholder="fname"><td>
+								</tr>
+								
+								<tr>
+									<td><label for="lname">Mother Name:</label></td>
+									<td><input type="text" id="mname" name="mname" placeholder="mname"></td>
+								</tr>
+								
+								<tr>
+									<td><label>Gender:</label></td>
+									<td>
+										<label for="male">Male</label>
+										<input type="radio" id="male" name="Gender" value="Male">
+								    	<label for="female">Female</label>
+										<input type="radio" id="female" name="Gender" value="Female">
+										<label for="other">Other</label>
+										<input type="radio" id="other" name="Gender" value="Other">
+									</td>
+								</tr>
+								
+								<tr>
+									<td><label for="dob">Date Of Birth:</label></td>
+									<td><input type="date" id="dob" name="dob"></td>									
+								</tr>
+								
+								<tr>
+									<td><label for="email">E-mail:</label></td>
+									<td><input type="email" id="email" name="email" placeholder="Enter Email Here..."></td>
+								</tr>
+								
+								<tr>
+									<td><label>Level:</label></td>									
+									<td>
+										<label for="level1">High School</label>
+										<input type="checkbox" id="level2" name="level2" value="Bachelors">
+										<label for="vehicle2">Bachelors</label>
+										<input type="checkbox" id="level3" name="level3" value="Masters">
+										<label for="vehicle3">Masters</label>
+										<input type="checkbox" id="level4" name="level4" value="PHD">
+										<label for="vehicle3">PHD</label>
+									</td>
+								</tr>
+								
+								<tr>
+									<td><label for="department">Department:</label></td>
+									<td>
+										<select id="department" name="department">
+											<option value="volvo">Computer Engineering</option>
+											<option value="saab">Electrical Engineering</option>						
+											<option value="audi">Mechanial Engineering</option>
+											<option value="audi">Software Engineering</option>
+											<option value="fiat">Civil Engineering</option>
+											<option value="audi">AI Engineering</option>
+											<option value="audi">IT Engineering</option>						
+										</select>
+									</td>
+								</tr>
+								
+								<tr>
+									<td><label for="phone">Tel/Mobile:</label></td>
+									<td><input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></td>
+								</tr>	
+								
+								<tr>
+									<td><input type="submit" value="Submit"></td>
+								</tr>
+								
+							</table>
+					</fieldset>
+				</form> 
+			</div>	
+		</div>
+	</body>
+</html>
+
+	
+		
+		
+

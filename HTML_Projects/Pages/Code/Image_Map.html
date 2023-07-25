@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+
+    <style>
+        body
+        {
+            margin: 30px 450px;
+        }
+
+        h1
+        {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Image Map</h1>
+
+        <img src="../Images/Daily_Use_Things.jpg" alt="Daily Use Things" usemap="#objects" style="height: 400px; width: 500px;">
+
+        <map name="objects">
+            <area target="_blank" shape="rect" coords="183,28,384,303" alt="White Board" href="https://en.wikipedia.org/wiki/Whiteboard">
+            <area target="_blank" shape="circle" coords="110,70,50" alt="Cup Of Tea" href="https://en.wikipedia.org/wiki/Cup_of_Tea">
+            <area target="_blank" shape="rect" coords="62,216,169,305" alt="White Boxes" href="https://en.wikipedia.org/wiki/White_box">
+            <area target="_blank" shape="rect" coords="65,135,175,197" alt="Phone" href="https://en.wikipedia.org/wiki/Mobile_phone">
+            <area target="_blank" shape="poly" coords="43,153,52,234,47,288,32,285,31,227" alt="Pen" href="https://en.wikipedia.org/wiki/Pen"> 
+        </map>
+
+    </div>
+    
+</body>
+</html>

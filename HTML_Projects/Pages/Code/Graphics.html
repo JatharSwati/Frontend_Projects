@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Graphics </title>
+    <style>
+        body
+        {
+            margin: 50px 400px;
+        }
+
+        h1
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div>
+        <h1> Draw Line: </h1>        
+        <canvas id="lineCanvas" width="200" height="100" style="border:1px solid black; margin-bottom: 30px;"></canvas> 
+    </div>
+    
+    <div>
+        <h1> Draw Circle: </h1>        
+        <canvas id="circleCanvas" width="200" height="100" style="border:1px solid #d3d3d3; margin-bottom: 30px;"></canvas>       
+    </div>
+    
+    <div>
+        <h1> Draw a Text: </h1>        
+        <canvas id="textCanvas" width="200" height="100" style="border:1px solid #d3d3d3; margin-bottom: 30px;"></canvas>  
+    </div>
+    
+    <div> 
+        <h1> Stroke Text: </h1>       
+        <canvas id="strokeCanvas" width="200" height="100" style="border:1px solid #d3d3d3; margin-bottom: 30px;"></canvas>  
+    </div>
+    
+    <div> 
+        <h1> Draw Linear Gradient: </h1>      
+        <canvas id="linerGradientCanvas" width="200" height="100" style="border:1px solid #d3d3d3; margin-bottom: 30px;"></canvas>  
+    </div>
+
+    <div>
+        <h1> Draw Circular Gradient: </h1>
+        <canvas id="circularGradientCanvas" width="200" height="100" style="border:1px solid #d3d3d3; margin-bottom: 30px;"></canvas>
+    </div>
+
+    <div>
+        <h1> Draw Image: </h1>
+        <p>Image To Use:</p>
+        <image id="krishna" src="..\Images\Krishna.jpg" alt="The Krishna" width="220" height="277"></image>
+        <p>Canvas To Fill:</p>
+        <canvas id="imageCanvas" width="250" height="300" style="border:1px solid pink;"></canvas>
+        <p> <button onclick="imageCanvas()">Try it</button></p>
+    </div>
+ 
+<script>   
+
+    var c = document.getElementById("lineCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(400,200);
+    ctx.stroke();
+
+    var c = document.getElementById("circleCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI);
+    ctx.stroke();
+
+    var c = document.getElementById("textCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World",10,50);
+
+    var c = document.getElementById("strokeCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.strokeText("Swati Jatahr", 10,50);
+
+    var c = document.getElementById("linerGradientCanvas");
+    var ctx = c.getContext("2d");
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"orange");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+
+    var c = document.getElementById("circularGradientCanvas");
+    var ctx = c.getContext("2d");
+    var grd= ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"pink");
+    grd.addColorStop(1,"blue");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+
+    function imageCanvas()
+    {
+        var c = document.getElementById("imageCanvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("krishna");
+        ctx.drawImage(img,10,10);
+    }
+</script>
+
+</body>
+</html>

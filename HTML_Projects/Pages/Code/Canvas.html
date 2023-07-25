@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Canvas </title>
+    <style>
+        body
+        {
+            margin: 0px 500px;
+        }
+
+        h1
+        {
+            margin-top: 40px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Canvas Examples -->
+    <div>
+        <h1>Canvas</h1>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>            
+    </div>
+
+    <!-- Draw a Line in Canvas -->
+    <div>
+        <h1>Line in Canvas</h1>
+        <canvas id="lineInCanvas" width="200" height="100" style="border:1px solid black;"></canvas>
+    </div>
+    
+    <!-- Draw a Circle in Canvas-->
+    <div>
+        <h1>Circle in Canvas</h1>
+        <canvas id="circleInCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    </div>
+
+    <!-- Draw a Text -->
+    <div>
+        <h1>Draw a Text</h1>
+        <canvas id="textInCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    </div>
+
+    <!-- Stroke Text -->
+    <div>
+        <h1>Stroke Text</h1>
+        <canvas id="strokeTextCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    </div>
+
+    <!-- Draw Liner Gradient -->
+    <div>
+        <h1>Linear Gradient</h1>
+        <canvas id="linearGradient" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    </div>
+
+    <!-- Draw Circular Gradient-->
+    <div>
+        <h1>Circular Gradient</h1>
+        <canvas id="circularGradient" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    </div>
+
+    <!-- Draw Image-->
+    <div>
+        <h1>Draw Image</h1>
+        <p>Image to use:</p>
+        <img id="swati" src="..\Images\Swati.jpg" alt="Swati" width="220" height="277">
+        <p>Canvas to fill:</p>
+        <canvas id="image" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
+        <p><button onclick="image()">Try it</button></p>
+    </div>
+
+    <script>
+
+        var c = document.getElementById("lineInCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+
+        var c = document.getElementById("circleInCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+
+        var c = document.getElementById("textInCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Swati Jathar",20,50);
+
+        var c = document.getElementById("strokeTextCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("JCOE",50,50);
+
+        var c = document.getElementById("linearGradient");
+        var ctx = c.getContext("2d");
+        // Create gradient
+        var grd = ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"blue");
+        grd.addColorStop(1,"white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80);
+
+        var c = document.getElementById("circularGradient");
+        var ctx = c.getContext("2d");
+        // Create gradient
+        var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+        grd.addColorStop(0,"maroon");
+        grd.addColorStop(1,"white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80);
+
+        function image() 
+        {
+            var c = document.getElementById("image");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("swati");
+            ctx.drawImage(img,10,10,220,277);
+        }
+
+    </script>
+</body>
+</html>

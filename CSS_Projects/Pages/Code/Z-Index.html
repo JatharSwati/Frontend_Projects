@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Z-Index</title>
+    <style>
+
+        img {
+            position: absolute;
+            height: 400px;
+            width: 500px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .green-box {
+            position: relative;
+            background-color: green;
+            height: 200px;
+            width: 300px;
+            margin: 350px 0;
+        }
+
+        .blue-box {
+            position: absolute;
+            border: 2px solid blue;
+            height: 200px;
+            width: 300px;
+            margin: 600px 0;
+            left:190px;
+            top: -15px;
+        }
+
+        .orange-box {
+            position: absolute;
+            background-color: orange;
+            height: 200px;
+            width: 300px;
+            margin: 670px 0;
+            left:380px;
+            top: -15px;            
+        }
+
+        .pink-box {
+            position: relative;
+            background-color: pink;
+            height: 200px;
+            width: 300px;
+            left: 950px;
+            top: -750px;
+        }
+
+        .black-box {
+            position: absolute;
+            border: 2px solid black;
+            height: 200px;
+            width: 300px;
+            left: 900px;
+            top: 100px;
+        }
+
+        .maroon-box {
+            position: fixed;
+            background-color: maroon;
+            height: 200px;
+            width: 300px;
+            top: 0;
+            right: 0;          
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Smiley</h1>
+        <img src="https://www.nicepng.com/png/detail/18-181114_smiley-smile-smiley-faces-emojis-pb-logo-geocaching.png" style="z-index: -1;">
+        <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+    </div>
+    
+    <div>
+        <div class="green-box" style="z-index: 1;">Green Box (z-index:1)</div>
+        <div class="blue-box" style="z-index: 2;">Blue Box (z-index:2)</div>
+        <div class="orange-box" style="z-index: 3;">Orange Box (z-index:3)</div>
+    </div>
+
+    <div>
+        <div class="pink-box" style="z-index: 1;">Pink Box (z-index:1)</div>
+        <div class="black-box" style="z-index: 3;">Blck Box (z-index:3)</div>
+        <div class="maroon-box" style="z-index: 2;">Maroon Box(z-index:2)</div>
+    </div>
+
+</body>
+</html>

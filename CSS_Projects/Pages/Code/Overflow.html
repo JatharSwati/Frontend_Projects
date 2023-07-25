@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        #overflowscroll {
+            background-color: rgb(9, 144, 227);
+            color: white;
+            overflow: scroll;
+            padding: 15px;
+            width: 100%;
+            height: 100px;
+            text-align: justify;
+            border: 1px solid black;
+        }
+
+        body {
+            margin: 20px 20%;
+        }
+
+        #overflowvisible {
+            background-color: rgb(239, 8, 162);
+            width: 100%;
+            height: 75px;
+            padding: 15px;
+            text-align: justify;
+            border: 1px solid;
+            overflow: visible;
+            
+        }
+
+        #overflowhidden {
+            background-color: rgb(10, 214, 170);
+            width: 100%;
+            height: 75px;
+            padding: 15px;
+            text-align: justify;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        #overflowauto {
+            background-color: rgb(202, 215, 18);
+            width: 100%;
+            height: 65px;
+            padding: 15px;
+            text-align: justify;
+            border: 1px solid black;
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+
+        <div>
+            <h1>1] Overflow: scroll</h1>
+            <h3>The overflow property controls what happens to content that is too big to fit into an area:</h3>
+            <div id="overflowscroll"><b>Sparrow</b> - Old World sparrows are a group of small passerine birds forming the family Passeridae. 
+                They are also known as true sparrows, a name also used for a particular genus of the family, Passer.
+                They are distinct from both the New World sparrows, in the family Passerellidae, and from a few other birds sharing their name, such as the Java sparrow of the family Estrildidae. 
+                Many species nest on buildings and the house and Eurasian tree sparrows, in particular, inhabit cities in large numbers. 
+                They are primarily seed-eaters, though they also consume small insects. Some species scavenge for food around cities and, like pigeons or gulls, will eat small quantities of a diversity of items.Generally, Old World sparrows are small, plump, brown and grey birds with short tails and stubby, powerful beaks. 
+                The differences between sparrow species can be subtle. Members of this family range in size from the chestnut sparrow (Passer eminibey), at 11.4 centimetres (4.5 in) and 13.4 grams (0.47 oz), to the parrot-billed sparrow (Passer gongonensis), at 18 centimetres (7.1 in) and 42 grams (1.5 oz). 
+                Sparrows are physically similar to other seed-eating birds, such as finches, but have a vestigial dorsal outer primary feather and an extra bone in the tongue.[2][3] This bone, the preglossale, helps stiffen the tongue when holding seeds. Other adaptations for eating seeds are specialised bills and elongated and specialised alimentary canals.
+                The family Passeridae was introduced (as Passernia) by the French polymath Constantine Samuel Rafinesque in 1815.[5][6] Under the classification used in the Handbook of the Birds of the World (HBW) main groupings of the sparrows are the true sparrows (genus Passer), the snowfinches (typically one genus, Montifringilla), and the rock sparrows (Petronia and the pale rockfinch).
+                These groups are similar to each other, and are each fairly homogeneous, especially Passer.[4] Some classifications also include the sparrow-weavers (Plocepasser) and several other African genera (otherwise classified among the weavers, Ploceidae)[4] which are morphologically similar to Passer.[7] According to a study of molecular and skeletal evidence by Jon Fjeldså and colleagues, the cinnamon ibon of the Philippines, previously considered to be a white-eye, is a sister taxon to the sparrows as defined by the HBW. They therefore classify it as its own subfamily within Passeridae.
+                Many early classifications of the Old World sparrows placed them as close relatives of the weavers among the various families of small seed-eating birds, based on the similarity of their breeding behaviour, bill structure, and moult, among other characters. Some, starting with P. P. Suskin in the 1920s, placed the sparrows in the weaver family as the subfamily Passerinae, and tied them to Plocepasser. Another family sparrows were classed with was the finches (Fringillidae).
+            </div>
+        </div>
+
+        <div>
+            <h1 style="margin-top: 50px;">2] Overflow: visible</h1>
+            <h3>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</h3>
+            <div id="overflowvisible">
+                <b>Parrot</b> - Parrots, also known as psittacines are birds of the order Psittaciformes and are found mostly in tropical and subtropical regions. They are made up of four families that contain roughly 410 species in 101 genera. The four families are: Psittaculidae (Old World parrots) , the Psittacidae (African and New World parrots), the Cacatuoidea (cockatoos), and the Strigopidae (New Zealand parrots). One-third of all parrot species are threatened by extinction, with higher aggregate extinction risk (IUCN Red List Index) than any other comparable bird group.[3] Parrots have a generally pantropical distribution with several species inhabiting temperate regions in the Southern Hemisphere, as well. The greatest diversity of parrots is in South America[4] and Australasia.
+            </div>
+        </div>
+
+        <div>
+            <h1 style="margin-top: 100px;">3] Overflow: hidden</h1>
+            <h3>With the hidden value, the overflow is clipped, and the rest of the content is hidden:</h3>
+            <div id="overflowhidden">
+                <b>Columbidae</b> - Columbidae is a bird family consisting of doves and pigeons. It is the only family in the order Columbiformes. These are stout-bodied birds with short necks and short slender bills that in some species feature fleshy ceres. They primarily feed on seeds, fruits, and plants. The family occurs worldwide, but the greatest variety is in the Indomalayan and Australasian realms. The family contains 344 species divided into 50 genera. Thirteen of the species are extinct.
+                In English, the smaller species tend to be called "doves" and the larger ones "pigeons". However, the distinction is not consistent, and does not exist in most other languages.
+                Doves and pigeons build relatively flimsy nests, often using sticks and other debris, which may be placed on branches of trees, on ledges, or on the ground, depending on species.
+            </div>
+        </div>
+
+        <div>
+            <h1 style="margin-top: 100px;">4] Overflow: auto</h1>
+            <h3>The auto value is similar to scroll, only it add scrollbars when necessary:</h3>
+            <div id="overflowauto">
+                <b>Owl</b> - Owls possess large, forward-facing eyes and ear-holes, a hawk-like beak, a flat face, and usually a conspicuous circle of feathers, a facial disc, around each eye. The feathers making up this disc can be adjusted to sharply focus sounds from varying distances onto the owls' asymmetrically placed ear cavities. Most birds of prey have eyes on the sides of their heads, but the stereoscopic nature of the owl's forward-facing eyes permits the greater sense of depth perception necessary for low-light hunting. Although owls have binocular vision, their large eyes are fixed in their sockets—as are those of most other birds—so they must turn their entire heads to change views. As owls are farsighted, they are unable to clearly see anything within a few centimetres of their eyes. Caught prey can be felt by owls with the use of filoplumes—hairlike feathers on the beak and feet that act as "feelers". Their far vision, particularly in low light, is exceptionally good.
+                Owls can rotate their heads and necks as much as 270°. Owls have 14 neck vertebrae compared to seven in humans, which makes their necks more flexible. They also have adaptations to their circulatory systems, permitting rotation without cutting off blood to the brain: the foramina in their vertebrae through which the vertebral arteries pass are about 10 times the diameter of the artery, instead of about the same size as the artery, as is the case in humans; the vertebral arteries enter the cervical vertebrae higher than in other birds, giving the vessels some slack, and the carotid arteries unite in a very large anastomosis or junction, the largest of any bird's, preventing blood supply from being cut off while they rotate their necks. Other anastomoses between the carotid and vertebral arteries support this effect.[
+            </div>
+        </div>
+    <div>
+</body>
+</html>

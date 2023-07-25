@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align</title>
+    <style>
+        .element {
+            margin: auto;
+            width: 60%;
+            border: 3px solid purple;
+            padding: 10px;
+        }
+
+        .text {
+            text-align: center;
+            border: 3px solid rgb(99, 195, 224);
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .left {
+            position: absolute;
+            left: 0px;
+            width: 300px;
+            border: 3px solid #f218c3;
+            padding: 10px;
+        }
+
+        .right {
+            float: right;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .img1 {
+            float: right;
+        }
+
+        .img2 {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .center1 {
+            padding: 50px 0;
+            border: 3px solid brown;
+        }
+
+        .center2 {
+            padding: 50px 0;
+            border: 3px solid brown;
+            text-align: center;
+        }
+
+        .center {
+            line-height: 200px;
+            height: 200px;
+            border: 3px solid green;
+            text-align: center;
+        }
+
+        .center3 p {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .center3 { 
+            height: 200px;
+            position: relative;
+            border: 3px solid rgb(10, 132, 232); 
+            }
+
+        .center3 p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .center4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: 3px solid rgb(182, 211, 74); 
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <div style="margin-bottom: 70px;">
+            <h1>1] Center Align Elements:</h1>
+            <p>To horizontally center a block element (like div), use margin: auto;</p>
+            <div class="element ">
+                <p>Welcome!</p>
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 70px;">
+            <h1>2] Center Align Text:</h1>
+            <p>To just center the text inside an element, use text-align: center;</p>
+            <div class="text">
+                <p>Good Morning!</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 70px;">
+            <h1>3] Center an Image:</h1>
+            <p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+            <img src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Zugpsitze_mountain.jpg?crop=0%2C176%2C3008%2C1654&wid=4000&hei=2200&scl=0.752" alt="Nature" style="width: 30%;">
+        </div>
+
+        <div style="margin-bottom: 200px;">
+            <h1>4] Left and Right Align - Using position:</h1>
+            <p>An example of how to right align elements with the position property:</p>
+            <div class="left">
+                <p>"When you arise in the morning. think of what a precious privilege it is to be alive-to breathe, to think, to enjoy, to love-then make that day count!"</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 70px;">
+            <h1>5] Left and Right Align - Using float:</h1>
+            <p>right align elements with the float property:</p>
+            <div class="right">
+                <p>Young's celebrated blank-verse dramatic rhapsody Night Thoughts. These poems express the sorrow and pain of bereavement, evoke the horror of death's physical manifestations, and suggest the transitory nature of human life.</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 70px;">
+
+            <h1>6] Clearfix Hack:</h1>
+
+            <h2>Without Clearfix</h2>
+            <p>This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:</p>
+            <div style="border: 3px solid #d10691; padding: 5px;">
+                <img class="img1" src="https://1.bp.blogspot.com/-5r7g0kYgztY/Vyo0i4PR4sI/AAAAAAAAAY8/36spwNg2fR4cNvj7aHcF0LWnoPoLFtrBQCLcB/s400/Peacock.jpg" alt="Peacock" width="150" height="150">
+                "Peacock" redirects here. For the streaming service, see Peacock (streaming service). For other uses, see Peacock (disambiguation).Peafowl is a common name for three bird species in the genera Pavo and Afropavo within the tribe Pavonini of the family Phasianidae (the pheasants and their allies). Male peafowl are referred to as peacocks, and female peafowl are referred to as peahens, although peafowl of either sex are often referred to colloquially as "peacocks".
+            </div>
+
+            <h2>With Clearfix</h2>
+            <p>Add the clearfix hack to the containing element, to fix this problem:</p>
+            <div class="clearfix" style="border: 3px solid #d10691; padding: 5px;">
+                <img class="img1" src="https://1.bp.blogspot.com/-5r7g0kYgztY/Vyo0i4PR4sI/AAAAAAAAAY8/36spwNg2fR4cNvj7aHcF0LWnoPoLFtrBQCLcB/s400/Peacock.jpg" alt="Peacock" width="150" height="150">
+                "Peacock" redirects here. For the streaming service, see Peacock (streaming service). For other uses, see Peacock (disambiguation).Peafowl is a common name for three bird species in the genera Pavo and Afropavo within the tribe Pavonini of the family Phasianidae (the pheasants and their allies). Male peafowl are referred to as peacocks, and female peafowl are referred to as peahens, although peafowl of either sex are often referred to colloquially as "peacocks".
+            </div>
+
+        </div>
+
+        <div style="margin-bottom: 70px;">
+
+            <h1>7] Center Vertically - Using padding:</h1>
+
+            <h2>(a) Center vertically with padding</h2>
+            <p>we use the padding property to center the div element vertically:</p>
+            <div class="center1">
+                <p>Good Afternoon!</p>
+            </div>
+
+            <h2>(b) Center vertically with padding and text-align</h2>
+            <p>we use padding and text-align to center the div element both vertically and horizontally:</p>
+            <div class="center2">
+                <p>Good Night!</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 70px;">
+            <h1>8] Center Vertically - Using line-height:</h1>
+            <h2>vertically and horizontally centered.</h2>
+            <p>we use the line-height property with a value that is equal to the height property to center the div element:</p>
+            <div class="center">
+                <p>Good Evening!</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 70px;">
+            <h1>9] Center Vertically - Using position & transform:</h1>
+            <h2>vertically and horizontally centered.</h2>
+            <p>we use positioning and the transform property to vertically and horizontally center the div element:</p>
+            <div class="center3">
+                <p>JCOE</p>
+            </div>
+        </div>
+
+        <div >
+            <h1>10] Center Vertically - Using Flexbox:</h1>
+            <h2>Flexbox Centering</h2>
+            <p>A container with both the justify-content and the align-items properties set to center will align the item(s) in the center (in both axis).</p>
+            <div class="center4">
+                <p>Jaihind College of Engineering!</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

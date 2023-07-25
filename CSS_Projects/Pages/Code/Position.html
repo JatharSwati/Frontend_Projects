@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin: 10px 5%;
+        }
+
+        div{
+            padding: 5px 10px;
+        }
+
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: lavender;
+            border: 2px solid purple;
+        }
+
+        div.static {
+            position: static;
+            left: 50px;
+            border: 2px solid #d80a0a;
+        }
+
+        div.relative {
+            position: relative;
+            left: 50px;
+            border: 2px solid #4d08e4; 
+        } 
+        
+        div.fixed {
+            position: fixed;
+            margin-bottom: 100px;
+            top: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid #dc11bd;
+        }
+
+        div.relative1 {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid orangered;
+        } 
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <h2> 1] Position-Sticky</h2>
+    <p>Try to <b> scroll</b> inside this frame to understand how sticky positioning works.</p>
+    <div class="sticky"> Veermata Jijabai Technological Institute (VJTI).</div>
+    <p><strong>Tip:</strong> (1) In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.<br>Scroll back up to remove the stickyness.</p>
+    <p><b>Veermata Jijabai Technological Institute (VJTI)</b> is a state funded college located in Mumbai, Maharashtra, India, and one of the oldest engineering colleges in Asia. Founded in 1887 and formerly known as the Victoria Jubilee Technical Institute, it adopted its present name on 26 January 1997.[1] VJTI is an academically and administratively autonomous institute, but it is affiliated to the University of Mumbai. The institute is financially supported by the Government of Maharashtra.</p>
+
+    <h2> 2] Position-Static:</h2>
+    <p> <b> position: staitc; </b> it is always positioned according to the normal flow of the page.</p>
+    <div class="static">
+        Jaihind College of Engineering, Kuran.
+    </div><br>
+
+    <h2> 3] Position-Relative:</h2>
+    <p> <b> position: relative; </b> is positioned relative to its normal position.</p>
+    <div class="relative">        
+        Amrutvahini College of Engineering.
+    </div><br>
+
+    <h2> 4] Position-Fixed:</h2>
+    <p> <b> position: fixed; </b> which means it always stays in the same place even if the page is scrolled.</p>
+    <div class="fixed">
+        COEP Technological University.
+    </div><br>
+
+    <h2> 5] Position-Absolute:</h2>
+    <p> <b> position: absolute; </b> instead of positioned relative to the viewport, like fixed.</p>
+    <div class="relative1">Position-Relative
+        <div class="absolute">position-Absolute</div>
+    </div>   
+    
+</body>
+</html>

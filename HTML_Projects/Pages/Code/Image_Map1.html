@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image Map 1 </title>
+
+    <style>
+        
+        body
+        {
+            margin: 30px 400px;
+        }
+
+        h1
+        {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <h1>Image Map</h1>
+
+        <img src="..\Images\Gadgets.jpg" alt="Gadgets" usemap="#objects" style="height: 400px; width: 500px;">
+
+        <map name="objects">
+            <area target="_blank" shape="rect" coords="464,6,609,269" alt="Laptop" href="https://en.wikipedia.org/wiki/Laptop">
+            <area target="_blank" shape="rect" coords="213,294,525,447" alt="Computer Keyboard" href="https://en.wikipedia.org/wiki/Computer_keyboard">
+            <area target="_blank" shape="rect" coords="542,305,607,445" alt="Computer Mouse" href="https://en.wikipedia.org/wiki/Computer_mouse">
+            <area target="_blank" shape="poly" coords="92,345,115" alt="Headphone" href="https://en.wikipedia.org/wiki/Headphones">
+            <area target="_blank" shape="rect" coords="432,102,456,270" alt="Pen" href="https://en.wikipedia.org/wiki/Pen">
+
+        </map>
+    </div>
+</body>
+</html>

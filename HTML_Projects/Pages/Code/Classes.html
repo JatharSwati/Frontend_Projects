@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title> Classes </title>
+			<style>
+				
+				body
+				{
+					margin: 30px 100px;
+				}
+
+				.fruit
+				{
+					background-color:lavender;
+					color:black;
+					border:3px solid black;
+					margin:20px;
+					padding:20px;
+				}
+
+				.fruit1
+				{
+					font-size:120%;
+					color:orange;
+				}
+
+				.city
+				{
+					background-color:pink;
+					color:black;
+					padding:10px;
+					margin:10px;
+				}
+				.main
+				{
+					text-align:center;
+				}
+
+				.layout
+				{
+					background-color:blue;
+					color:white;
+				}
+			</style>
+		</head>
+		
+		<body>
+			<!-- Class Attribute -->
+			<div class="fruit">
+				<h1>Apple</h1>
+				<p>An apple is an edible fruit produced by an apple tree Malus domestica.</p>
+			</div>
+			
+			<div class="fruit">
+				<h1>Mango</h1>
+				<p>A mango is an edible stone fruit produced by the tropical tree Mangifera indica.</p>
+			</div>
+			
+			<div class="fruit">
+				<h1>Banana</h1>
+				<p>A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</p>
+			</div>
+			
+			<!-- Class in Span -->
+			<h1>There is <span class="fruit1">Three</span> Fruits</h1>
+			<p>Here,a some <span class="fruit1">Information</span> of Friuts</p>
+			
+			<!-- Different Element use Same class -->
+			<h1 class="layout">City</h1>
+			<p class="layout">There is Some Imortant City</p>
+			
+			<!-- HTML Element use more than one Classes -->
+			<h2 class="city">Mumbai</h2>
+			<h2 class="city main">Pune</h2>
+			<h2 class="city">Nashik</h2>		
+			
+			<!-- Class Attribute in JavaScript -->
+			<button onclick="myFunction()">Hide</button>
+			
+			<h3 class="bird">parrot</h3>
+			<p>Parrots, also known as Psittacine.</p>
+			
+			<h3 class="bird">peacock</h3>
+			<p>Peacocks are large,colorful pheasant known for their iridescent tails.</p>
+			
+			<h3 class="bird">Sparrow</h3>
+			<p>They are very sociable birds, often nesting in colonies.</p>
+			
+			<script>
+				function myFunction()
+				{
+					var x = document.getElementsByClassName("bird");
+					for(var i=0; i<x.length; i++)
+					{
+						x[i].style.display="none";
+					}
+				}
+			</script>
+		<body>
+	</html>

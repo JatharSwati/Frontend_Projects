@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dislpay </title>
+    <style>
+
+        body{
+            margin: 10px 10%;
+            border: black solid 3px;
+            padding: 10px 50px;
+        }
+
+        h1{
+            margin-top: 40px;
+        }
+
+        h2{
+            color: rgb(224, 19, 125)
+        }
+
+        
+        a:link{
+            color:darkblue;
+        }
+
+        a:visited{
+            color: blue;
+        }
+
+        a:hover{
+            color: rgb(148, 24, 125);
+        }
+
+        a:active{
+            color:red
+        }
+
+        a{
+            font-weight: bold;
+        }
+      
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1> 1] Display Inline To Block Elements: </h1>
+
+        <p>a (anchor) is inline element as shown below:</p>        
+        <a href="https://www.javatpoint.com/machine-learning" target="_blank"> Machine Learing </a>
+        <a href="https://www.javatpoint.com/artificial-intelligence-ai" target="_blank"> Artificial Intelligence </a>
+        <a href="https://www.javatpoint.com/iot-internet-of-things" target="_blank"> Internet Of Things</a>
+        
+
+        <p>We can convert it to block element using display: block; as shown below:</p>        
+        <a style="display: block;" href="https://www.javatpoint.com/machine-learning" target="_blank"> Machine Learing </a>
+        <a style="display: block;" href="https://www.javatpoint.com/artificial-intelligence-ai" target="_blank"> Artificial Intelligence </a>
+        <a style="display: block;" href="https://www.javatpoint.com/iot-internet-of-things" target="_blank"> Internet Of Things</a>
+        
+    </div>
+    
+    <div>
+        <h1> 2] Display Block To Inline Elements: </h1>
+        <p>List is block element as shown below:</p> 
+        <ul>
+            <li>Pradip</li>
+            <li>Pravin</li>
+            <li>Shubhangi</li>
+            <li>Sawti</li>
+        </ul>
+
+        <p>We can convert it to inline element using display: inline; as shown below:</p> 
+        <ul>
+            <li style="display: inline;">Pradip</li>
+            <li style="display: inline;">Pravin</li>
+            <li style="display: inline;">Shubhangi</li>
+            <li style="display: inline;">Sawti</li>
+        </ul>
+    </div>
+    
+ 
+
+    <h1> 3] Display None Elament: </h1>
+    <h2> Computer Science Engineering. (This is a visible heading) </h2>
+    <h4 style="display: none;"> Mechanical Engineering. (This is a hidden heading).</h4>
+    <p>Notice that the h4 element with display: none; does not take up any space.</p>
+    
+    <h1> 4] Visibility Hidden Element: </h1>
+    <h2> Information Technology Engineering. (This is a visible heading) </h2>
+    <h5 style="visibility: hidden;"> Civil Engineering.</h5>
+    <p>Notice that the hidden heading h5 still takes up space.</p>
+
+</body>
+</html>
