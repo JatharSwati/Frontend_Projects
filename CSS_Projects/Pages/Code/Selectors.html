@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors And Combinators</title>
+    <style>
+        
+        /* 1] Element Selector */
+        h2 {
+            color:mediumblue;
+            font-family:monospace;
+            font-size: 20px;
+        } 
+
+        /* 2] ID Selector */
+        #s1 {
+            text-align:justify;
+            color: black;
+            font-weight: normal;
+            background-color: palevioletred;
+        }
+
+        /* 3] Class Selector */
+        .s1 {
+            color:orange;
+            text-decoration: underline;
+        }
+
+        /* 4] Specific Element Class Selector */
+        p.style1 {
+            color: green;
+            text-align:justify;
+            font-family:cursive;
+        }
+
+        p.style2 {
+            color: blue;
+            text-transform: lowercase;
+        }
+
+        /* 5] Universal Selector */
+        * {
+            font-family: Georgia, serif;
+        }
+
+        /* 6] Grouping Selector */
+        h1, ol {
+            color: purple;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <div>
+            <h1>1] Element Selector</h1>
+            <p>Element Selector - h2 { }</p>
+            <p>Every paragraph will be affected by the style.</p>
+            <p>The element selector selects HTML elements based on the element name.</p>
+            <h2>Hey! Everyone.</h2>
+        </div>
+
+        <div>
+            <h1>2] ID Selector</h1>
+            <p>ID Selector - #s1 { }</p>
+            <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+            <p>Welcome To JCOE!</p>
+            <p id="s1">Jaihind College of Engineering, Kuran, an Institution under Jaihind Comprehensive Educational Institute. The college has set itself a vision “ Making rural people’s lives better by unleashing the Technical Education”. It is believed and practiced that excellence is a continuous process and in pursuit of which the institute has made deep forays into contributing world renowned technocrats, successful entrepreneurs, competent leaders, innovative scientists and researchers. The evolution of the institute over the past six years has witnessed strong blend of state-of-the-art infrastructure and highly experienced staff.
+               Attention is given to each student to focus on their strengths and to develop confidence. This would stand them in good stead, once student graduate from our institute, to encounter life’s problems on their own. We, at Jaihind College of Engineering, strive to cultivate students who are not only successful in their personal and professional fields, but who take upon themselves the challenge to fetch science and technology to the doorsteps of the common man and to propel India as the leader in emerging technologies.</p>
+        </div>
+    
+        <div>
+            <h1>3] Class Selector</h1>
+            <p>Class Selector - .style1 { }</p>
+            <p>Specific Element Class Selector - p.style1 { }</p>
+            <p>- The class selector selects HTML elements with a specific class attribute (.s1)</p>
+            <p>- You can also specify that only specific HTML elements should be affected by a class (p.style1)</p>
+            <p>- HTML elements can also refer to more than one class.(style1 style2)</p>
+            <h2 class="s1">Branch Name:</h2>
+            <p class="style1">(1) Computer Engineering</p>
+            <p class="style1">(2) Mechanical Engineering</p>
+            <p class="style1 style2">(3) Civil Engineering</p>
+            <p class="style1">(4) IT Engineering</p>
+            <p class="style1">(5) AI Engineering</p>
+        </div>
+
+        <div>
+            <h1>4] Universal Selector</h1>
+            <p> Universal Selector - * { }</p>
+            <p>The universal selector (*) selects all HTML elements on the page.</p>
+            <p>We used all HTML elments "font-family: Georgia, serif;" </p>
+        </div>
+
+        <div>
+            <h1>5] Grouping Selector</h1>
+            <p>Grouping Selector - h1, ol { }</p>
+            <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
+            <ol>
+                <li>Pradip</li>
+                <li>Pravin</li>
+                <li>Shubhangi</li>
+                <li>Swati</li>
+            </ol>
+        </div>
+
+    </div>
+</body>
+</html>
