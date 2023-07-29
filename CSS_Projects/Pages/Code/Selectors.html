@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectors And Combinators</title>
     <style>
+
+        h1 {
+            text-decoration: underline;
+            font-family: Arial, Helvetica, sans-serif;
+        }
         
         /* 1] Element Selector */
-        h2 {
+        h3 {
             color:mediumblue;
             font-family:monospace;
             font-size: 20px;
@@ -45,26 +50,26 @@
         }
 
         /* 6] Grouping Selector */
-        h1, ol {
+        h2, ol {
             color: purple;
-            text-decoration: underline;
         }
 
     </style>
 </head>
 <body>
     <div>
+        <h1>"Selector"</h1>
 
         <div>
-            <h1>1] Element Selector</h1>
+            <h2>1] Element Selector</h2>
             <p>Element Selector - h2 { }</p>
             <p>Every paragraph will be affected by the style.</p>
             <p>The element selector selects HTML elements based on the element name.</p>
-            <h2>Hey! Everyone.</h2>
+            <h3>Hey! Everyone.</h3>
         </div>
 
         <div>
-            <h1>2] ID Selector</h1>
+            <h2>2] ID Selector</h2>
             <p>ID Selector - #s1 { }</p>
             <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
             <p>Welcome To JCOE!</p>
@@ -73,13 +78,13 @@
         </div>
     
         <div>
-            <h1>3] Class Selector</h1>
+            <h2>3] Class Selector</h2>
             <p>Class Selector - .style1 { }</p>
             <p>Specific Element Class Selector - p.style1 { }</p>
             <p>- The class selector selects HTML elements with a specific class attribute (.s1)</p>
             <p>- You can also specify that only specific HTML elements should be affected by a class (p.style1)</p>
             <p>- HTML elements can also refer to more than one class.(style1 style2)</p>
-            <h2 class="s1">Branch Name:</h2>
+            <h3 class="s1">Branch Name:</h3>
             <p class="style1">(1) Computer Engineering</p>
             <p class="style1">(2) Mechanical Engineering</p>
             <p class="style1 style2">(3) Civil Engineering</p>
@@ -88,14 +93,14 @@
         </div>
 
         <div>
-            <h1>4] Universal Selector</h1>
+            <h2>4] Universal Selector</h2>
             <p> Universal Selector - * { }</p>
             <p>The universal selector (*) selects all HTML elements on the page.</p>
             <p>We used all HTML elments "font-family: Georgia, serif;" </p>
         </div>
 
         <div>
-            <h1>5] Grouping Selector</h1>
+            <h2>5] Grouping Selector</h2>
             <p>Grouping Selector - h1, ol { }</p>
             <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
             <ol>
