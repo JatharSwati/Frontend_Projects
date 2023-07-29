@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+
+        p.s1 {
+            font-size: 20px;
+            font-weight:lighter;
+        }
+
+        h4 {
+            text-decoration: underline;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        h1 {
+            text-decoration:underline;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*1] Descendant Selector (space)*/
+        div ol {
+            font-weight: bold;
+            font-size: 25px;
+            color: rgb(247, 73, 131);
+            text-shadow: 2px 1px 2px gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*2] Child Selector (>)*/
+        section > p {
+            color: rgb(50, 130, 205);
+            font-weight: bold;
+            font-family:cursive;
+            font-style: italic;
+        }
+
+        /*3] Adjacent Sibling Selector (+)*/
+        span + p {
+            color:deeppink;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /*4] General Sibling Selector (~)*/
+        h4.gen ~ p {
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+        
+    <h1>"Combinators"</h1>
+    <p class="s1">- A combinator is something that explains the relationship between the selectors.</p>
+    <p class="s1">- Between the simple selectors, we can include a combinator.</p>
+
+    <!-- 1] Descendant Selector (space) -->
+    <div>
+        <h2>1] Descendant Selector (space)</h2>
+        <p>Descendant Selector - div ol { }</p>
+        <p>The descendant selector matches all elements that are descendants of a specified element.</p>
+        <p>selects all "ol" Elements inside "div" Elements</p>
+        <h4>Name Of Engineering Colleges:</h4>
+        <ol style="background-color: paleturquoise">
+            <li>Jaihind College of Enfineering</li>
+            <li>Amrutvahini College of Engineering</li>
+            <li>Veermata Jijabai Technological Institute VJTI</li>
+            <li>Sinhgad Academy Of Engineering</li>
+            <li>Shri Chhatrapati Shivaji Maharaj College of Engineering</li>
+        </ol>
+    </div>
+
+    <ol>
+        <li>Jaihind College of Enfineering</li>
+        <li>Amrutvahini College of Engineering</li>
+        <li>Veermata Jijabai Technological Institute VJTI</li>
+        <li>Sinhgad Academy Of Engineering</li>
+        <li>Shri Chhatrapati Shivaji Maharaj College of Engineering</li>
+    </ol>
+    
+    <!-- 2] Child Selector (>) -->
+    <div>
+        <h2>2] Child Selector (>)</h2>
+        <p>Child Selector - sectoin > p { }</p>
+        <p>The child selector selects all elements that are the children of a specified element.</p>
+        <p>selects all "p" Elements that are children of a "section" element</p>
+        <h4>Time:</h4>
+        <p>(a) Morning!</p>
+        <p>(b) Afternoon!</p>
+        <section><p>(c) Evening!</p></section>
+        <p>(d) Night!</p>
+    </div>
+
+    <!-- 3] Adjacent Sibling Selector (+) -->
+    <div>
+        <h2>3] Adjacent Sibling Selector (+)</h2>
+        <p>Adjacent Sibling Selector - span + p { }</p>
+        <p>The adjacent sibling selector is used to select an element that is directly after another specific element.</p>
+        <p>selects the first "p" Element that are placed immediately after "span" Elements</p>
+        <h4>Direction:</h4>
+        <span><p>(a) East</p></span>
+        <p>(b) West</p>
+        <span><p>(c) North</p></span>
+        <p>(d) South</p>
+    </div>
+
+    <!-- 4] General Sibling Selector (~) -->
+    <div>
+        <h2>4] General Sibling Selector (~)</h2>
+        <p>General Sibling Selector - h4.gen ~ p { }</p>
+        <p>The general sibling selector selects all elements that are next siblings of a specified element.</p>
+        <p>selects all p elements that are next siblings of h4 elements</p>
+        <h4 class="gen">Mobile Name:</h4>
+        <p>(a) Redmi</p>
+        <p>(b) Vivo</p>
+        <p>(c) Iphone</p>
+        <p>(d) Oppo</p>
+    </div>
+             
+</body>
+</html>
