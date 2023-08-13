@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors</title>
+    <style>
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        /* 1] CSS [attribute] Selector */
+        a[target] {
+            color: green;
+            background-color:rgb(171, 243, 171);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* 2] CSS [attribute="value"] Selector */
+        a[target="_blank"].style {
+            color: purple;
+            background-color: rgb(237, 143, 237);
+            font-weight: bold;
+        }
+
+        /* 3] CSS [attribute~="value"] Selector */
+        [title~="Fruits"] {
+            border: 5px inset green;
+            
+        }
+
+        /* 4] CSS [attribute|="value"] Selector */
+        [class|="top"] {
+            background: rgb(211, 211, 239);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* 5] CSS [attribute^="value"] Selector */
+        [class^="css"] {
+            background-color: rgb(118, 200, 223);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* 6] CSS [attribute$="value"] Selector */
+        [class$="bird"] {
+            font-size: 25px;
+            color: darkslateblue;
+            text-shadow: 2px 1px 2px gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* 7] CSS [attribute*="value"] Selector */
+        [class*="flow"] {
+            font-family: cursive;
+            font-weight: bold;
+            color: deeppink;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Attribute Selectors</h1>
+        <p>Style HTML Elements With Specific Attributes</p>
+        <p>It is possible to style HTML elements that have specific attributes or attribute values.</p>
+
+        <!-- 1] CSS [attribute] Selector -->
+        <div>
+            <h2>1] CSS [attribute] Selector</h2>
+            <p>a[target] {}</p>
+            <p>The [attribute] selector is used to select elements with a specified attribute.</p>
+            <p>Selects all "a" elements with a target attribute</p>
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML Tutorial</a>
+            <a href="https://www.w3schools.com/css/default.asp" target="_self">CSS Tutorial</a>
+            <a href="https://www.w3schools.com/js/default.asp" target="_parent">JavaScript Tutorial</a>
+            <a href="https://www.w3schools.com/sql/default.asp" target="_top">SQL Tutorial</a><br>
+        </div>
+
+        <!-- 2] CSS [attribute="value"] Selector -->
+        <div>
+            <h2>2] CSS [attribute="value"] Selector</h2>
+            <P>a[target="_blank"].style1 {}</P>
+            <p>The [attribute="value"] selector is used to select elements with a specified attribute and value.</p>
+            <P>Selects all "a" elements with a target="_blank" attribute</P>
+            <a class="style" href="https://www.w3schools.com/python/default.asp" target="_blank">Python Tutorial</a>
+            <a href="https://www.w3schools.com/java/default.asp" target="_self">Java Tutorial</a>
+            <a href="https://www.w3schools.com/php/default.asp" target="_parent">PHP Tutorial</a>
+            <a href="https://www.w3schools.com/cpp/default.asp" target="_top">C++ Tutorial</a>
+            <a class="style" href="https://www.w3schools.com/cs/index.php" target="_blank">C# Tutorial</a>
+        </div>
+
+        <!-- 3] CSS [attribute~="value"] Selector -->
+        <div>
+            <h2>3] CSS [attribute~="value"] Selector</h2>
+            <p>[title~="Fruits"] {}</p>
+            <p>The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.</p>
+            <p>Selects all elements with a title attribute that contains a space-separated list of words, one of which is "Tree"</p>
+            <img src="https://www.svz.com/wp-content/uploads/2018/05/Mango.jpg" title="Mango Fruits" width="200" height="200">
+            <img src="https://m.media-amazon.com/images/I/61hVLTBkByL._SX679_.jpg" title="strawberry" width="200" height="200">
+            <img src="https://5.imimg.com/data5/LM/DU/MY-22954806/apple-fruit-500x500.jpg" title="Apple Fruits" width="200" height="200">
+        </div>
+
+        <!-- 4] CSS [attribute|="value"] Selector -->
+        <div>
+            <h2>4] CSS [attribute|="value"] Selector</h2>
+            <p>[class|="top"] {}</p>
+            <p>The [attribute|="value"] selector is used to select elements with the specified attribute.</p>
+            <p>Whose value can be exactly the specified value, or the specified value followed by a hyphen (-)</p>
+            <h3 class="top-header">Time</h3>
+            <p class="top-text">(a) Good Morning</p>
+            <p class="middle-text">(b) Good Afternoon</p>
+            <p class="bottom-text">(c) Good Nignt</p>
+        </div>
+
+        <!-- 5] CSS [attribute^="value"] Selector -->
+        <div>
+            <h2>5] CSS [attribute^="value"] Selector</h2>
+            <p>[class^="CSS"] {}</p>
+            <p>The [attribute^="value"] selector is used to select elements with the specified attribute, whose value starts with the specified value.</p>
+            <p>Selects all elements with a class attribute value that starts with "CSS"</p>
+            <h3>CSS</h3>
+            <p class="css-Text">(a) Text</p>
+            <p class="cssFonts">(b) Fonts</p>
+            <p class="css-Links">(c) Links</p>
+            <p class="cssLists">(d) Lists</p>
+            <p class="css-Icons">(e) icons</p>
+        </div>
+
+        <!-- 6] CSS [attribute$="value"] Selector -->
+        <div>
+            <h2>6] CSS [attribute$="value"] Selector</h2>
+            <p>[class$="bird"] {}</p>
+            <p>The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.</p>
+            <p>Selects all elements with a class attribute value that ends with "bird"</p>
+            <p class="parrot_bird">(a) Parrot</p>
+            <p class="peacock">(b) Peacock</p>
+            <p class="sparrow-bird">(c) Sparrow</p>
+            <p class="dovebird">(d) Dove</p>
+        </div>
+
+        <!-- 7] CSS [attribute*="value"] Selector -->
+        <h2>7] CSS [attribute*="value"] Selector</h2>
+        <p>[class*="flow"] {}</p>
+        <p>The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.</p>
+        <p>Selects all elements with a class attribute value that contains "flo"</p>
+        <p class="rose_flower">(a) Rose</p>
+        <p class="lotus">(b) Lotus</p>
+        <p class="mogra-flower">(c) Mogra</p>
+        <p class="daisy">(d) Daisy</p>
+        <p class="jasmineflower">(e) Jasmine</p>
+    </div>
+</body>
+</html>
