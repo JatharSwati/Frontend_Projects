@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+
+        /* Specificity */
+        h2 {
+            color:green;
+        }
+
+        .style {
+            color:blue;
+        }
+
+        #sj {
+            color:magenta;
+        }
+
+        /* !important */
+        button {
+            color: white;
+            background-color: orange !important; 
+            padding: 15px 20px;
+            margin-right: 50px;
+        }
+
+        .style1 {
+            color: white;
+            background-color: blue !important;
+        }
+
+        #pj {
+            color: white;
+            background-color:green;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <div>
+
+            <h1>Specificity</h1>
+
+            <p> We have used the "h2" element as selector, and specified a <b>Green Color</b> for this element.</p>
+            <h2>Hey! Everyone</h2>
+
+            <p>Also in this, we have added a class selector (named "style"), and specified a <b>Blue Color</b> for this class.</p>
+            <p>The text will now be <b>Blue</b> (even though we have specified a Green Color for the element selector "h2").</p>
+            <P>This is because the <b>class selector </b> is given higher priority</P>
+            <h2 class="style">Hey! Everyone.</h2>
+
+            <p>Now we have added the id selector (named "sj").</p>
+            <p>The text will now be <B>magenta</B>, because the id selector is given higher priority</p>
+            <h2 id="sj">Hey! Everyone.</h2>
+
+            <p>We have added an inline style for the "h2" element.</p>
+            <p>The text will now be <b>Red</b>, because the inline style is given the highest priority:</p>
+            <h2 style="color: red;">Hey! Everyone.</h2>
+
+            <h2  id="sj" class="style" style="color: red;">Hey! Everyone.</h2>
+
+        </div>
+
+        <div>
+
+            <h1>!important</h1>
+
+            <p>The !important rule in CSS is used to add more importance to a property/value than normal.</p>
+            <p>In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!</p>
+            <button>Click Me!</button>
+            <button class="style1">Click Me!</button>
+            <button id="pj">Click Me!</button>
+        </div>
+
+    </div>    
+</body>
+</html>
