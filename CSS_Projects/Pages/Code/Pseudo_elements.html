@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        /* 1] The ::first-line Pseudo-element */
+        header::first-line {
+            color: magenta;
+            font-weight: bold;
+            font-variant: small-caps;
+        }
+
+        /* 2] The ::first-letter Pseudo-element */
+        h4::first-letter {
+            color: #ff0000;
+            font-size: 30px;
+        }
+
+        /* 3] Pseudo-elements and HTML Classes */
+        h4.style::first-letter {
+            color: purple;
+            font-size: 200%;
+        } 
+        
+        /* 4] Multiple Pseudo-elements */
+        pre::first-letter {
+            color: blueviolet;
+            font-size: 25px;
+        }
+
+        pre::first-line {
+            color: rgb(248, 89, 192);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* 5] The ::before Pseudo-element */
+        h5::before {
+            content: url(https://images.collegedunia.com/public/college_data/images/logos/1673068069logo170x172.png?h=80&w=80&mode=stretch);
+        }
+
+        /* 6] The ::after Pseudo-element */
+        h6::after {
+            content: url(https://images.collegedunia.com/public/college_data/images/logos/1673068069logo170x172.png?h=80&w=80&mode=stretch);
+        }
+
+        /* 7] The ::marker Pseudo-element */
+        ::marker { 
+            color: rgb(189, 24, 156);
+            font-size: 23px;
+        }
+
+        /* 8] The ::selection Pseudo-element */
+        ::selection {
+            color: white;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Pseudo Elements</h1>
+        <p>A CSS pseudo-element is used to style specified parts of an element.</p>
+
+        <!-- 1] The ::first-line Pseudo-element -->
+        <div>
+            <h2>1] The ::first-line Pseudo-element</h2>
+            <p> header::first-line {}</p>
+            <p>The ::first-line pseudo-element is used to add a special style to the first line of a text.</p>
+            <p>The first line of the text in all "p" elements</p>
+            <h3>Jaihind College of Engineering</h3>
+            <header>Jaihind Comprehensive Educational Institute was established in 1996 with mission to educate rural and economically background students. Society opened the first educational set-up namely “Jaihind Polytechnic, Kuran” which is formerly known as Institute of Technology imparting quality technical education at diploma engineering level. Since its foundation, Jaihind Polytechnic has always been running on the path of progress and development.</header>
+        </div>
+
+        <!-- 2] The ::first-letter Pseudo-element -->
+        <div>
+            <h2>2] The ::first-letter Pseudo-element</h2>
+            <p>h4::first-letter {}</p>
+            <p>The ::first-letter pseudo-element is used to add a special style to the first letter of a text.</p>
+            <p>The first letter of the text in all "span" elements</p>
+            <h4>Swati Eknath Jatahr</h4>
+        </div>
+
+        <!-- 3] Pseudo-elements and HTML Classes -->
+        <div>
+            <h2>3] Pseudo-elements and HTML Classes</h2>
+            <p>h4.style::first-letter {}</p>
+            <p>Pseudo-elements can be combined with HTML classes</p>
+            <h4 class="style">Hey! Everyone</h4>
+        </div>
+
+        <!-- 4] Multiple Pseudo-elements -->
+        <div>
+            <h2>4] Multiple Pseudo-elements</h2>
+            <p>pre::first-letter {}, pre::first-line {}</p>
+            <p>Several pseudo-elements can also be combined.</p>
+            <pre>Good Morning! Never give up, you are a great fighter. Rise and shine, it's a brand new day full of possibilities. May your day be filled with joy, success, and all the positive vibes you deserve. Remember to start your day with a smile and carry that positive energy throughout. You've got this!</pre>
+        </div>
+
+        <!-- 5] The ::before Pseudo-element -->
+        <div>
+            <h2>5] The ::before Pseudo-element</h2>
+            <p>h5::before {}</p>
+            <p>The ::before pseudo-element can be used to insert some content before the content of an element.</p>
+            <p>Inserts an image before the content of each "h5" element:</p>
+            <h5 style="font-size: 50px; margin-top: 10px;" >Jaihind College of Engineering</h5>
+        </div>
+
+        <!-- 6] The ::after Pseudo-element -->
+        <div>
+            <h2>6] The ::after Pseudo-element</h2>
+            <P>h6::after {}</P>
+            <p>The ::after pseudo-element can be used to insert some content after the content of an element.</p>
+            <P>Inserts an image after the content of each "h6" element</P>
+            <h6 style="font-size: 50px; margin-top: 10px;">Jaihnid College of Engineering</h6>
+        </div>
+
+        <!-- 7] The ::marker Pseudo-element -->
+        <div>
+            <h2>7] The ::marker Pseudo-element</h2>
+            <p>::marker {}</p>
+            <p>The ::marker pseudo-element selects the markers of list items.</p>
+
+            <ul>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Banana</li>
+                <li>Orange</li>
+                <li>Strwberry</li>
+            </ul>
+
+            <ol>
+                <li>Rose</li>
+                <li>Lotus</li>
+                <li>Jasmine</li>
+                <li>Magnolia</li>
+                <li>Sunflower</li>
+            </ol>
+
+        </div>
+
+        <!-- 8] The ::selection Pseudo-element -->
+        <div>
+            <h2>8] The ::selection Pseudo-element</h2>
+            <p>::selection {}</p>
+            <p>The ::selection pseudo-element matches the portion of an element that is selected by a user.</p>
+            <p>This ::selection Pseudo-element applyed to the all page</p>
+        </div>
+    </div>
+    
+</body>
+</html>

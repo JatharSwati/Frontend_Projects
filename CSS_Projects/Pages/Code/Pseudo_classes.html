@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+
+        h1 {
+            text-decoration: underline;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        h3 {
+            text-decoration: underline;
+            color: palevioletred;
+        }
+
+        a {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* 1] Anchor Pseudo-classes */
+        a:link {
+            color: blue;
+        }
+        
+        a:visited {
+            color: orchid;
+        }
+        
+        a:hover {
+            color: green;
+        }
+        
+        a:active {
+            color: red;
+        }
+
+        /* 2] Pseudo-classes and HTML Classes */
+        a.highlight:hover {
+            color: darkslateblue;
+            font-size: 40px;
+            font-family: cursive;
+        } 
+
+        /* 3] Hover on "span" Element */
+        span {
+          background-color: rgb(9, 153, 127);
+          color: white;
+          padding: 25px;
+          text-align: center;
+        }
+
+        span:hover {
+          background-color: mediumvioletred;
+        }
+
+        /* 4] Simple Tooltip Hover */
+        img {
+            display: none;
+            
+        }
+
+        div:hover img {
+            display: block;
+            height: 150px;
+            width: 200px
+        }
+
+        /* 5] The :first-child Pseudo-class */
+
+         /*(a)Match the first "li" element*/
+        li:first-child {
+            color: steelblue;
+        }
+
+        /* (b) Match the first "b" element in all "p" elements */
+        p b:first-child {
+            color: darkorchid;
+            text-decoration: underline;
+        }
+
+        /* (c) Match all "i" elements in all first child "p" elements */
+        p:first-child i {
+            color: magenta;
+            text-decoration: underline;
+        } 
+
+        /* 6] The :lang Pseudo-class */
+        q:lang(no) {
+            quotes: "/#" "#/";
+            color: darkred;
+            font-weight: bold;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <h1>"Pseudo-classes"</h1>
+    <p>A pseudo-class is used to define a special state of an element.</p>
+
+     <!-- 1] Anchor Pseudo-classes -->
+    <div>
+        <h2>1] Anchor Pseudo-classes</h2>
+        <p>Links can be displayed in different ways:</p>
+        <a href="https://jatharswati.github.io/Frontend_Projects/" target="_blank">My Projects</a>
+    </div>
+
+    <!-- 2] Pseudo-classes and HTML Classes -->
+    <div>
+        <h2>2] Pseudo-classes and HTML Classes</h2>
+        <p>Pseudo-classes can be combined with HTML classes</p>
+        <p>When you hover over the <u>Second link</u>, it will change color and font size</p>
+        <a href="https://www.linkedin.com/feed/">(1) linkedin</a><br><br>
+        <a class="highlight" href="https://github.com/JatharSwati?tab=repositories">(2) Github</a><br><br>
+        <a href="https://chat.openai.com/">(3) ChatGPT</a>
+    </div>
+
+    <!-- 3] Hover on "span" Element -->
+    <div>
+        <h2>3] Hover on "span" Element </h2>
+        <p style="margin-bottom: 40px;">Mouse over the <u>span</u> element below to change its background color</p>
+        <span>Hey! Everyone</span>
+    </div>
+
+    <!-- 4] Simple Tooltip Hover -->
+    <div>
+        <h2>4] Simple Tooltip Hover</h2>
+        <p>Hover over this "div" element to show a "img" element (like a tooltip):</p>
+        <h3>Nature</h3>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg" alt="Nature">
+        </div>
+    </div>
+
+    <!-- 5] The :first-child Pseudo-class -->
+    <div>
+        <h1>5] The :first-child Pseudo-class</h1>
+        <p>The :first-child pseudo-class matches a specified element that is the first child of another element.</p>
+        
+        <!-- (a)Match the first "li" element -->
+        <div>
+            <h2>(a) Match the first "li" element</h2>
+            <p>The selector matches any "li" element that is the first child of any element like (ul, ol)</p>
+            <h3>Birds Name</h3>
+            <ul>
+                <li>Parrot</li>
+                <li>Peacock</li>
+                <li>Sparrow</li>
+                <li>Duck</li>
+                <li>Dove</li>
+            </ul>
+            <h3>Animal Name</h3>
+            <ol>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Cow</li>
+                <li>Lion</li>
+                <li>Tiger</li>
+            </ol>
+        </div>
+
+        <!-- (b) Match the first "b" element in all "p" elements -->
+        <div>
+            <h2>(b) Match the first "b" element in all "p" elements</h2>
+            <p>The selector matches the first "b" element in all "p" elements</p>
+            <p>My <b>Name</b> is <b>Swati</b> Eknath Jathar</p>
+            <p>My <b>Brother</b> is <b>Pradip</b> Eknath Jathar</p>
+        </div>
+
+        <!-- (c) Match all "i" elements in all first child "p" elements -->
+        <div>
+
+            <h2>(c) Match all "i" elements in all first child "p" elements</h2>
+            <p>the selector matches all "i" elements in "p" elements that are the first child of another element</p>
+            
+            <div>
+                <p>My <i>Name</i> is <i>Swati</i> Eknath Jathar</p>
+                <p>My <i>Name</i> is <i>Swati</i> Eknath Jathar</p>
+            </div>
+            
+            <section>
+                <p>My <i>Name</i> is <i>Swati</i> Eknath Jathar</p>
+                <p>My <i>Name</i> is <i>Swati</i> Eknath Jathar</p>
+            </section>
+            
+        </div>
+
+    </div>    
+
+    <!-- 6] The :lang Pseudo-class -->
+    <div>
+        <h2>6] The :lang Pseudo-class</h2>
+        <p>The :lang pseudo-class allows you to define special rules for different languages.</p>
+        <p>:lang defines the quotation marks for "q" elements with lang="no"</p>
+        <p> Jaihind <q lang="no"> College </q> of Engineering.</p>
+    </div>
+</body>
+</html>
