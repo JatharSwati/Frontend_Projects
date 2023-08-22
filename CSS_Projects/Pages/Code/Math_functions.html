@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Functions</title>
+
+    <style>
+
+        /* 1] calc() Function*/
+            /* (a)Addition*/
+            #div1 {
+                width: calc(50% + 500px);
+                border: 2px solid orangered;
+                background-color: orange;
+                padding: 5px;
+            }
+
+            #div2 {
+                width: calc(100% - 500px);
+                border: 2px solid darkblue;
+                background-color: blue;
+                padding: 5px;
+            }
+
+        /* 2] max() Function */
+        #div4 {
+            width: max(50%, 300px);
+            background-color: plum;
+            padding: 5px;
+            height: 100px;
+        }
+
+        /* 3] min() Function */
+        #div5 {
+            width: min(50%, 300px);
+            background-color: palevioletred;
+            padding: 5px;
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <h1>Math Functions</h1>
+        <p>The CSS math functions allow mathematical expressions to be used as property values.</p>
+
+        <!-- 1] calc() Function -->       
+        <div>
+
+            <h2>1] calc() Function</h2>
+
+            <!-- (a) Addition -->
+            <div>
+                <h3>(a) Addition</h3>
+                <p>width: calc(50% + 500px);</p>
+                <p>Use calc() to calculate the width of a "div" element</p>
+                <div id="div1">Write some text here...</div>
+            </div>
+
+            <!-- (b) Subtraction -->
+            <div>
+                <h3>(a) Subtraction</h3>
+                <p>width: calc(100% - 500px);</p>
+                <p>Use calc() to calculate the width of a "div" element</p>
+                <div id="div2">Write some text here...</div>
+            </div>
+            
+        </div>
+
+        <!-- 2] max() Function -->
+        <div>
+            <h2>2] max() Function</h2>
+            <p>width: max(50%, 300px);</p>
+            <p>Use max() to set the width of #div4 to whichever value is largest, 50% or 300px:</p>
+            <div id="div4">Write some text here...</div>
+        </div>
+
+        <!-- 3] min() Function -->
+        <div>
+            <h2>3] min() Function</h2>
+            <p>width: min(50%, 300px);</p>
+            <p>Use min() to set the width of #div5 to whichever value is smallest, 50% or 300px</p>
+            <div id="div5">Write some text here...</div>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
