@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counters</title>
+    <style>
+       
+        h2 {
+            counter-reset: course;
+            margin-top: 30px;
+        }
+            
+    /* 1] Automatic Numbering With Counters */
+        body {
+            counter-reset: subject;
+        }
+
+        h3::before {
+            counter-increment: subject;
+            content: "Subject " counter(subject) " : ";
+        }
+
+        /* 2] Nesting Counters */        
+        h3 {
+            counter-reset: subcourse;
+        }
+
+        h3::before {
+            counter-increment: course;
+            content: "Course " counter(course) ". ";
+        }
+
+        h4::before {
+            counter-increment: subcourse;
+            content: counter(course) "." counter(subcourse) " ";
+        }
+
+
+        /* Different levels of Nested Counters */
+        ol {
+            counter-reset: section;
+            list-style-type: none;
+        }
+
+        li::before {
+            counter-increment: section;
+            content: counters(section,".") " ";
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Counters</h1>
+
+        <!-- 1] Automatic Numbering With Counters -->
+        <div>
+            <h2>1] Automatic Numbering With Counters</h2>
+            <p> body {}, h3::before {}</p>
+            <p>CSS counters are like "variables".</p>
+            <p>The variable values can be incremented by CSS rules (which will track how many times they are used).</p>
+            <p>Creates a counter for the page (in the body selector), then increments the counter value for each "h3" element and adds "Subject (value of the counter) : " to the beginning of each "h3" element</p>
+            <h3>ML(Machine Learning)</h3>
+            <h3>DAA(Design and Analysis of Algorithms)</h3>
+            <h3>BCT(Blockchain Technology)</h3>
+            <h3>OOMD(Object Oriented Modeling and Design)</h3>
+            <h3>STQA(System Testing and Quality Assurance)</h3>
+        </div>
+
+        <!-- 2] Nesting Counters -->
+        <div>
+
+            <h2>2] Nesting Counters</h2>
+
+            <h3>HTML</h3>
+            <h4>Element</h4>
+            <h4>Attribute</h4>
+            <h4>Heading</h4>
+            <h4>Parahraphs</h4>
+            <h4>Styles</h4>
+
+            <h3>CSS</h3>
+            <h4>Selectors</h4>
+            <h4>Comments</h4>
+            <h4>Colors</h4>
+            <h4>Borders</h4>
+            <h4>Bakgrounds</h4>
+
+            <h3>JavaScript</h3>
+            <h4>Let</h4>
+            <h4>variables</h4>
+            <h4>Operators</h4>
+            <h4>Arithmetic</h4>
+            <h4>Data Types</h4>
+
+            <h3>SQL</h3>
+            <h4>Joins</h4>
+            <h4>Inner Joins</h4>
+            <h4>Left Joins</h4>
+            <h4>Right Joins</h4>
+            <h4>Full Joins</h4>
+
+            <h3>Python</h3>
+            <h4>Casting</h4>
+            <h4>Strings</h4>
+            <h4>Booleans</h4>
+            <h4>Lists</h4>
+            <h4>Tuples</h4>
+
+        </div>
+
+        <!-- Different levels of Nested Counters -->
+        <div>
+            <h1>Fullstack Tutorial</h1>
+            <ol>
+                <li>HTML</li>
+                <li>CSS
+                <ol>
+                    <li>Color
+                        <ol>
+                            <li>Red</li>
+                            <li>Blue</li>
+                            <li>Green</li>
+                        </ol>
+                    </li>
+
+                    <li>Links
+                        <ol>
+                            <li>Visited</li>
+                            <li>Unisited</li>
+                            <li>Active</li>
+                        </ol>
+                    </li>
+
+                    <li>Lists
+                        <ol>
+                            <li>Ordered  List</li>
+                            <li>Unordered List</li>
+                            <li>Description List</li>
+                        </ol>
+                    </li>
+                    
+                    <li>Table</li>
+                </ol>
+                </li>
+
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ol>
+
+        </div>
+
+    </div>
+</body>
+</html>
