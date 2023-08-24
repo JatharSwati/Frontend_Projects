@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaihind College of Engineering</title>
+    <link rel="icon" type="image/x-icon" href=https://jaihind.edu.in/images/JCEI_logo_330px.png>
+    <script src="https://kit.fontawesome.com/477cd788d1.js" crossorigin="anonymous"></script>
+
+    <style>
+
+       /* Header */
+       .header {
+            background-color: lavender;
+            padding: 20px 20px 1px;
+            text-align: center;
+        }
+
+
+
+        /* Top Navbar */
+        .topnav {
+            overflow:hidden;
+            background-color: darkblue;
+        }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .topnav a.right-align {
+            float:right;
+            }
+
+            .topnav a.active {
+            background-color: rgb(202, 9, 137);
+            color: white;
+            }
+
+            .topnav a:hover:not(.active) {
+            background-color: rgb(1, 1, 90);
+            color: white;
+            }
+
+            
+
+
+        /* columns */
+        .column {
+            display: table;
+            width: 100%;    
+            border: 1px solid #eee;        
+        }     
+        
+        .column.middle {
+            display: table-cell;
+            width: 60%; 
+            border: 1px solid #eee;                       
+            padding: 0 1.5vw;                                     
+        }
+                
+        .column.right-side {
+            background-color: lavender;
+            display: table-cell;
+            width: 20%;
+            border: 1px solid #eee;            
+            padding: 0 1vw; 
+        }
+       
+        .sidenav { 
+            display: table-cell;
+            width: 20%;
+            border: 1px solid #eee;            
+            background-color: lavender;            
+        }
+
+            .sidenav a {
+                display: block;
+                color: black;
+                padding:  8px 16px;
+                text-decoration: none;
+            }
+
+            .sidenav a.active {
+                background-color: rgb(202, 9, 137);
+                color: white;
+            }
+
+            .sidenav a:hover:not(.active) {
+                background-color: rgb(76, 76, 155);
+                color: white;
+            }
+
+
+
+        /* Footer */
+        .footer {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+         /* Image Gallery */
+        .img-dropdown {
+            position: relative;
+            display: inline-block;
+            padding: 12px;
+        }
+
+        .img-dropdown > img {            
+            width: 150px;
+            height: 150px;
+        }
+
+        .img-dropdown > img:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .img-dropdown > a {            
+           text-decoration: none;
+        }
+
+        .img-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            box-shadow: 0px 0px 15px 10px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .img-dropdown-content a > img {           
+            width: 200px;
+            height: 170px;
+        } 
+
+        .img-dropdown-content a > img:hover {           
+            cursor: pointer;
+        }        
+
+        .img-dropdown:hover .img-dropdown-content {
+            display: block;            
+        }
+
+        .desc {
+            padding: 5px;
+            text-align: center;
+        }
+
+        i {
+            margin: 0 3px;
+        }
+
+       
+        @media screen and (max-width: 600px) {
+            .column.sidenav  {
+                width: 30%;
+            }
+            
+            .column.middle {
+                width: 70%;
+            }
+            
+            .column.right-side {
+                width: 100%;
+                display: block;
+            }
+            
+        }
+
+        @media screen and (max-width: 450px) {
+            .column.sidenav, .column.middle {
+                width: 100%;
+                display: block;
+            }
+
+            .column.sidenav {
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            .topnav a, .topnav a.right-align {
+                float: none;
+            }
+        }
+        
+    </style>
+
+
+</head>
+<body>
+
+    
+    <!-- Header -->
+    <div class="header">  
+        <i class="fa-solid fa-graduation-cap fa-2xl"></i>    
+        <h1 style="color:darkblue;"><img src="https://jaihind.edu.in/images/JCEI_logo_330px.png" alt="Jaihind Logo" style="margin-right: 10px; height: 30px; width: 50px;">JAIHIND COLLEGE OF ENGINEERING</h1>
+        <p style="margin-top: -10px;">"Sky is the Limit"</p>
+    </div>
+
+
+
+    <!-- Top Navbar -->
+    <div class="topnav">
+        <a href="#">Institutes</a>
+        <a href="#">About</a>    
+        <a href="#" class="active">Gallery</a>
+        <a href="#">Admissions</a>    
+        <a href="#">Library</a>   
+        <a href="#">Placements</a>  
+        <a href="#">Alumani</a>  
+        <a href="#">Events</a> 
+        <a href="#">Contact</a>   
+        <a class="right-align" href="#">Login</a>
+        <a class="right-align" href="#">Sign up</a>
+    </div>
+
+
+
+    <!-- Columns -->
+    <div class="row">
+
+        <!-- Side Navbar -->
+        <div class="column sidenav">  
+            <h2 style="margin-left: 15px;">Department</h2>         
+            <a href="#">1. Mechanical Engineering</a>
+            <a href="#">2. Civil Engineering</a>
+            <a href="#">3. Information Technology</a>
+            <a href="#" class="active">4. Computer engineering</a>
+            <a href="#">5. Chemical engineering</a>                
+            <a href="#">6. Industrial Engineering</a>  
+            <a href="#">7. Electronics & Telecommunication</a> 
+            <a href="#">8. Artificial Intelligence & Data Science</a>               
+        </div>
+
+
+        <!-- Middle Column -->
+        <div class="column middle">
+
+            <h2 style="margin-left: 10px;">Jaihind Gallery</h2>
+
+            <div>
+
+                <div class="img-dropdown">
+
+                    <img src="https://i.ytimg.com/vi/9BoSeIyNho0/mqdefault.jpg" alt="Jaihind 1">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://i.ytimg.com/vi/9BoSeIyNho0/mqdefault.jpg" style="text-decoration: none;">
+                            <img src="https://i.ytimg.com/vi/9BoSeIyNho0/mqdefault.jpg" alt="Jaihind 1">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>                  
+                
+                </div>
+
+
+                <div class="img-dropdown">
+
+                    <img src="https://lh3.googleusercontent.com/-dPy6La-128U/X3rUw19I7II/AAAAAAAAAIw/EmRmQC43YNY2fh-XYR2EMLmLzTC6OGlVQCLcBGAsYHQ/s1600/1601885965055757-0.png" alt="Jaihind 2">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://lh3.googleusercontent.com/-dPy6La-128U/X3rUw19I7II/AAAAAAAAAIw/EmRmQC43YNY2fh-XYR2EMLmLzTC6OGlVQCLcBGAsYHQ/s1600/1601885965055757-0.png" style="text-decoration: none;">
+                            <img src="https://lh3.googleusercontent.com/-dPy6La-128U/X3rUw19I7II/AAAAAAAAAIw/EmRmQC43YNY2fh-XYR2EMLmLzTC6OGlVQCLcBGAsYHQ/s1600/1601885965055757-0.png" alt="Jaihind 2">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>
+                
+                </div>
+
+
+                <div class="img-dropdown">
+
+                    <img src="https://jaihind.edu.in/uploads/JPK/sliders/camp2.jpg" alt="Jaihind 3">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://jaihind.edu.in/uploads/JPK/sliders/camp2.jpg" style="text-decoration: none;">
+                            <img src="https://jaihind.edu.in/uploads/JPK/sliders/camp2.jpg" alt="Jaihind 3">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>                  
+                
+                </div>
+
+
+                <div class="img-dropdown">
+
+                    <img src="https://jaihind.edu.in/uploads/JCEI/files/jaihind-building1.jpg" alt="Jaihind 4">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://jaihind.edu.in/uploads/JCEI/files/jaihind-building1.jpg" style="text-decoration: none;">
+                            <img src="https://jaihind.edu.in/uploads/JCEI/files/jaihind-building1.jpg" alt="Jaihind 4">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>
+                
+                </div>
+
+
+                <div class="img-dropdown">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGF-4X27Yak0qZ_PmfSaJmMW2uzGKwvPfo-lnydN_RsVW76aZU4LvsRpOMu2nSyI8Tao&usqp=CAU" alt="Jaihind 5">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGF-4X27Yak0qZ_PmfSaJmMW2uzGKwvPfo-lnydN_RsVW76aZU4LvsRpOMu2nSyI8Tao&usqp=CAU" style="text-decoration: none;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGF-4X27Yak0qZ_PmfSaJmMW2uzGKwvPfo-lnydN_RsVW76aZU4LvsRpOMu2nSyI8Tao&usqp=CAU" alt="Jaihind 5">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>                  
+                
+                </div>
+
+
+                <div class="img-dropdown">
+
+                    <img src="https://content3.jdmagicbox.com/comp/pune/w4/020pxx20.xx20.120717200624.v4w4/catalogue/jaihind-college-of-engineering-kuran-pune-colleges-yaio16.jpg" alt="Jaihind 6">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://content3.jdmagicbox.com/comp/pune/w4/020pxx20.xx20.120717200624.v4w4/catalogue/jaihind-college-of-engineering-kuran-pune-colleges-yaio16.jpg" style="text-decoration: none;">
+                            <img src="https://content3.jdmagicbox.com/comp/pune/w4/020pxx20.xx20.120717200624.v4w4/catalogue/jaihind-college-of-engineering-kuran-pune-colleges-yaio16.jpg" alt="Jaihind 6">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>
+                
+                </div>
+
+
+                <div class="img-dropdown">
+
+                    <img src="https://www.vidyavision.com/CollegeUploads/Photos/2017-02-12-15-02-39_20_01_17_010331_Events.jpg" alt="Jaihind 7">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://www.vidyavision.com/CollegeUploads/Photos/2017-02-12-15-02-39_20_01_17_010331_Events.jpg" style="text-decoration: none;">
+                            <img src="https://www.vidyavision.com/CollegeUploads/Photos/2017-02-12-15-02-39_20_01_17_010331_Events.jpg" alt="Jaihind 7">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>                  
+                
+                </div>
+
+
+                <div class="img-dropdown">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6dudoi7otLhzoh6Uo1CRB9s5bo_zB6whMmJTMKx8xIZTLfSicyJ0W_KXqPNNS486GiI&usqp=CAU" alt="Jaihind 8">
+                
+                    <div class="img-dropdown-content">
+                        <a target="_blank" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6dudoi7otLhzoh6Uo1CRB9s5bo_zB6whMmJTMKx8xIZTLfSicyJ0W_KXqPNNS486GiI&usqp=CAU" style="text-decoration: none;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6dudoi7otLhzoh6Uo1CRB9s5bo_zB6whMmJTMKx8xIZTLfSicyJ0W_KXqPNNS486GiI&usqp=CAU" alt="Jaihind 8">
+                        </a>
+                        <div class="desc">Jaihind College</div>
+                    </div>
+                
+                </div>
+
+            </div>           
+
+        </div>
+    
+
+         <!-- Right Side Column -->
+        <div class="column right-side">
+
+            <h1>About</h1>
+            <h2>"Jaihnid College of enginerring, Kuran."</h2>
+            <p>
+                Jaihind Comprehensive Educational Institute was established in 1996 with mission to educate rural and economically background students. Society opened the first educational set-up namely “Jaihind Polytechnic, Kuran” which is formerly known as Institute of Technology imparting quality technical education at diploma engineering level. Since its foundation, Jaihind Polytechnic has always been running on the path of progress and development.
+            </p>   
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer s1">
+        <p>Jaihind Collehge of engineering, Kuran.</p>
+        <a target="_blank" href="https://www.instagram.com/jai_hind__college_/">
+            <i class="fa-brands fa-instagram"></i>
+        </a>      
+        <a target="_blank" href="https://www.facebook.com/jceijaihind">
+            <i class="fa-brands fa-facebook"></i>
+        </a>        
+        <a target="_blank" href="https://twitter.com/TPO_JAIHIND">
+            <i class="fa-brands fa-twitter"></i>
+        </a>        
+        <a target="_blank" href="https://www.linkedin.com/company/jaihind-college-of-engineering/about/">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>        
+        <a target="_blank" href="mailto:jcei.jaihind@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+        </a>   
+    </div>  
+
+
+</body>
+</html>
