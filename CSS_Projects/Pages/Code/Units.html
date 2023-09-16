@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+
+    <style>
+
+        
+
+        /* Set different length values, using px (pixels) */
+        header {
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 50px;
+        }  
+
+        
+        /* Absolute Lengths */
+
+            /* (a) Centimeters */
+            h2 {
+                font-size: 0.5cm;
+                line-height: 1cm;
+            }
+
+            /* (b) Millimeters */
+            h3 {
+                font-size: 5mm;
+                line-height: 10mm;
+            }
+
+            /* (c) Inches */
+            h4 {
+                font-size: 0.4in;
+                line-height: 0.8in;
+            }
+
+            /* (d) Pixels */
+            h5 {
+                font-size: 15px;
+                line-height: 30px;
+            }
+
+            /* (e) Points */
+            h6 {
+                font-size: 17pt;
+                line-height: 34pt;
+            }
+
+            /* (f) Picas */
+            p.picas {
+                font-size: 1pc;
+                line-height: 2pc;
+            }
+        
+        
+        /*Relative Lengths*/
+            /* (a) em */
+            p.relaive1 {
+                font-size: 1em;
+                line-height: 2em;
+            }
+
+            /* (b) ex */
+            p.relative2 {
+                font-size: 2ex;
+                line-height: 4ex;
+            }
+
+            /* (c) ch */
+            p.relative3 {
+                font-size: 3ch;
+                line-height: 6ch;
+            }
+
+            /* (d) rem */
+            p.relative4 {
+                font-size: 4rem;
+                line-height: 6rem;
+
+            }
+
+            /* (e) vw */
+            p.relative5 {
+                font-size: 5vw;
+                line-height: 7vw;
+            }
+
+            /* (f) vh */
+            p.relative6 {
+                font-size: 6vh;
+                line-height: 8vh;
+
+            }
+
+            /* (g) vmin */
+            p.relative7 {
+                font-size: 7vmin;
+                line-height: 10vmin;
+
+            }
+
+            /* (h) vmax */
+            p.relative8 {
+                font-size: 8vmax;
+                line-height: 10vmax;
+            }
+
+            /* (i) % */
+            p.relative9 {
+                font-size: 150%;
+                line-height: 200%;
+            }
+        
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <div>
+
+            <h1>1] Units</h1>
+            <p>CSS has several different units for expressing a length.</p>
+            <p>Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.</p>
+
+            <!--  Set different length values, using px (pixels) -->
+            <p>Set different length values, using px (pixels)</p>
+            <header>Good Morning!<header>
+            <h2>Have a Good Day!</h2>
+        
+        </div>
+
+        
+        <div>
+
+            <h1>2] Absolute Lengths</h1>
+            <p>The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.</p>
+
+            <!-- (a) Centimeters -->
+            <div style="background-color:red;">
+                <h1>(a) Centimeters</h1>
+                <h2>Rose - Rose is Red.</h2>
+            </div>
+
+            <!-- (b) Millimeters -->
+            <div style="background-color: gray">
+                <h1>(b) Millimeters</h1>
+                <h3>Mogra - Mogra is white.</h3>
+            </div>
+
+            <!-- (c) Inches -->
+            <div style="background-color: pink;">
+                <h1>(c) Inches</h1>
+                <h4>Lotus - Lotus is Pink.</h4>
+            </div>
+
+            <!-- (d) Pixels -->
+            <div style="background-color: orange;">
+                <h1>(d) Pixels</h1>
+                <h5>Marigold - Marigold is orange.</h5>
+            </div>
+
+            <!-- (e) Points -->
+            <div style="background-color: lavender;">
+                <h1>(e) Points</h1>
+                <h6>Lavender - Lavender is lavender.</h6>
+            </div>
+
+            <!-- (f) Picas -->
+            <div style="background-color: purple;">
+                <h1>(f) Picas</h1>
+                <p class="picas">Hibiscus - Hibiscus is Purple.</p>
+            </div>
+        </div>
+
+
+        <div>
+
+            <h1>3] Relative Lengths</h1>
+            <p>Relative length units specify a length relative to another length property.</p>
+
+            <!-- (a) em -->
+            <div style="background-color: plum;">
+                <h2>(a) em</h2>
+                <p class="relaive1">Cat - Cat is Animal.</p>
+            </div>
+
+            <!-- (b) ex -->
+            <div style="background-color: green;">
+                <h2>(a) ex</h2>
+                <p class="relative2">Dog - Dog ia Aniaml.</p>
+            </div>
+
+            <!-- (c) ch -->
+            <div style="background-color: darksalmon;">
+                <h2>(c) ch</h2>
+                <p class="relative3">Cow - cow is Animal.</p>
+            </div>
+
+            <!-- (d) rem -->
+            <div style="background-color: cornflowerblue;">
+                <h2>(d) rem</h2>
+                <p class="relative4">Elephant - Elephant is Animal.</p>
+            </div>   
+            
+            <!-- (e) vw -->
+            <div style="background-color: mediumvioletred;">
+                <h2>(e) vw</h2>
+                <p class="relative5">Lion - Lion is Animal.</p>
+            </div>
+
+            <!-- (f) vh -->
+            <div style="background-color: darkcyan;">
+                <h2>(f) vh</h2>
+                <p class="relative6">Tiger - Tiger is Animal.</p>
+            </div>
+
+            <!-- (g) vmin -->
+            <div style="background-color:fuchsia;">
+                <h2>(g) vmin</h2>
+                <p class="relative7">Monkey - Monkey is Aniaml.</p>
+            </div>
+
+            <!-- (h) vmax -->
+            <div style="background-color: lavender;">
+                <h2>(h) vmax</h2>
+                <p class="relative8">Zebra - Zebra is Animal.</p>
+            </div>
+
+            <!-- (i) %-->
+            <div style="background-color: darkseagreen;">
+                <h2>(i) %</h2>
+                <p class="relative9">Camel - Camelis Animal.</p>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+</html> 
