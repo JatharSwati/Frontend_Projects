@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Images</title>
+
+    <style>
+        #borderimg1 { 
+            border: 15px solid transparent;
+            margin-bottom: 50px;
+            padding: 15px;
+            border-image: url(../Images/Border.jpg) 35 round;
+        }
+
+        #borderimg2 { 
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(../Images/Border.jpg) 20 stretch;
+        }
+
+        #borderimg3 {
+            border: 10px solid transparent;
+            margin-bottom: 50px;
+            padding: 15px;
+            border-image: url(../Images/Border.jpg) 100% round;
+        }
+
+        #borderimg4 {
+            border: 10px solid transparent;
+            margin-bottom: 50px;
+            padding: 15px;
+            border-image: url(../Images/Border.jpg) 20% round;
+        }
+
+        #borderimg5 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(../Images/Border.jpg) 30% round;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Border Images</h1>
+
+        <div>
+
+            <h1>1. The border-image Property</h1>
+            <p>The CSS border-image property allows you to specify an image to be used instead of the normal border around an element.</p>
+
+            <p>(a) Here, the middle sections of the image are repeated to create the border.</p>
+            <p id="borderimg1">border-image: url(Border.jpg) 35 round;</p>
+
+            <p>(b) Here, the middle sections of the image are stretched to create the border</p>
+            <p id="borderimg2" style="margin-bottom: 50px;">border-image: url(Border.jpg) 20 stretch;</p>
+
+            <p>Here is the original image:</p>
+            <img src="../Images/Border.jpg" style="margin-bottom: 50px;">
+
+        </div>
+
+        <div>
+
+            <h1>The border-image - Different Slice Values</h1>
+            <p>Different slice values completely changes the look of the border</p>
+
+            <p>(a) border-image: url(Border.jpg) 100% round;</p>
+            <p id="borderimg3"></p>
+
+            <p>(b) border-image: url(Border.jpg) 20% round;</p>
+            <p id="borderimg4"></p>
+
+            <p>(cs) border-image: url(Border.jpg) 30% round;</p>
+            <p id="borderimg5"></p>
+
+        </div>
+
+    </div>
+</body>
+</html>
