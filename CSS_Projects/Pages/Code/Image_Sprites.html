@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Sprites</title>
+    <style>
+
+        /* 1.Image Sprites - Create a Navigation List */
+        #navlist1 {
+            position: relative;
+        }
+
+        #navlist1 li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+
+        #navlist1 li, #navlist1 a {
+            height: 44px;
+            display: block;
+        }
+
+        #home2 {
+            left: 0px;
+            width: 46px;
+            background: url('../Images/img_navsprites.gif') 0 0;
+        }
+
+        #prev1 {
+            left: 63px;
+            width: 43px;
+            background: url('../Images/img_navsprites.gif') -47px 0;
+        }
+
+        #next2 {
+            left: 129px;
+            width: 43px;
+            background: url('../Images/img_navsprites.gif') -91px 0;
+        }
+
+        /* 2.Image Sprites - Hover Effect */
+        #navlist2 {
+            position: relative;
+        }
+
+        #navlist2 li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+
+        #navlist2 li, #navlist2 a {
+            height: 44px;
+            display: block;
+        }
+
+        #home3 {
+            left: 0px;
+            width: 46px;
+            background: url('../Images/img_navsprites_hover.gif') 0 0;
+        }
+
+        #prev2 {
+            left: 63px;
+            width: 43px;
+            background: url('../Images/img_navsprites_hover.gif') -47px 0;
+        }
+
+        #next3 {
+            left: 129px;
+            width: 43px;
+            background: url('../Images/img_navsprites_hover.gif') -91px 0;
+        }
+
+        #home3 a:hover {
+            background: url('../Images/img_navsprites_hover.gif') 0 -45px;
+        }
+
+        #prev2 a:hover {
+            background: url('../Images/img_navsprites_hover.gif') -47px -45px;
+        }
+
+        #next3 a:hover {
+            background: url('../Images/img_navsprites_hover.gif') -91px -45px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <h1>Image Sprites</h1>
+
+        <!-- 1.Image Sprites - Create a Navigation List -->
+        <div>
+            <h2>1.Image Sprites - Create a Navigation List</h2>
+            <ul id="navlist1">
+                <li id="home2"></li>
+                <li id="prev1"></li>
+                <li id="next2"></li>
+            </ul>
+        </div>
+
+        <!-- 2.Image Sprites - Hover Effect -->
+        <div>
+            <h2 style="margin-top: 100px;">2.Image Sprites - Hover Effect</h2>
+            <ul id="navlist2">
+                <li id="home3"><a href="#"></a></li>
+                <li id="prev2"><a href="#"></a></li>
+                <li id="next3"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
