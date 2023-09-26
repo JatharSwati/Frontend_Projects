@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Effects</title>
+
+    <style>
+
+        /* 1. Text Overflow */
+        p.test1 {
+          white-space: nowrap; 
+          width: 200px; 
+          border: 1px solid #000000;
+          overflow: hidden;
+          text-overflow: clip;
+        }
+
+        p.test2 {
+          white-space: nowrap; 
+          width: 200px; 
+          border: 1px solid #000000;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        /* 2. Word Wrapping */
+        p.test {
+          width: 210px; 
+          padding: 10px;
+          border: 1px solid #000000;
+          word-wrap: break-word;
+        }
+
+        /* 3. Word Breaking */
+        p.s1 {
+          width: 140px; 
+          padding: 10px;
+          border: 1px solid #000000;
+          word-break: keep-all;
+        }
+
+        p.s2 {
+          width: 140px; 
+          padding: 10px;
+          border: 1px solid #000000;
+          word-break: break-all;
+        }
+
+        p.t1 {
+        /* 4. Writing Mode */
+            writing-mode: horizontal-tb; 
+        }
+
+        span.t2 {
+            writing-mode: vertical-rl; 
+        }
+
+        p.t2 {
+            writing-mode: vertical-rl; 
+        }
+
+    </style>
+</head>
+<body>    
+    <div>
+
+        <h1>Text Effects</h1>
+
+        <!-- 1. Text Overflow -->
+        <div>
+            <h2>1. The text-overflow - </h2>
+            <p>The following two paragraphs contains a long text that will not fit in the box.</p>
+
+            <h3>(a) text-overflow: clip</h3>
+              <p class="test1">This is some long text that will not fit in the box</p>
+
+            <h3>(b) text-overflow: ellipsis</h3>
+            <p class="test2">This is some long text that will not fit in the box</p>
+        </div>
+
+        <!-- 2. Word Wrapping -->
+        <div>
+            <h2>2. Word Wrapping - </h2>
+            <p>The CSS word-wrap property allows long words to be able to be broken and wrap onto the next line.</p>
+            <p class="test">This paragraph contains a very long word: Good Morning!Good Morning!Good Morning!Good Morning!Good Morning!Good Morning!Good Morning!Good Morning!Good Morning!Good Morning!</p>
+        </div>
+        
+        <!-- 3. Word Breaking -->
+        <div>
+            <h2>3. Word Breaking - </h2>
+            <p>The  CSS word-break property specifies line breaking rules.</p>
+            <p class="s1">This paragraph contains some text. This line will-break-at-hyphens.</p>
+            <p class="s2">This paragraph contains some text. The lines will break at any character.</p>
+        </div>
+
+        <!-- 4. Writing Mode -->
+        <div>
+            <h2>4. Writing Mode - </h2>
+            <p>The CSS writing-mode property specifies whether lines of text are laid out horizontally or vertically.</p>
+            <p class="t1">(a) Some text with default writing-mode.</p>
+            <p>(b) Some text with a span element with a <span class="t2">vertical-rl</span> writing-mode.</p>
+            <p class="t2">(c) Some text with writing-mode: vertical-rl.</p>
+        </div>
+
+    </div>
+</body>
+</html>
