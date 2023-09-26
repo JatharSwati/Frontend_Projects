@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows</title>
+
+    <style>
+
+        h1 {
+            text-decoration: underline;
+        }
+
+        /* Shadow Effects */
+        /* 1. Text Shadow */
+        #s1 {
+            text-shadow: 1px 1px;
+            font-size: 40px;
+        }
+
+        #s2 {
+            text-shadow: 2px 1px hotpink;
+            font-size: 40px;
+        }
+
+        #s3 {
+            text-shadow: 3px 3px 5px darkcyan;
+            font-size: 40px;
+        }
+
+        #s4 {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            font-size: 40px;
+        }
+
+        #s5 {
+            text-shadow: 0 0 3px purple;
+            font-size: 40px;
+        }
+
+        /* 2. Multiple Text Shadow Effect */
+        #s6 {
+            text-shadow: 0 0 5px maroon, 0 0 5px darkorange;
+            font-size: 40px;
+        }
+
+        #s7 {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            font-size: 40px;
+        }
+
+        #s8 {
+            color: darkcyan;
+            text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            font-size: 40px;
+        }
+
+
+        /* Box Shadow */
+
+        /* 1. Specify a Horizontal and a Vertical Shadow */
+        #div1 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: palevioletred;
+            box-shadow: 10px 10px;
+        }
+
+        /* 2. Specify a Color for the Shadow */
+        #div2 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: peru;
+            box-shadow: 10px 10px gray;
+        }
+
+        /* 3. Add a Blur Effect to the Shadow */
+        #div3 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: plum;
+            box-shadow: 10px 10px 5px rgb(232, 5, 156);
+        }
+
+        /* 4. Set the Spread Radius of the Shadow */
+        #div4 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: whitesmoke;
+            box-shadow: 10px 10px 5px 15px darkcyan;
+        }
+
+        /* 5. Set the inset Parameter */
+        #div5 {
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            background-color: lavender;
+            box-shadow: 10px 10px 5px darkblue inset;
+        }
+
+        /* 6. Add Multiple Shadows */
+
+            /* (a) Multiple shadows */
+            #ex1 {
+                width: 300px;
+                height: 100px;
+                background-color: whitesmoke;
+                border: 1px solid;
+                padding: 20px;
+                box-shadow: 5px 5px orange, 10px 10px gray, 15px 15px green;
+                margin: 20px 0;
+            }
+
+            /* (b) Multiple shadows with blur effect*/
+            #ex2 {
+                width: 300px;
+                height: 100px;
+                background-color: whitesmoke;
+                border: 1px solid;
+                padding: 20px;
+                box-shadow: 5px 5px 8px orange, 10px 10px 8px gray, 15px 15px 8px green;
+                margin: 20px 0;
+            }
+
+        /* 7. Cards */
+        /* (a) Create Cards and Create Polaroid Images */
+        div.card {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+    
+        div.header {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            font-size: 40px;
+        }
+    
+        div.container {
+            padding: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div>
+
+        <div>
+
+            <h1>Shadow Effects</h1>
+            <p>With CSS you can add shadow to text and to elements.</p>
+            
+            <!-- 1. Text Shadow -->
+            <div>
+            
+                <h2>1. Text Shadow - </h2>
+                <p>The CSS text-shadow property applies shadow to text.</p>
+            
+                <p>(a) In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):</p>
+                <div id="s1">Text-shadow effect!</div>
+            
+                <p>(b) Add a color to the shadow:</p>
+                <div id="s2">Text-shadow effect!</div>
+            
+                <p>(c) Add a blur effect to the shadow:</p>
+                <div id="s3">Text-shadow effect!</div>
+            
+                <p>(d) The following example shows a white text with black shadow:</p>
+                <div id="s4">Text-shadow effect!</div>
+            
+                <p>(e) The following example shows a purple glow shadow:</p>
+                <div id="s5">Text-shadow effect!</div>
+            
+            </div>
+        
+            <!-- 2. Multiple Text Shadow Effect -->
+            <div>
+            
+                <h2>2. Multiple Text Shadow Effect - </h2>
+                <p>To add more than one shadow to the text, you can add a comma-separated list of shadows.</p>
+            
+                <p>(a) The following example shows a maroon and darkorange glow shadow:</p>
+                <div id="s6">Text-shadow effect!</div>
+            
+                <p>(b) The following example shows a white text with black, blue, and darkblue shadow:</p>
+                <div id="s7">Text-shadow effect!</div>
+            
+                <p>The text-shadow property to create a plain border around some text (without shadows):</p>
+                <div id="s8">Border around text!</div>
+            
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h1>Box Shadow</h1>
+            <p>The CSS box-shadow property is used to apply one or more shadows to an element.</p>
+
+            <!-- 1. Specify a Horizontal and a Vertical Shadow -->
+            <h2>1. Specify a Horizontal and a Vertical Shadow -</h2>
+            <p>Specify a horizontal and a vertical shadow. The default color of the shadow is the current text-color.</p>
+            <div id="div1">This is a div element with a box-shadow.</div>
+
+            <!-- 2. Specify a Color for the Shadow -->
+            <h2>2. Specify a Color for the Shadow - </h2>
+            <p>The color parameter defines the color of the shadow.</p>
+            <div id="div2">A div element with a gray box-shadow.</div>
+
+            <!-- 3. Add a Blur Effect to the Shadow -->
+            <h2>3. Add a Blur Effect to the Shadow - </h2>
+            <p>The blur parameter defines the blur radius. The higher the number, the more blurred the shadow will be.</p>
+            <div id="div3">A div element with a 5px blurred, maroon box-shadow.</div>
+
+            <!-- 4. Set the Spread Radius of the Shadow -->
+            <h2>4. Set the Spread Radius of the Shadow - </h2>
+            <p>The spread parameter defines the spread radius.</p>
+            <p>A positive value increases the size of the shadow, a negative value decreases the size of the shadow.</p>
+            <div id="div4">A div element with a blurred, lightblue box-shadow, with a spread radius of 15px.</div>
+
+            <!-- 5. Set the inset Parameter -->
+            <h2>5. Set the inset Parameter - </h2>
+            <p>The inset parameter changes the shadow from an outer shadow (outset) to an inner shadow.</p>
+            <div id="div5">A div element with a blurred, darkblue, inset box-shadow</div>
+
+            <!-- 6. Add Multiple Shadows -->
+            <h2>6. Add Multiple Shadows - </h2>
+            <p>An element can also have multiple shadows.</p>
+
+            <div id="ex1">
+                <h2>Multiple shadows:</h2>
+            </div>
+
+            <div id="ex2">
+                <h2>Multiple shadows with blur effect:</h2>
+            </div>
+
+            <!-- 7. Cards -->
+            <h2>7. Cards - </h2>
+            <p>You can also use the box-shadow property to create paper-like cards</p>
+
+            <h3>(a) Create Cards: </h3>
+
+            <div class="card">
+                <div class="header">
+                  <h3>Monday</h3>
+                </div>              
+                <div class="container">
+                  <p style="color:darkblue">Saptember 25, 2023</p>
+                </div>
+            </div>
+
+            <h3>(b) Create Polaroid Images: </h3>
+
+            <div class="card">
+                <img src="../Images/Nature.jpg" alt="Norway" style="width:100%">
+                <div class="container">
+                  <p>Hardanger, Norway</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
