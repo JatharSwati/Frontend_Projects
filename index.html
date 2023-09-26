@@ -7,49 +7,74 @@
         <title>HTML Home Page</title>
         
         <style>
-            div {               
-                font-size: 20px;          
-                padding: 20px;                               
-                font-weight: bold;               
-            }
-     
-            body
-            {
-                background-image: url("Index_BG.jpg");                
+
+            body {
+                min-height: 100vh;
+                margin: 0;
+                background: linear-gradient(135deg, hsl(32, 93%, 62%), hsl(20, 100%, 60%), hsl(343, 77%, 58%), hsl(331, 79%, 50%), hsl(317, 72%, 47%), hsl(287, 70%, 45%), hsl(259, 71%, 41%), hsl(242, 71%, 44%), hsl(233, 70%, 41%));
+                background-repeat: no-repeat;
+                background-size: 120% 150%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
-            a {
-                background-color: maroon;
-                border: 7px ridge rgb(70, 0, 0);
-                border-radius: 5px ;
+            .container {
+                text-align: center;
+            }
+
+            .text {
                 color: white;
-                width: 1000px;
-                padding: 3px;
-                text-align: center;             
-                cursor: pointer;
-                text-decoration: none;
+                font-size: 43px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-shadow: 3px 3px 2px rgb(235, 195, 195)
+
             }
 
-            h1  {
-                font-family: Copperplate, Papyrus, fantasy;
+            .link-button {
+                display: inline-block;
+                font-size: 25px;
+                margin: 50px 50PX 0;
             }
+
+            a:link, a:visited {
+                color:whitesmoke;
+                border: 3px solid whitesmoke;
+                padding: 10px 20px;
+                text-decoration: none;
+                box-shadow: 0 0 6px 3px whitesmoke;
+            
+            }
+
+            a:hover, a:active {
+                background-color: whitesmoke;
+                color: rgb(245, 104, 128);
+                box-shadow:none;
+                border-radius: 5px;
+            }
+
         </style>
     
     </head> 
-    <body> 
-        <center>
-            <h1>My Projects</h1>            
-            <div>
-                <div>                        
-                    <span><a href="HTML_Projects/HTML_Home_Page.html">HTML Pages</a></span>            
-                </div>    
-                <div>  
-                    <span><a href="CSS_Projects/CSS_Home_Page.html">CSS Pages</a></span>
-                </div> 
-                <div>  
-                    <span><a href="Advanced_CSS_Projects/CSS_Advanced_Home_Page.html">Advanced CSS Pages</a></span>
-                </div>        
-            </div>  
-        </center>  
-    </body>
+
+    <body>
+
+        <div class="container">
+
+            <h1 class="text"><b>Welcome To My Frontend Projects.</b></h1>
+
+            <div class="link-button">
+              <a href="HTML_Projects/HTML_Home_Page.html">HTML</a>
+            </div>
+
+            <div class="link-button">
+              <a href="CSS_Projects/CSS_Home_Page.html">CSS</a>
+            </div>
+        
+            <div class="link-button">
+              <a href="Advanced_CSS_Projects/CSS_Advanced_Home_Page.html">Advance CSS</a>
+            </div>
+
+        </div>
+</body>
 </html>
