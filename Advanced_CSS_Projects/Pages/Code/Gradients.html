@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gradients</title>
+
+    <style>
+
+        h2 {
+            text-decoration: underline;
+        }
+
+        /* Linear Gradients */
+        /* 1. Direction - Top to Bottom */
+        #lineargrad1 {
+            height: 100px;
+            background-image: linear-gradient(rgb(239, 29, 176), white, green);
+            text-align: center;
+        }
+
+        /* 2. Direction - Left to Right */
+        #lineargrad2 {
+            height: 100px;
+            background-image: linear-gradient(to right, rgb(235, 181, 18) , rgb(255, 0, 157), rgb(51, 85, 194));
+            text-align: center;
+            
+        }
+
+        /* 3. Direction - Diagonal */
+        #lineargrad3 {
+            height: 100px;
+            background-image: linear-gradient(to bottom right, rgb(190, 18, 90), rgb(229, 222, 222), rgb(95, 176, 211));
+            text-align: center;
+        }
+
+        /* 4. Using Angles */
+        #angle1 {
+            height: 70px;
+            background-image: linear-gradient(0deg, orange, white, green);
+            text-align: center;
+        }
+
+        #angle2 {
+            height: 70px;
+            background-image: linear-gradient(90deg, orange, white, green);
+            text-align: center;
+        }
+
+        #angle3 {
+            height: 70px;
+            background-image: linear-gradient(180deg, orange, white, green);
+            text-align: center;
+        }
+
+        #angle4 {
+            height: 70px;
+            background-image: linear-gradient(270deg, orange, white, green);
+            text-align: center;
+        }
+
+        #angle5 {
+            height: 70px;
+            background-image: linear-gradient(50deg, orange, white, green);
+            text-align: center;
+        }
+
+        /* 5. Using Multiple Color Stops */
+
+            /* Example 1 */
+            #stops1 {
+                height: 70px;
+                background-image: linear-gradient(rgb(206, 223, 16), rgb(229, 128, 209), rgb(240, 150, 172));
+                text-align: center;
+            }
+
+            #stops2 {
+                height: 70px;
+                background-image: linear-gradient(rgb(255, 0, 72), rgb(240, 174, 174), rgb(22, 99, 215));
+                text-align: center;
+            }
+
+            #stops3 {
+                height: 70px;
+                background-image: linear-gradient(rgb(255, 0, 149) 30%, rgb(249, 237, 237) 60%, green 90%);
+                text-align: center;
+            }
+
+            #stops4 {
+                height: 70px;
+                background-image: linear-gradient(orange, green);
+                text-align: center;
+            }
+
+            #stops5 {
+                height: 70px;
+                background-image: linear-gradient(rgb(253, 253, 9), rgb(225, 151, 151), rgb(0, 60, 128));
+                text-align: center;
+            }
+
+            /* Example 2 */
+            #rainbow {
+                height: 55px;
+                background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+                text-align: center;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+                height: 100px;
+            }
+
+        /* 6. Using Transparency */
+        #transparancy {
+            height: 100px;
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,0.2), rgba(255,0,0,0.4), rgba(255,0,0,0.6), rgba(255,0,0,0.8), rgba(255,0,0,1));
+            text-align: center;
+        }
+
+        /* 7. Repeating a linear-gradient */
+        #grad1 {
+            height: 70px;
+            background-image: repeating-linear-gradient(magenta, yellow 10%, cyan 20%);
+        }
+
+        #grad2 {
+            height: 70px;
+            background-image: repeating-linear-gradient(45deg,magenta,yellow 7%,cyan 10%);
+        }
+
+        #grad3 {
+            height: 70px;
+            background-image: repeating-linear-gradient(190deg,magenta,yellow 7%,cyan 10%);
+        }
+
+        #grad4 {
+            height: 70px;
+            background-image: repeating-linear-gradient(90deg,magenta,yellow 7%,cyan 10%);
+        }
+
+        #grad5 {
+            height: 70px;
+            background-image: repeating-linear-gradient(45deg, magenta 0px, magenta 10px, magenta 10px, yellow 10px, yellow 20px);
+        }
+
+
+        /* Radial Gradients */
+        /* 1. Radial Gradient - Evenly Spaced Color Stops */
+        #radial {
+            height: 200px;
+            width: 200px;
+            background-image: radial-gradient(rgb(212, 17, 183), rgb(230, 230, 204), rgb(7, 125, 228));
+        }
+
+        /* 2. Radial Gradient - Differently Spaced Color Stops */
+        #radial2 {
+            height: 200px;
+            width: 200px;
+            background-image: radial-gradient(red 20%, yellow 40%, darkblue 50%);
+        }
+
+        /* 3. Set Shape */
+            /* (a) Ellipse (this is default) */
+            #shape1 {
+              height: 150px;
+              width: 200px;
+              background-image: radial-gradient(red, white, green);
+            }
+
+            /* (b) Circle */
+            #shape2 {
+              height: 150px;
+              width: 200px;
+              background-image: radial-gradient(circle, red, white, green);
+            }
+
+        /* 4. Use of Different Size Keywords */
+        #keyword1 {
+          height: 200px;
+          width: 200px;
+          background-image: radial-gradient(closest-side at 60% 55%, purple, lavender, black);
+        }
+
+        #keyword2 {
+          height: 150px;
+          width: 200px;
+          background-image: radial-gradient(farthest-side at 60% 55%, purple, lavender, black);
+        }
+
+        #keyword3 {
+          height: 200px;
+          width: 200px;
+          background-image: radial-gradient(closest-corner at 60% 55%, purple, lavender, black);
+        }
+
+        #keyword4 {
+          height: 200px;
+          width: 200px;
+          background-image: radial-gradient(farthest-corner at 60% 55%, purple, lavender, black);
+        }
+
+        /* 5. Repeating a radial-gradient */
+        #repeat {
+            height: 200px;
+            width: 200px;
+            background-image: repeating-radial-gradient(maroon, white 10%, green 15%);
+        }
+
+
+        /* Conic Gradients */
+        /* 1. Conic Gradient: Seven Colors */
+        #conic1 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(red, yellow, maroon, green, PaleVioletRed, purple, skyblue);
+        }
+
+        /* 2. Conic Gradient: Four Colors and Degrees */
+        #conic2 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(darkblue 50deg, yellow 180deg, green 50deg, PaleVioletRed 270deg);
+        }
+
+        /* 3. Create Pie Charts */
+
+            /* Example 1:*/
+            #ex1 {
+                height: 200px;
+                width: 200px;
+                background-image: conic-gradient(red, yellow, green, purple);
+                border-radius: 50%;
+            }
+            /* Example 2: */
+            #ex2 {
+                height: 200px;
+                width: 200px;
+                background-image: conic-gradient(lightcoral 0deg, lightcoral 90deg, indigo 90deg, indigo 180deg, darkcyan 180deg, darkcyan 270deg, peru 270deg);
+                border-radius: 50%;
+            }
+
+        /* 4. Conic Gradient With Specified From Angle */
+        #conic4 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(from 90deg, red, yellow, darkcyan);
+            border-radius: 50%;
+        }
+
+        /* 5. Conic Gradient With Specified Center Position */
+        #conic5 {
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(at 60% 45%, darkmagenta, darkcyan, darksalmon);
+            border-radius: 50%;
+        }
+
+        /* 6. Repeating a Conic Gradient */
+
+        /* Example 1: */
+            #s1 {
+                height: 200px;
+                width: 200px;
+                background-image: repeating-conic-gradient(lavender 10%, purple 15%);
+                border-radius: 50%;
+            }
+
+            /* Example 2: */
+            #s2 {
+                height: 200px;
+                width: 200px;
+                background-color: red; /* For browsers that do not support gradients */
+                background-image: repeating-conic-gradient(hotpink 0deg 10deg, yellow 10deg 20deg, darkcyan 20deg 30deg);
+                border-radius: 50%;
+            }
+
+    </style>
+</head> 
+<body>
+    <div>
+
+        <h1> Gradients</h1>
+
+        <div>
+
+            <h2>Linear Gradients</h2>
+
+            <!-- 1. Direction - Top to Bottom -->
+            <div>
+                <h3>1. Direction: Top to Bottom -</h3>
+                <p>The following example shows a linear gradient that starts at the top.</p>
+                <div id="lineargrad1">Top to Bottom</div>
+            </div>
+
+            <!-- 2. Direction - Left to Right -->
+            <div>
+                <h3>2. Direction: Left to Right -</h3>
+                <p>The following example shows a linear gradient that starts from the left.</p>
+                <div id="lineargrad2">Left to Right</div>
+            </div>
+
+            <!-- 3. Direction - Diagonal -->
+            <div>
+                <h3>3. Direction: Diagonal -</h3>
+                <p>You can make a gradient diagonally by specifying both the horizontal and vertical starting positions.</p>
+                <P>The following example shows a linear gradient that starts at top left and goes to bottom right.</P>
+                <div id="lineargrad3">Top Left to Bottom Right</div>
+            </div>
+
+            <!-- 4. Using Angles -->
+            <div>
+                <h3>4. Using Angles -</h3>
+                <p>Linear Gradients - Using Different Angles</p>
+                <p id="angle1">0deg</p>
+                <p id="angle2">90deg</p>
+                <p id="angle3">180deg</p>
+                <p id="angle4">270deg</p>
+                <p id="angle5">50deg</p>
+            </div>
+
+            <!-- 5.Using Multiple Color Stops -->
+            <div>
+                <h3>5. Using Multiple Color Stops -</h3>
+
+                <h4>Example 1:</h4>
+                <P>The following example shows a linear gradient (from top to bottom) with multiple color stops</P>
+                <p id="stops1">Color Stops (evenly spaced)</p>
+                <p id="stops2">Color Stops (evenly spaced)</p>
+                <p id="stops3">Color Stops (not evenly spaced)</p>
+                <p id="stops4">Color Stops (evenly spaced)</p>
+                <p id="stops5">Color Stops (evenly spaced)</p>
+
+                <h4>Example 3:</h4>
+                <p>The following example shows how to create a linear gradient (from left to right) with the color of the rainbow and some text:</p>
+                <div id="rainbow">Rainbow Background</div>
+            </div>
+
+            <!-- 6. Using Transparency -->
+            <div>
+                <h3>6. Using Transparency -</h3>
+                <p>The following example shows a linear gradient that starts from the left.It starts fully transparent, transitioning to full color red</p>
+                <div id="transparancy">Linear Gradient - Transparency</div>
+            </div>
+
+            <!-- 7.Repeating a linear-gradient -->
+            <div>
+                <h3>7. Repeating a linear-gradient -</h3>
+                <p>(a) The repeating-linear-gradient() function is used to repeat linear gradients</p>
+                <div id="grad1"></div>
+
+                <p>(b) A repeating gradient on 45deg axe starting magenta and finishing cyan:</p>
+                <div id="grad2"></div>
+
+                <p>(c) A repeating gradient on 190deg axe starting magenta and finishing cyan:</p>
+                <div id="grad3"></div>
+
+                <p>(d) A repeating gradient on 90deg axe starting magenta and finishing cyan:</p>
+                <div id="grad4"></div>
+
+                <p>(e) A repeating linear gradient with solid stripes:</p>
+                <div id="grad5"></div>
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h2>Radial Gradients</h2>
+            <p>A radial gradient is defined by its center.</p>
+            <p>By default, shape is ellipse, size is farthest-corner, and position is center.</p>
+ 
+            <!-- 1. Radial Gradient - Evenly Spaced Color Stops -->
+            <div>
+                <h3>1. Radial Gradient: Evenly Spaced Color Stops -</h3>
+                <p>The following example shows a radial gradient with evenly spaced color stops:</p>
+                <div id="radial"></div>
+            </div>
+
+            <!-- 2. Radial Gradient - Differently Spaced Color Stops -->
+            <div>
+                <h3>2. Radial Gradient: Differently Spaced Color Stops -</h3>
+                <p>The following example shows a radial gradient with differently spaced color stops</p>
+                <div id="radial2"></div>
+            </div>
+
+            <!-- 3. Set Shape -->
+            <div>
+                <h3>3. Radial Gradient: Shapes -</h3>
+                <p>The shape parameter defines the shape. It can take the value circle or ellipse. The default value is ellipse.</p>
+                <p>The following example shows a radial gradient with the shape of a circle</p>
+
+                <h4>(a) Ellipse (this is default):</h2>
+                <div id="shape1"></div>
+                                
+                <h4>(b) Circle:</h4>
+                <div id="shape2"></div>
+            </div>
+
+            <!-- 4.Use of Different Size Keywords -->
+            <div>
+                <h3>4. Use of Different Size Keywords -</h3>
+                <p>The size parameter defines the size of the gradient. It can take four values</p>
+
+                <h4>(a) closest-side:</h4>
+                <div id="keyword1"></div>
+
+                <h4>(b) farthest-side:</h4>
+                <div id="keyword2"></div>
+
+                <h4>(c) closest-corner:</h4>
+                <div id="keyword3"></div>
+
+                <h4>(d) farthest-corner (default):</h4>
+                <div id="keyword4"></div>
+            </div>
+
+            <!-- 5. Repeating a radial-gradient -->
+            <div>
+                <h3>5. Repeating a radial-gradient -</h3>
+                <p>The repeating-radial-gradient() function is used to repeat radial gradients</p>
+                <div id="repeat"></div>
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h2>Conic Gradients</h2>
+            <p>A conic gradient is a gradient with color transitions rotated around a center point.</p>
+
+            <!-- 1. Conic Gradient: Seven Colors -->
+            <div>
+                <h3>1. Conic Gradient: Seven Colors -</h3>
+                <p>The following example shows a conic gradient with seven colors.</p>
+                <div id="conic1"></div>
+            </div>
+
+            <!-- 2. Conic Gradient: Four Colors and Degrees -->
+            <div>
+                <h3>2. Conic Gradient: Four Colors and Degrees -</h3>
+                <p>The following example shows a conic gradient with four colors and a degree for each color.</p>
+                <div id="conic2"></div>
+            </div>
+
+            <!-- 3. Create Pie Charts -->
+            <div>
+                <h3>3. Create Pie Charts -</h3>
+
+                <p>(a) Just add border-radius: 50% to make the conic gradient look like a pie</p>
+                <div id="ex1"></div>
+
+                <p>(b) Here is another pie chart with defined degrees for all the colors</p>
+                <div id="ex2"></div>
+            </div>
+
+            <!-- 4. Conic Gradient With Specified From Angle -->
+            <div>
+                <h3>4. Conic Gradient With Specified From Angle -</h3>
+                <p>The following example shows a conic gradient with a from angle of 90deg</p>
+                <div id="conic4"></div>
+            </div>
+
+            <!-- 5. Conic Gradient With Specified Center Position -->
+            <div>
+                <h3>5. Conic Gradient With Specified Center Position -</h3>
+                <p>The following example shows a conic gradient with a center position of 60% 45%</p>
+                <div id="conic5"></div>
+            </div>
+
+            <!-- 6. Repeating a Conic Gradient -->
+            <div>
+                <h3>6. Repeating a Conic Gradient -</h3>
+
+                <p>(a) The repeating-conic-gradient() function is used to repeat conic gradients</p>
+                <div id="s1"></div>
+
+                <p>(b) Here is a repeating conic gradient with defined color-starts and color-stops</p>
+                <div id="s2"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
