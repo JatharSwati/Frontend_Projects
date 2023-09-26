@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds</title>
+    <style>
+
+        /* 1.Multiple Backgrounds */
+        #SJ {
+            background-image: url(../Images/Flower.jpg), url(../Images/PaperImage.jpg);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 30px;
+        }
+
+        /* 2.Background Size */
+        #ex1 {
+            border: 1px solid black;
+            background: url(../Images/Flower.jpg);
+            background-size: 100px 80px;
+            background-repeat: no-repeat;
+            padding: 15px;
+        }
+
+        #ex2 {
+            border: 1px solid black;
+            background: url(../Images/Flower.jpg);
+            background-repeat: no-repeat;
+            padding: 15px;
+        }
+
+        #div1 {
+          border: 1px solid black;
+          height: 120px;
+          width: 150px;
+          background: url(../Images/Flower.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        #div2 {
+          border: 1px solid black;
+          height: 120px;
+          width: 150px;
+          background: url(../Images/Flower.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        #div3 {
+          border: 1px solid black;
+          height: 120px;
+          width: 150px;
+          background: url(../Images/Flower.jpg);
+          background-repeat: no-repeat;
+        }
+
+        /* 3. Define Sizes of Multiple Background Images */
+        #div4 {
+            background: url(../Images/Tree.jpg) left top no-repeat, 
+                        url(../Images/Flower.jpg) right bottom no-repeat, 
+                        url(../Images/PaperImage.jpg) left top repeat;
+            padding: 15px;
+            background-size: 50px, 130px, auto;
+        }
+
+        /* 4. Full Size Background Image 
+           5.Hero Image (A Large Image With Text)*/
+        a:link, a:visited.size1 {
+            background-color: palevioletred;
+            border: 2px solid black;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        a:hover, a:active {
+            background-color: maroon;
+            color: white;
+        }
+
+        /* 6. The background-origin Property */
+        .s1 {
+            border: 10px solid black;
+            padding: 20px;
+            background: url(../Images/Flower.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .s2 {
+            border: 10px solid black;
+            padding: 20px;
+            background: url(../Images/Flower.jpg);
+            background-repeat: no-repeat;
+            background-origin: border-box;
+        }
+
+        .s3 {
+            border: 10px solid black;
+            padding: 20px;
+            background: url(../Images/Flower.jpg);
+            background-repeat: no-repeat;
+            background-origin: content-box;
+        }
+
+        /* 7.background-clip Property */
+        .j1 {
+            border: 10px double black;
+            background: darkcyan;
+            padding: 30px;
+        }
+
+        .j2 {
+            border: 10px double black;
+            background: chocolate;
+            padding: 30px;
+            background-clip: padding-box;
+        }
+
+        .j3 {
+            border: 10px double black;
+            background: green;
+            padding: 30px;
+            background-clip: content-box;
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+        <h1>Backgrounds</h1>
+
+        <!-- 1.Multiple Backgrounds -->
+        <div>
+            <h2>1.Multiple Backgrounds - </h2>
+            <p>The following div element has two background images</p>
+            <div id="SJ">
+                <p>(a) CSS allows you to add multiple background images for an element, through the background-image property.</p>
+                <p>(b) The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.</p>
+                <p>(c) Example has two background images, the first image is a flower (aligned to the bottom and right) and the second image is a paper background (aligned to the top-left corner)</p>
+            </div>
+        </div>
+
+        <!-- 2.Background Size -->
+        <div>
+
+            <h2>2.Background Size - </h2>
+
+            <div>
+                <h3>A] background-size: pixels(p)</h3>
+                <p><u>Resized background-image:</u></p>
+                <div id="ex1">
+                    <p>(a) The CSS background-size property allows you to specify the size of background images.</p>
+                    <p>(b) The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.</p>
+                    <p>(c) Example resizes a background image to much smaller than the original image (using pixels)</p>
+                </div>
+
+                <p><u>Original size of the background-image:</u></p>
+                <div id="ex2">
+                    <p>(a) The CSS background-size property allows you to specify the size of background images.</p>
+                    <p>(b) The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.</p>
+                    <p>(c) Example resizes a background image to much smaller than the original image (using pixels)</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>B] background-size: contain:</h3>
+                <div id="div1"></div>
+            </div>
+
+            <div>
+                <h3>C] background-size: cover:</h3>
+                <div id="div2"></div>
+            </div>
+
+            <div>
+                <h3>D] No background-size defined:</h3>
+                <div id="div3"></div>
+            </div>
+
+            <div>
+                <h3>E] Original image:</h3>
+                <img src="../Images/Flower.jpg" alt="Flowers" width="224" height="162">
+            </div>
+
+        </div>
+
+        <!-- 3. Define Sizes of Multiple Background Images -->
+        <div>
+            <h2>3. Define Sizes of Multiple Background Images - </h2>
+            <div id="div4">
+                <p>(a) The background-size property also accepts multiple values for background size (using a comma-separated list), when working with multiple backgrounds.</p>
+                <p>(b) Example has three background images specified, with different background-size value for each image:</p>
+            </div>    
+        </div>
+
+        <!-- 4. Full Size Background Image -->
+        <div class="size1">
+            <h2>4.Full Size Background Image</h2>
+            <p>Now we want to have a background image on a website that covers the entire browser window at all times.</p>
+            <a href="Background_Image.html">Full Size Background Image</a>
+        </div>
+
+
+        <!-- 5.Hero Image (A Large Image With Text) -->
+        <div>
+            <h2>5.Hero Image (A Large Image With Text)</h2>
+            <p>You could also use different background properties on a div to create a hero image (a large image with text),and place it where you want.</p>
+            <a href="Hero_Image.html">Hero Image</a>
+        </div>
+
+        <!-- 6. The background-origin Property-->
+        <div>
+
+            <h2>6.background-origin Property - </h2>
+            <p>The CSS background-origin property specifies where the background image is positioned.</p>
+
+            <p style="font-weight: bold;">(a) No background-origin (padding-box is default):</p>
+            <div class="s1">
+                <h2>The background-origin Property</h2>
+                <p>The CSS background-origin property specifies where the background image is positioned.</p>
+                <p>border-box - the background image starts from the upper left corner of the border
+                   padding-box - (default) the background image starts from the upper left corner of the padding edge
+                   content-box - the background image starts from the upper left corner of the content
+                </p>
+            </div>
+
+            <p style="font-weight: bold;">(b) background-origin: border-box:</p>
+            <div class="s2">
+                <h2>The background-origin Property</h2>
+                <p>The CSS background-origin property specifies where the background image is positioned.</p>            
+                <p>border-box - the background image starts from the upper left corner of the border
+                   padding-box - (default) the background image starts from the upper left corner of the padding edge
+                   content-box - the background image starts from the upper left corner of the content</p>
+            </div>
+
+            <p style="font-weight: bold;">(c) background-origin: content-box:</p>
+            <div class="s3">
+                <h2>The background-origin Property</h2>
+                <p>The CSS background-origin property specifies where the background image is positioned.</p>            
+                <p>border-box - the background image starts from the upper left corner of the border
+                   padding-box - (default) the background image starts from the upper left corner of the padding edge
+                   content-box - the background image starts from the upper left corner of the content
+                </p>
+            </div>
+        
+        </div>
+
+        <!-- 7.background-clip Property -->
+        <div>
+
+            <h2>7.background-clip Property - </h2>
+            <p>The CSS background-clip property specifies the painting area of the background.</p>
+            
+            <p style="font-weight: bold;">(a) No border-clip(border-box is default):</p>
+            <div class="j1">
+                <h2>The background-clip Property</h2>
+                <p>border-box - (default) the background is painted to the outside edge of the border
+                   padding-box - the background is painted to the outside edge of the padding
+                   content-box - the background is painted within the content box
+                </p>                
+                <p>The CSS background-clip property specifies the painting area of the background.</p>
+            </div>
+        
+            <p style="font-weight: bold;">(b) background-clip: padding-box:</p>
+            <div class="j2">
+                <h2>The background-clip Property</h2>
+                <p>border-box - (default) the background is painted to the outside edge of the border
+                   padding-box - the background is painted to the outside edge of the padding
+                   content-box - the background is painted within the content box
+                </p>                
+                <p>The CSS background-clip property specifies the painting area of the background.</p>
+            </div>
+        
+            <p style="font-weight: bold;">(c) background-clip: content-box:</p>
+            <div class="j3">
+                <h2>The background-clip Property</h2>
+                <p>border-box - (default) the background is painted to the outside edge of the border
+                   padding-box - the background is painted to the outside edge of the padding
+                   content-box - the background is painted within the content box
+                </p>                
+                <p>The CSS background-clip property specifies the painting area of the background.</p>                          
+            </div>
+</body>
+</html>
