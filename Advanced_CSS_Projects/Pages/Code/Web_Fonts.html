@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Fonts</title>
+    <style>
+
+        /* 1.Using The Font You Want */
+        @font-face {
+            font-family: myFirstFont;
+            src: url(../Font/Sansation_Light.woff);
+        }
+
+        @font-face {
+            font-family: mySecondFont;
+            src: url(../Font/Sansation_Bold.woff);
+        }
+
+        div.light {
+            font-family: myFirstFont;
+        }
+
+        div.bold {
+            font-family: mySecondFont;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Web Fonts</h1>
+
+        <!-- 1.Using Light Text -->
+        <h1>1.Using Light Text</h1>
+        <div class="light">
+            <h2>The @Font-Face Rule</h2>
+            <p>With CSS, websites can use fonts other than the pre-selected "web-safe" fonts.</p>
+        </div>
+
+        <!-- 2.Using Bold Text -->
+        <h1>2.Using Bold Text</h1>
+        <div class="bold">
+            <h2>The @Font-Face Rule</h2>
+            <p>With CSS, websites can use fonts other than the pre-selected "web-safe" fonts.</p>
+        </div>
+
+    </div>
+</body>
+</html>
