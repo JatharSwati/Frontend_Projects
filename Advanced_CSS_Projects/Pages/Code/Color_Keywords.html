@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Keywords</title>
+
+    <style>
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        /* 1.The Transparent Keyword */
+        body {
+            background-image: url("../Images/PaperImage1.jpg");
+        }
+
+        div.s1 { 
+            background-color: rgb(218, 81, 104);
+            border: 3px solid black;
+            padding: 15px;
+        }
+
+        div.s2 { 
+            background-color: transparent;
+            border: 3px solid black;
+            padding: 15px;
+        } 
+
+        /* 2.The currentcolor Keyword*/
+        /* Example 1 */
+        #currentcolor1 {
+            color: green;
+            border: 8px solid currentcolor;
+            padding: 15px;  
+        }
+
+        /* Example 2 */
+        body {
+            color: darkslateblue;
+        }
+
+        #cureentcolor2 {
+            background-color: currentcolor;
+            padding: 15px;
+        }
+
+        /* Example 3 */
+        h4 {
+            color: orangered;
+        }
+
+        #cureentcolor3 { 
+            box-shadow: 0px 0px 15px currentcolor;
+            border: 5px solid currentcolor;
+            padding: 15px;
+        }
+
+        /* 3.The inherit Keyword */
+        div.inherit {
+            border: 5px solid peru;
+            padding: 15px;
+        }
+
+        span {
+            border: inherit;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        
+        <h1 style="text-decoration: underline;">Color Keywords</h1>
+
+        <!-- 1.The Transparent Keyword -->
+        <div>
+            <h2>1.The Transparent Keyword-</h2>
+            <p>The transparent keyword is used to make a color transparent.
+               This is often used to make a transparent background color for an element.</p>
+            <p>Here, the background color of the "div" element will be fully transparent, and the background image will show through:</p>
+            <div class="s1">This div has a light green background.</div>
+            <br>
+            <div class="s2">This div has a transparent background.</div>
+        </div>
+
+        <!-- 2.The currentcolor Keyword -->
+        <div>
+
+            <h2>2.The currentcolor Keyword-</h2>
+            <p>The currentcolor keyword refers to the current value of the color property of an element.</p>
+
+            <h3>Example 1:</h3>
+            <p>In this example the border color of the"div" element will be Green, because the text color of the "div" element is Grren:</p>
+            <div id="currentcolor1">This div element has a Green text color and a Green border.</div>            
+
+            <h3>Example 2:</h3>
+            <p>In this example the "div" background color is set to the current color value of the body element:</p>
+            <div id="cureentcolor2">
+                <p style="color: white;">This div's background color is set to the current color value of the body element.</p>
+            </div>
+
+            <h3>Example 3:</h3>
+            <p>In this example the "div" border color and shadow color is set to the current color value of the body element:</p>
+            <div id="cureentcolor3">
+                <p>This div's border color and shadow color is set to the current color value of the body element.</p>
+            </div>
+        </div>
+
+        <!-- 3.The Inherit Keyword -->
+        <div>
+            <h2>3.The Inherit Keyword-</h2>
+            <p>The inherit keyword specifies that a property should inherit its value from its parent element.</p>
+            <p>In this example the "span" border settings will be inherited from the parent element: </p>
+            <div class="inherit">Here, the <span>span element's</span> border settings will be inherited from the parent element.</div>
+            <br>
+            <div style="border:2px double green; padding: 15px;">Here, the <span>span element's</span> border settings will also be inherited from the parent element.</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
