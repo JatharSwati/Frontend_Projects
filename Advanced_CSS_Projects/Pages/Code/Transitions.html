@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+
+        /* Transitions */
+        div.ex1 {
+            width: 270px;
+            height: 100px;
+            background: rgb(230, 24, 92);
+            transition: width 2s;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 60px;
+            border: 10px double white;
+            color: white;
+        }
+
+        div.ex1:hover {
+            width: 400px;
+        }
+
+        /* Change Several Property Values */
+        div.ex2 {
+            width: 270px;
+            height: 100px;
+            background: darkslateblue;
+            transition: width 2s, height 4s;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 60px;
+            border: 10px double white;
+            color: white;
+        }
+
+        div.ex2:hover {
+            width: 400px;
+            height: 200px;
+        }
+
+        /*Specify the Speed Curve of the Transition*/
+        div.ex3 {
+            width: 270px;
+            height: 80px;
+            background: palevioletred;
+            transition: width 1s;
+            border: 10px double white;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        div.ex3:hover {
+            width: 400px;
+        }
+
+        /* Delay the Transition Effect */
+        div.ex4 {
+            width: 270px;
+            height: 100px;
+            background: peru;
+            transition: width 3s;
+            transition-delay: 1s;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 60px;
+            border: 10px double white;
+            color: white;
+        }
+
+        div.ex4:hover {
+          width: 400px;
+        }
+
+        /* Transition + Transformation */
+
+        /* The translate() Method */
+        div#tt {
+            width: 270px;
+            height: 100px;
+            color: white;
+            background-color: darkcyan;
+            border: 10px double white;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 60px;
+            margin-bottom: 35px;
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        div.t1:hover {
+            transform: translate(50px, 20px);
+        }
+
+        div.t2:hover {
+            width: 200px;
+            height: 150px;
+            transform: rotate(360deg);
+        }
+
+        div.t3:hover {
+            transform: scale(2, 2);
+        }
+
+        div.t4:hover {
+            transform: scale(0.5, 0.5);
+        }
+
+        div.t5:hover {
+            transform: scaleX(2);
+        }
+
+        div.t6:hover {
+            transform: scaleY(2);
+        }
+
+        div.t7:hover {
+            transform: skewX(10deg);
+        }
+
+        div.t8:hover {
+            transform: skewY(10deg);
+        }
+
+        div.t9:hover {
+            transform: skew(20deg, 10deg);
+        }
+
+        div.t10:hover {
+            transform: matrix(2, -0.3, 0, 1, 0, 0);
+        }
+
+        div.t11:hover {
+            transform: matrix(1, 0, 0.5, 1, 150, 0);
+        }
+
+        div.t12:hover {
+            animation-timing-function: cubic-bezier(0.08, 1.79, 1,-0.94);
+        }       
+
+        /* More Transition Examples */
+        div.ex6 {
+            width: 270px;
+            height: 100px;
+            background: red;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 60px;
+            border: 10px double white;
+            color: white;
+            transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+        }
+
+        div.ex6:hover {
+            width: 400px;
+        }
+
+        /* Using the shorthand property transition */
+        div.ex7 {
+            width: 270px;
+            height: 100px;
+            background: orchid;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 60px;
+            border: 10px double white;
+            color: white;
+            transition: width 2s linear 1s;
+        }
+
+        div.ex7:hover {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Change Several Property Values -->
+    <div>
+        <h1>Transitions - </h1>
+        <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div class= "ex1">Transitions</div>
+    </div>
+
+    <!-- Change Several Property Values -->
+    <div>
+        <h1>Change Several Property Values - </h1>
+        <p>The following example adds a transition effect for both the <b>width</b> and <b>height</b> property. </p>
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div class="ex2">Transitions</div>
+    </div>
+
+    <!-- Specify the Speed Curve of the Transition -->
+    <div>
+        <h1>Specify the Speed Curve of the Transition - </h1>
+        <p>The <b>transition-timing-function property</b> specifies the speed curve of the transition effect.</p>
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <p>1. linear - specifies a transition effect with the same speed from start to end.</p>
+        <div class= "ex3" style="transition-timing-function: linear;">linear</div><br>
+
+        <p>2. ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default).</p>
+        <div class= "ex3" style="transition-timing-function: ease;">ease</div><br>
+
+        <p>3. ease-in - specifies a transition effect with a slow start</p>
+        <div class= "ex3" style="transition-timing-function: ease-in;">ease-in</div><br>
+
+        <p>4. ease-out - specifies a transition effect with a slow end.</p>
+        <div class= "ex3" style="transition-timing-function: ease-out;">ease-out</div><br>
+
+        <p>5. ease-in-out - specifies a transition effect with a slow start and end.</p>
+        <div class= "ex3" style="transition-timing-function: ease-in-out;">ease-in-out</div><br>
+
+        <p>6. cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function.</p>
+        <div class="ex3" style="animation-timing-function: cubic-bezier(0.08, 1.79, 1,-0.94);">cubic-bezier(n,n,n,n)</div>
+
+    </div>
+
+    <!-- Delay the Transition Effect -->
+    <div>
+        <h1>Delay the Transition Effect - </h1>
+        <p>The transition-delay property specifies a delay (in seconds) for the transition effect.</p>
+        <p>Example has a <b>1 second </b>delay before starting.</p>
+        <p>Hover over the div element below, to see the transition effect.</p>        
+        <div class="ex4">Transitions</div>
+    </div>
+
+    <!-- Transition + Transformation -->
+    <div>
+        <h1>Transition + Transformation - </h1>
+        <p>Example adds a <b>transition effect to the transformation.</b></p>
+        <p>Hover over the div element below:</p>
+
+        <div>
+            <p>1. The translate() Method</p>
+            <div id="tt" class="t1">translate() Method</div>
+        </div>
+
+        <div>
+            <p>2. The rotate() Method</p>
+            <div id="tt" class="t2">rotate() Method</div>
+        </div>
+
+        <div>
+            <p>3. The scale() Method</p>
+            <div id="tt" class="t3">scale() Method - 1</div>
+            <div id="tt" class="t4">scale() Method - 2</div>
+        </div>
+
+        <div>
+            <p>4. The scaleX() Method</p>
+            <div id="tt" class="t5">scaleX() Method</div>
+        </div>
+        
+        <div>
+            <p>5. The scaleY() Method</p>
+            <div id="tt" class="t6">scaleY() Method</div>
+        </div>
+
+        <div>
+            <p>6. The skewX() Method</p>
+            <div id="tt" class="t7">skewX() Method</div>
+        </div>
+
+        <div>
+            <p>7. The skewY() Method</p>
+            <div id="tt" class="t8">skewY() Method</div>
+        </div>
+
+        <div>
+            <p>8. The skew() Method</p>
+            <div id="tt" class="t9">skew() Method</div>
+        </div>
+
+        <div>
+            <p>9. The matrix() Method</p>
+            <div id="tt" class="t10">matrix() Method - 1</div>
+            <div id="tt" class="t11">matrix() Method - 2</div>
+        </div>
+
+    </div>
+
+    <!-- More Transition Examples -->
+    <div>
+        <h1>More Transition Examples - </h1>
+        <p>The CSS transition properties can be specified <b>one by one</b>, like this.</p>
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div class="ex6">Transitions</div>
+    </div>
+
+    <!-- Using the shorthand property transition -->
+    <div>
+        <h1>Using the shorthand property transition - </h1>
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div class="ex7">Transitions</div>
+        <p><b>Note:</b> The transition effect has a <b>1 second</b> delay before starting.</p>
+    </div>
+
+</body>
+</html> 
