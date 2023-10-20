@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Images</title>
+
+    <style>
+
+        /* 1. Rounded Images */
+        #img1 {
+            border-radius: 20px;
+            height: 250px;
+            width: 260px;
+            margin: 0 20px;
+        }
+
+        #img2 {
+            border-radius: 50%;
+            height: 260px;
+            width: 260px;
+            margin: 0 20px;
+        }
+
+        #img3 {
+            border-radius: 50%;
+            height: 200px;
+            width: 260px;
+            margin: 0 20px;
+        }
+
+        /* 2. Thumbnail Images */
+        #img4 {
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            height: 200px;
+            width: 250px;
+            margin: 0 20px;
+        }
+
+        #img4:hover {
+            box-shadow: 0 0 5px 3px grey;
+        }
+
+        #img5 {
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            height: 200px;
+            width: 250px;
+            margin: 0 20px;
+        }
+
+        #img5:hover {
+            box-shadow: 0 0 5px 3px grey;
+        }
+
+        /* 3. Responsive Images */
+        #img6 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 4. Center an Image */
+        #img7 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            width: 50%;
+        }
+
+        /* 5. Polaroid Images / Cards*/
+        div.polaroid {
+            width: 260px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 20px;
+        }
+
+        div.container {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        /* 6. Transparent Image */
+        .img1 {
+            opacity: 0.2;
+            margin: 0 20px;
+        }
+
+        .img2 {
+            opacity: 0.6;
+            margin: 0 20px;
+        }
+
+        .img3 {
+            opacity: 1;
+            margin: 0 20px;
+        }
+
+        /* 7. Image Text */
+        .container {
+            position: relative;
+        }
+
+        .text { 
+            width: 100%;
+            height: auto;
+            opacity: 0.3;
+        }
+
+        .topleft {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .topright {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .bottomleft {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .bottomright {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 8. Image Filters */
+        .filter {
+            width: 33%;
+            height: auto;
+            float: left; 
+            max-width: 235px;
+        }
+
+        .blur {filter: blur(4px);}
+        .brightness {filter: brightness(250%);}
+        .contrast {filter: contrast(200%);}
+        .grayscale {filter: grayscale(100%);}
+        .huerotate {filter: hue-rotate(180deg);}
+        .invert {filter: invert(100%);}
+        .opacity {filter: opacity(50%);}
+        .saturate {filter: saturate(7);}
+        .sepia {filter: sepia(100%);}
+        .shadow {filter: drop-shadow(8px 8px 10px green);}
+
+        /* 9. Image Hover Overlay */
+
+        /* (a) Fade in Overlay */
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image1 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: maroon;
+        }
+
+        .container:hover .overlay1 {
+            opacity: 1;
+        }
+
+        .text1 {
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        /* (b) Fade in a Box */
+
+        .image2 {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text2 {
+            background-color: maroon;
+            color: white;
+            font-size: 20px;
+            padding: 20px 35px;
+        }
+
+        /* (c) Slide in (top) */
+
+        .image3 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay3 {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: maroon;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .container:hover .overlay3 {
+            bottom: 0;
+            height: 100%;
+        }
+
+        .text3 {
+            white-space: nowrap; 
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        /* (d) Slide in (bottom) */
+
+        .image4 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay4 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: maroon;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .container:hover .overlay4 {
+          height: 100%;
+        }
+
+        .text4 {
+            white-space: nowrap; 
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        /* (e) Slide in (left) */
+
+        .image5 {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay5 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: maroon;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+        }
+
+        .container:hover .overlay5 {
+            width: 100%;
+        }
+
+        .text5 {
+            white-space: nowrap; 
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        /* (f) Slide in (right) */
+
+        .image6 {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .overlay6 {
+          position: absolute;
+          bottom: 0;
+          left: 100%;
+          right: 0;
+          background-color: maroon;
+          overflow: hidden;
+          width: 0;
+          height: 100%;
+          transition: .5s ease;
+        }
+
+        .container:hover .overlay6 {
+          width: 100%;
+          left: 0;
+        }
+
+        .text6 {
+          white-space: nowrap; 
+          color: white;
+          font-weight: bold;
+          font-size: 50px;
+          position: absolute;
+          overflow: hidden;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+</head>
+<html>
+    <body>
+        <div>
+
+            <h1>Styling Images</h1>
+
+            <!-- 1. Rounded Images -->
+            <div>
+
+                <h2>1. Rounded Images</h2>
+                <p>Use the <b>border-radius</b> property to create rounded images:</p>
+
+                <img src="../Images/Nature_Image1.jpg" alt="Nature Image" id="img1">
+
+                <img src="../Images/Nature_Image1.jpg" alt="Nature Image" id="img2">
+
+                <img src="../Images/Nature_Image1.jpg" alt="Nature Image" id="img3">
+
+            </div>
+
+            <!-- 2. Thumbnail Images -->
+            <div>
+
+                <h2>2. Thumbnail Images</h2>
+                <p>Use the <b>border</b> property to create thumbnail images.</p>
+
+                <p>(A) Thumbnail Image:</p>
+                <img src="../Images/Nature_Image2.jpg" alt="Nature Image"  id="img4">
+
+                <p>(B) Thumbnail Image as Link:</p>
+                <a target="_blank" href="../Images/Nature_Image2.jpg">
+                    <img src="../Images/Nature_Image2.jpg" alt="Nature Image" id="img5">
+                </a>
+
+            </div>
+
+            <!-- 3. Responsive Images -->
+            <div>            
+                <h2>3. Responsive Images</h2>
+                <p>Responsive images will automatically adjust to fit the size of the screen.</p>
+                <img src="../Images/Nature_Image3.jpg" alt="Nature Image" id="img6">
+            </div>
+
+            <!-- 4. Center an Image-->
+            <div>
+                <h2>4. Center an Image</h2>
+                <p>To center an image, set left and right margin to auto and make it into a block element</p>
+                <img src="../Images/Paris.jpg" alt="Nature Image" id="img7">
+            </div>
+
+            <!-- 5. Polaroid Images / Cards-->
+            <div>
+
+                <h2>5. Responsive Polaroid Images / Cards</h2>
+
+                <div class="polaroid">
+                    <img src="../Images/BMW.jpg" alt="5 Terre" style="width:100%">
+                    <div class="container">
+                        <p>BMW</p>
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                  <img src="../Images/Mercedes.jpg" alt="Norther Lights" style="width:100%">
+                  <div class="container">
+                      <p>MERCEDES</p>
+                  </div>
+                </div>
+            </div>
+
+                <!-- 6. Transparent Image -->
+                <div>
+
+                    <h2>6. Transparent Image</h2>
+                    <p>The opacity property can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
+
+                    <div>
+                        <p>(a) Image with 0.3 opacity:</p>
+                        <img src="../Images/Forest.jpg" alt="Forest" class="img1" width="260" height="200">
+                    </div>
+
+                    <div>
+                        <p>(b) Image with o.6 opacity:</p>
+                        <img src="../Images/Forest.jpg" alt="Forest" class="img2" width="260" height="200">
+                    </div>
+
+                    <div>
+                        <p>(c) Image with 1 opacity:</p>
+                        <img src="../Images/Forest.jpg" alt="Forest" class="img3" width="260" height="200">
+                    </div>
+
+                </div>
+
+                <!-- 7. Image Text -->
+                <div>
+                    <h2>7. Image Text</h2>
+                    <p>How to position text in an image:</p>
+                    <div class="container">
+                        <img src="../Images/BG.jpg" alt="Cinque Terre" class="text" width="1000" height="300">
+                        <div class="topleft">Top Left</div>
+                        <div class="topright">Top Right</div>
+                        <div class="bottomleft">Bottom Left</div>
+                        <div class="bottomright">Bottom Right</div>
+                        <div class="center">Centerd</div>
+                    </div>
+                </div>
+
+                <!-- 8. Image Filters -->
+                <div>
+                    <h2>8. Image Filters</h2>
+                    <img src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="blur" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="brightness" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="contrast" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="grayscale" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="huerotate" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="invert" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="opacity" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="saturate" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="sepia" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                    <img class="shadow" src="../Images/Rose.jpg" alt="Rose" width="300" height="300">
+                </div>
+
+                <!-- 9. Image Hover Overlay -->
+                <div>
+                    <h2>9. Image Hover Overlay</h2>
+
+                    <div>
+                        <p>(a) Fade in Overlay</p>
+                        <div class="container">
+                            <img src="../Images/Nature_Image5.jpg" alt="Nature Image" class="image1">
+                            <div class="overlay1">
+                              <div class="text1">Welcome</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>(b) Fade in a Box</p>
+                        <div class="container">
+                            <img src="../Images/Nature_Image5.jpg" alt="Nature Image" class="image2" style="width:100%">
+                            <div class="middle">
+                                <div class="text2">Swati Jathar</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>(c) Slide in (top)</p>
+                        <div class="container">
+                            <img src="../Images/Nature_Image5.jpg" alt="Nature Image" class="image3">
+                            <div class="overlay3">
+                                <div class="text3">Welcome</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>(d) Slide in (bottom)</p>
+                        <div class="container">
+                            <img src="../Images/Nature_Image5.jpg" alt="Nature Image" class="image4">
+                            <div class="overlay4">
+                                <div class="text4">Welcome</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p>(e) Slide in (left)</p>
+                        <div class="container">
+                            <img src="../Images/Nature_Image5.jpg" alt="Nature Image" class="image5">
+                            <div class="overlay5">
+                                <div class="text5">Welcome</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>(f) Slide in (right)</p>
+                        <div class="container">
+                            <img src="../Images/Nature_Image5.jpg" alt="Nature Image" class="image6">
+                            <div class="overlay6">
+                                <div class="text6">Welcome</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+    </body>
+</html>
