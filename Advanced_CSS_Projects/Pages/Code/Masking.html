@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masking</title>
+
+    <style>
+
+        .mask1 {
+            -webkit-mask-image: url(../Images/w3logo.jpg);
+            mask-image: url(../Images/w3logo.jpg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;   
+        }
+
+        .mask2 {
+            -webkit-mask-image: url(../Images/w3logo.jpg);
+            mask-image: url(../Images/w3logo.jpg);
+        }
+
+        .mask3 {
+            -webkit-mask-image: linear-gradient(black, transparent);
+            mask-image: linear-gradient(black, transparent);
+        }
+
+        .mask4 p {
+            font-size: 25px;
+            font-weight: bold;
+            padding: 20px;
+            color: white;
+        }
+
+        .mask4 {
+            max-width: 600px;
+            height: 350px;
+            overflow-y: scroll;
+            background: url(../Images/Nature_Image2.jpg) no-repeat;
+            -webkit-mask-image: linear-gradient(black, transparent);
+            mask-image: linear-gradient (black, transparent);
+        }
+
+        .mask5 {
+            -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+            mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+        }
+
+        .mask6 {
+            -webkit-mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+            mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <h1>Masking</h1>
+
+        <div>
+            <p>1. An image with a mask layer image:</p>
+            <div class="mask1">           
+                <img src="../Images/Nature_Image2.jpg" alt="Nature Image" width="600" height="400">
+            </div>
+        </div>
+
+        <div>
+            <p>2. The mask-repeat property specifies if or how a mask image will be repeated:</p>
+            <div class="mask2">
+                <img src="../Images/Nature_Image2.jpg" alt="Nature Image" width="600" height="400">
+            </div>
+        </div>
+
+        <div>
+            <p>3. A linear gradient as a mask layer:</p>
+            <div class="mask3">
+                <img src="../Images/Nature_Image2.jpg" alt="Nature Image" width="600" height="400">
+            </div>
+        </div>
+
+        <div>
+            <p>4. Use a linear-gradient along with text masking as the mask layer for our image:</p>
+            <div class="mask4">
+                <p>Nature, in the broadest sense, is the physical world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large, if not the only, part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.</p>
+                <P>The word nature is borrowed from the Old French nature and is derived from the Latin word natura, or "essential qualities, innate disposition", and in ancient times, literally meant "birth".</P>
+                <p>Which originally related to the intrinsic characteristics of plants, animals, and other features of the world to develop of their own accord. The concept of nature as a whole, the physical universe, is one of several expansions of the original notion; it began with certain core applications of the word φύσις by pre-Socratic philosophers (though this word had a dynamic dimension then, especially for Heraclitus), and has steadily gained currency ever since.</p>
+            </div>
+        </div>
+
+        <div>
+            <p>5. A radial gradient as a mask layer (a circle):</p>
+            <div class="mask5">
+                <img src="../Images/Nature_Image2.jpg" alt="Nature Image" width="600" height="400">
+            </div>
+        </div>
+
+        <div>
+            <p>6. A radial gradient as a mask layer (an ellipse):</p>
+            <div class="mask6">
+                <img src="../Images/Nature_Image2.jpg" alt="Nature Image" width="600" height="400">
+            </div>                
+        </div>
+
+        <div>
+            <p>7. An SVG mask layer (formed as a triangle):</p>
+            <svg width="300" height="200">
+                <mask id="svgmask1">
+                  <polygon fill="#ffffff" points="200 0, 400 400, 0 400"></polygon>
+                </mask>
+                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../Images/Nature_Image2.jpg" mask="url(#svgmask1)"></image>
+            </svg>
+        </div>
+
+        <div>
+            <p>8. An SVG mask layer (formed as a star):</p>
+            <svg width="600" height="400">
+                <mask id="svgmask2">
+                  <polygon fill="#ffffff" points="100,10 40,198 190,78 10,78 160,198"></polygon>
+                </mask>
+                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../Images/Nature_Image2.jpg" mask="url(#svgmask2)"></image>
+              </svg>
+        </div>
+
+        <div>
+            <p>9. An SVG mask layer (formed as circles):</p>
+            <svg width="600" height="400">
+                <mask id="svgmask3">
+                  <circle fill="#ffffff" cx="75" cy="75" r="75"></circle>
+                  <circle fill="#ffffff" cx="80" cy="260" r="75"></circle>
+                  <circle fill="#ffffff" cx="270" cy="160" r="75"></circle>
+                </mask>
+                <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../Images/Nature_Image2.jpg" mask="url(#svgmask3)"></image>
+            </svg>
+        </div>
+
+        <div>
+            <h2>Original image:</h2>
+            <img src="../Images/Nature_Image2.jpg" alt="Nature Image" width="600" height="400">
+        </div>
+
+
+    </div>
+
+</body>
+</html>
