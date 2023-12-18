@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Reflection</title>
+
+    <style>
+
+        /* Image Reflection */
+        /* 1. Reflection below the Image */
+        .img1 {
+            -webkit-box-reflect: below;
+            height: 150px;
+            margin-bottom: 150px;
+        }
+
+        /* 2. Reflection above the Image*/
+        .img2 {
+            -webkit-box-reflect: above;
+            height: 150px;
+            margin-top: 150px;
+        }
+
+        /* 3. Reflection to the right of the Image */
+        .img3 {
+            -webkit-box-reflect: right;
+            height: 150px;
+        }  
+
+        /* 4. Reflection to the left of the image */
+        .img4 {
+            -webkit-box-reflect: left;
+            height: 150px;
+            margin-left: 80px;
+        } 
+        
+        /* Reflection Offset */
+        /* Reflection below the Image, with a 20px Offset */
+        .img5 {
+            -webkit-box-reflect: below 20px;
+            height: 150px;
+            margin-bottom: 170px;
+        }
+
+        /* Reflection With Gradient */
+        /* A fade-out effect on the reflection */
+        .img6 {
+            -webkit-box-reflect: right 0px linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+            height: 150px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <div>
+
+            <h1>Image Reflection</h1>
+
+            <div>
+                <p>1. Reflection below the Image:</p>
+                <img src="../Images/Tree1.jpg" class="img1">
+            </div>
+
+            <div>
+                <p>2. Reflection above the Image:</p>
+                <img src="../Images/Tree1.jpg" class="img2">
+            </div>
+
+            <div>
+                <p>3. Reflection to the right of the Image:</p>
+                <img src="../Images/Tree1.jpg" class="img3">
+            </div>
+
+            <div>
+                <p>4. Reflection to the left of the image:</p>
+                <img src="../Images/Tree1.jpg" class="img4">
+            </div>
+        </div>
+
+        <div>
+
+            <h1>Reflection Offset</h1>
+
+            <div>
+                <p>Reflection below the Image, with a 20px Offset:</p>
+                <img src="../Images/Tree1.jpg" class="img5">
+            </div>
+
+        </div>
+
+        <div>
+
+            <h1>Reflection With Gradient</h1>
+
+            <div>
+                <p>A fade-out effect on the reflection:</p>
+                <img src="../Images/Tree1.jpg" class="img6">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
