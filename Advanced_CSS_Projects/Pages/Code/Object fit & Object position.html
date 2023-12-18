@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit & Object position</title>
+
+    <style>
+
+        /*The object-fit Property*/
+
+        /* 1. Using object-fit: cover; */
+        .img1 {
+            width:200px;
+            height:300px;
+            object-fit: cover;
+        }
+
+        /* 2. Using object-fit: contain; */
+        .img2 {
+            width: 200px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /* 3. Using object-fit: fill; */
+        .img3 {
+            width: 200px;
+            height: 300px;
+            object-fit: fill;
+        }
+
+        /* 4. Using object-fit: none; */
+        .img4 {
+            width: 200px;
+            height: 300px;
+            object-fit: none;
+        }
+
+        /* 5. Using object-fit: scale-down; */
+        .img5 {
+            width: 200px;
+            height: 300px;
+            object-fit: scale-down;
+        }
+
+        /* 6. Not Using object-fit */
+        .img6 {
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+
+        /* 7. Using object-fit */
+        .img7 {
+            float: left;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* The object-position Property */
+
+        /* 1. Using object-position */
+        .image1 {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            object-position: 80% 100%;
+        }
+
+        .image2 {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            object-position: 15% 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div>
+
+        <div>
+
+            <h1>The object-fit Property</h1>
+
+            <!-- 1. Using object-fit: cover; -->
+            <div>
+                <p>1. Using object-fit: cover;</p>
+                <img src="../Images/Paris.jpg" alt="Paris" width="400" height="300" class="img1">
+            </div>
+
+            <!-- 2. Using object-fit: contain; -->
+            <div>
+                <p>2. Using object-fit: contain;</p>
+                <img src="../Images/Paris.jpg" alt="Paris" class="img2">
+            </div>
+
+            <!-- 3. Using object-fit: fill; -->
+            <div>
+                <p>3. Using object-fit: fill;</p>
+                <img src="../Images/Paris.jpg" alt="Paris" class="img3">
+            </div>
+
+            <!-- 4. Using object-fit: none; -->
+            <div>
+                <p>4. Using object-fit: none;</p>
+                <img src="../Images/Paris.jpg" alt="Paris" class="img4">
+            </div>
+
+            <!-- 5. Using object-fit: scale-down; -->
+            <div>
+                <p>5. Using object-fit: scale-down;</p>
+                <img src="../Images/Paris.jpg" alt="Paris" class="img5">
+            </div>
+
+            <!-- 6. Not Using object-fit -->
+            <div style="width:100%;height:400px;">
+                <p>6. Not Using object-fit </p>
+                <img src="../Images/Nature_Image1.jpg" alt="Nature Image" class="img6">
+                <img src="../Images/Nature_Image2.jpg" alt="Nature Image" class="img6">
+            </div>
+
+            <!-- 7. Using object-fit -->
+            <div style="width:100%;height:400px; margin-top: 50px;">
+                <p> 7. Using object-fit </p>
+                <img src="../Images/Nature_Image3.jpg" alt="Nature Image" class="img7">
+                <img src="../Images/Nature_Image4.jpg" alt="Nature Image" class="img7">
+            </div>
+
+        </div>
+
+        <div>
+
+            <h1 style="margin-top: 80px;">The object-position Property</h1>
+            <p>To position the specific part of the image, we will use the object-position property.</p>
+
+            <!-- 1. Using object-position -->
+            <div>
+                <img src="../Images/Paris.jpg" alt="Paris" width="400" height="300" class="image1">
+                <img src="../Images/Paris.jpg" alt="Paris" width="400" height="300" class="image2">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
