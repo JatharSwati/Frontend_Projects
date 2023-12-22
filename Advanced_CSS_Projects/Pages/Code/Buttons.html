@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+
+    <style>
+
+        h3 {
+            margin-top: 30px;
+        }
+
+        /* 1. Basic Button Styling */
+        .button1 {
+            background-color: rgb(234, 15, 88);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* 2. Button Colors */
+        .button2 {
+            background-color: #04AA6D; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* 3. Button Sizes */
+        .button3 {
+            background-color: darkcyan;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        /* 4.Button Padding*/
+        .button4 {
+            background-color: chocolate;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* 5. Rounded Buttons */
+        .button5 {
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* 6. Colored Button Borders */
+        .button6 {
+            background-color: white;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: 3px solid;
+        }
+
+        /* 7. Hoverable Buttons */
+        .hoverBtn1 {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .btnBG1:hover {
+            background-color: white !important;
+            color: black;
+            border: 5px solid darkcyan;
+        }
+
+        .btnBG2:hover {
+            background-color: white !important;
+            color: black;
+            border: 5px solid chocolate;
+        }
+
+
+        .btnBG3:hover {
+            background-color: white !important;
+            color: black;
+            border: 5px solid maroon;
+        }
+
+        .btnBG4:hover {
+            background-color: white !important;
+            color: black;
+            border: 5px solid darkblue;
+        }
+
+        .btnBG5:hover {
+            background-color: white !important;
+            color: black;
+            border: 5px solid purple;
+        }
+
+        .hoverBtn2 {
+            background-color: white;
+            border: none;
+            color: black;
+            border: 2px solid;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .btnBorder1:hover {
+          background-color: darkcyan;
+          color: white;
+        }
+
+        .btnBorder2:hover {
+          background-color: chocolate;
+          color: white;
+        }
+
+        .btnBorder3:hover {
+          background-color: maroon;
+          color: white;
+        }
+
+        .btnBorder4:hover {
+          background-color: darkblue;
+          color: white;
+        }
+
+        .btnBorder5:hover {
+          background-color: purple;
+          color: white;
+        }   
+        
+        /* 8. Shadow Buttons */
+        .button8 {
+            background-color: mediumvioletred;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        .btnShadow1 {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .btnShadow2:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        /* 9. Disabled Buttons */
+        .button9 {
+            background-color: navy;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* 10. Button Width */
+        .button10 {
+            background-color: olive;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* 11. Button Groups */
+        .btn-group1 .btn1 {
+            background-color: rgb(151, 54, 54);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+        }
+
+        .btn-group1 .btn1:hover {
+            background-color: maroon;
+        }
+
+        /* 12. Bordered Button Group */
+        .btn-group2 .btn2 {
+            background-color: #04AA6D; /* Green */
+            border: 1px solid green;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+        }
+
+        .btn-group2 .btn2:not(:last-child) {
+            border-right: none; /* Prevent double borders */
+        }
+
+        .btn-group2 .btn2:hover {
+            background-color: #3e8e41;
+        }
+        
+        /* 13. Vertical Button Group */
+        .btn-group3 .btn3 {
+            background-color: rgb(204, 112, 112);
+            border: 1px solid rgb(203, 81, 81);
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            width: 150px;
+            display: block;
+        }
+
+        .btn-group3 .btn3:not(:last-child) {
+            border-bottom: none; /* Prevent double borders */
+        }
+
+        .btn-group3 .btn3:hover {
+            background-color: indianred;
+        }
+
+        /*14. Button on Image*/
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #f1f1f1;
+            color: black;
+            font-size: 16px;
+            padding: 16px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .container .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* 15. Animated Buttons */
+        .button15 {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: indigo;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button15 span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button15 span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button15:hover span {
+            padding-right: 25px;
+        }
+
+        .button15:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        /* 16. Animated Button - "Pressed Effect" */
+        .button16 {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: mediumvioletred;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button16:hover {
+            background-color: rgb(148, 3, 95);
+        }
+
+        .button16:active {
+            background-color: mediumvioletred;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        /* 17. Animated Button - Fade in Effect */
+        .button17 {
+          background-color: peru;
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 18px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button17:hover {
+            opacity: 1
+        }
+
+        /* 18. Animated Button - Ripple Effect */
+        .button18 {
+            position: relative;
+            background-color: firebrick;
+            border: none;
+            font-size: 20px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .button18:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .button18:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <h1>Buttons</h1>
+
+        <!-- 1. Basic Button Styling -->
+        <div>
+
+            <h3>1. Basic Button Styling:</h3>
+
+            <div>
+                <button style="margin-bottom: 6px;">Default Button</button>
+            </div>
+    
+            <div>
+                <button class="button1">Button</button>
+            </div>
+            
+            <div>
+                <a href="#" class="button1">Link Button</a>
+            </div>
+    
+            <div>
+                <input type="button" class="button1" value="Input Button">
+            </div>
+
+        </div> 
+        
+        <!-- 2. Button Colors -->
+        <div>
+
+            <h3>2. Button Colors:</h3>
+            <p>Change the background color of a button with the background-color property:</p>
+
+            <div>
+                <button class="button2" style="background-color: green;">Green</button>
+                <button class="button2" style="background-color: blue;">Blue</button>
+                <button class="button2" style="background-color: red;">Red</button>
+                <button class="button2" style="background-color: gray;">Gray</button>
+                <button class="button2" style="background-color: black;">Black</button>
+            </div>
+
+        </div>
+
+        <!-- 3. Button Sizes -->
+        <div>
+
+            <h3>3. Button Sizes:</h3>
+            <p>Change the font size of a button with the font-size property:</p>
+
+            <div>
+                <button class="button3" style="font-size: 10px;">10px</button>
+                <button class="button3" style="font-size: 12px;">12px</button>
+                <button class="button3" style="font-size: 16px;">16px</button>
+                <button class="button3" style="font-size: 20px;">20px</button>
+                <button class="button3" style="font-size: 24px;">24px</button>
+            </div>
+
+        </div>
+
+        <!-- 4.Button Padding -->
+        <div>
+
+            <h3>4.Button Padding:</h3>
+            <p>Change the padding of a button with the padding property:</p>
+
+            <div>
+                <button class="button4" style="padding: 8px 10px;">8px 10px</button>
+                <button class="button4" style="padding: 12px 18px;">12px 18px</button>
+                <button class="button4" style="padding: 20px 28px;">20px 28px</button>
+                <button class="button4" style="padding: 30px 38px;">30px 38px</button>
+                <button class="button4" style="padding: 40px;">40px</button>
+            </div>
+
+        </div>
+
+        <!-- 5. Rounded Buttons -->
+        <div>
+
+            <h3>5. Rounded Buttons:</h3>
+            <p><p>Add rounded corners to a button with the border-radius property:</p></p>
+
+            <div>
+                <button class="button5" style="border-radius: 2px;">2px</button>
+                <button class="button5" style="border-radius: 8px;">8px</button>
+                <button class="button5" style="border-radius: 15px;">15px</button>
+                <button class="button5" style="border-radius: 20px;">20px</button>
+                <button class="button5" style="border-radius: 50%;">50%</button>
+            </div>
+
+        </div>
+
+        <!-- 6. Colored Button Borders -->
+        <div>
+
+            <h3>6. Colored Button Borders:</h3>
+
+            <div>
+                <button class="button6" style="border-color: green;">Green</button>
+                <button class="button6" style="border-color: blue;">Blue</button>
+                <button class="button6" style="border-color: red;">Red</button>
+                <button class="button6" style="border-color: gray;">Gray</button>
+                <button class="button6" style="border-color: black;">Black</button>
+            </div>
+
+        </div>
+
+        <!-- 7. Hoverable Buttons -->
+        <div>
+
+            <h3>7. Hoverable Buttons:</h3>
+
+            <div>
+                <button class="hoverBtn1 btnBG1" style="background-color: darkcyan;">Darkcyan</button>
+                <button class="hoverBtn1 btnBG2" style="background-color: chocolate;">Chocolate</button>
+                <button class="hoverBtn1 btnBG3" style="background-color: maroon;">Maroon</button>
+                <button class="hoverBtn1 btnBG4" style="background-color: darkblue;">Darkblue</button>
+                <button class="hoverBtn1 btnBG5" style="background-color: purple;">Purple</button>
+            </div>
+
+            <div>
+                <button class="hoverBtn2 btnBorder1" style="border-color: darkcyan;">Darkcyan</button>
+                <button class="hoverBtn2 btnBorder2" style="border-color: chocolate;">Chocolate</button>
+                <button class="hoverBtn2 btnBorder3" style="border-color: maroon;">Maroon</button>
+                <button class="hoverBtn2 btnBorder4" style="border-color: darkblue;">Darkblue</button>
+                <button class="hoverBtn2 btnBorder5" style="border-color: purple;">Purple</button>
+            </div>
+
+        </div>
+
+        <!-- 8. Shadow Buttons -->
+        <div>
+
+            <h3>8. Shadow Buttons:</h3>
+            <p>Use the box-shadow property to add shadows to the button:</p>
+
+            <div>
+                <button class="button8 btnShadow1">Shadow Button</button>
+                <button class="button8 btnShadow2">Shadow on Hover</button>
+            </div>
+
+        </div>
+
+        <!-- 9. Disabled Buttons -->
+        <div>
+
+            <h3>9. Disabled Buttons:</h3>
+            <p>Use the opacity property to add some transparency to a button (make it look disabled):</p>
+
+            <div>
+                <button class="button9">Normal Button</button>
+                <button class="button9 disabled">Disabled Button</button>
+            </div>
+
+        </div>
+
+        <!-- 10. Button Width-->
+        <div>
+
+            <h3>10. Button Width:</h3>
+            <p>Use the width property to change the width of the button:</p>
+
+            <div>
+                <button class="button10" style="width: 250px;">250px</button><br>
+                <button class="button10" style="width: 50%;">50%</button><br>
+                <button class="button10" style="width: 100%;">100%</button>
+            </div>
+
+        </div>
+
+        <!-- 11. Button Groups -->
+        <div>
+
+            <h3>11. Button Groups:</h3>
+            <p>Remove margins and float the buttons to create a button group:</p>
+
+            <div class="btn-group1">
+                <button class="btn1">Button1</button>
+                <button class="btn1">Button2</button>
+                <button class="btn1">Button3</button>
+                <button class="btn1">Button4</button>
+            </div>
+            <p style="clear:both"></p>
+
+        </div>
+
+        <!-- 12. Bordered Button Group -->
+        <div>
+
+            <h3>12. Bordered Button Group:</h3>
+
+            <div class="btn-group2">
+                <button class="btn2">Button1</button>
+                <button class="btn2">Button2</button>
+                <button class="btn2">Button3</button>
+                <button class="btn2">Button4</button>
+            </div>
+            <p style="clear:both"></p>
+
+        </div>
+
+        <!-- 13. Vertical Button Group -->
+        <div>
+
+            <h3>13. Vertical Button Group:</h3>
+
+            <div class="btn-group3">
+                <button class="btn3">Button1</button>
+                <button class="btn3">Button2</button>
+                <button class="btn3">Button4</button>
+                <button class="btn3">Button5</button>
+            </div>
+              
+        </div>
+
+        <!-- 14. Button on Image -->
+        <div>
+
+            <h3>14. Button on Image:</h3>
+            <p>Add a button on an image:</p>
+
+            <div class="container">
+                <img src="../Images/Background_Image.jpg" alt="Background Image" style="width:100%">
+                <button class="btn">Button</button>
+            </div>
+        </div>
+
+        <!-- 15. Animated Buttons -->
+        <div>
+
+            <h3>15. Animated Buttons:</h3>
+            <button class="button15" style="vertical-align:middle"><span>Hover </span></button>
+
+        </div>
+
+        <!-- 16. Animated Button - "Pressed Effect" -->
+        <div>
+
+            <h3>16. Animated Button - "Pressed Effect":</h3>
+            <button class="button16">Click Me</button>
+
+        </div>
+
+        <!-- 17. Animated Button - Fade in Effect -->
+        <div>
+
+            <h3>17. Animated Button - Fade in Effect:</h3>
+            <button class="button17">Hover Over Me</button>
+
+        </div>
+
+        <!-- 18. Animated Button - Ripple Effect -->
+        <div>
+
+            <h3>18. Animated Button - Ripple Effect:</h3>
+            <button class="button18">Click Me</button>
+
+        </div>
+        
+    </div>
+    
+</body>
+</html>
