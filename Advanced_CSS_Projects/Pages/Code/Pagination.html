@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+
+    <style>
+
+        h3 {
+            margin-top: 30px;
+        }
+        /* 1. Simple Pagination */
+        .pagination1 {
+            display: inline-block;
+        }
+
+        .pagination1 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        /* 2.Active and Hoverable Pagination */
+        .pagination2 {
+            display: inline-block;
+        }
+
+        .pagination2 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination2 a.active1 {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .pagination2 a.active1:hover {
+            background-color: green;
+        }
+
+        /* 3. Rounded Active and Hoverable Buttons */
+        .pagination3 {
+            display: inline-block;
+        }
+
+        .pagination3 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination3 a.active2 {
+            background-color: palevioletred;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .pagination3 a.active2:hover {
+            background-color: rgb(245, 14, 91);
+        }
+
+        /* 4. Hoverable Transition Effect */
+        .pagination4 {
+          display: inline-block;
+        }
+
+        .pagination4 a {
+          color: black;
+          float: left;
+          padding: 8px 16px;
+          text-decoration: none;
+          transition: background-color .3s;
+        }
+
+        .pagination4 a.active3 {
+          background-color: steelblue;
+          color: white;
+        }
+
+        .pagination4 a.active3:hover {
+          background-color: rgb(3, 69, 123);
+        }
+
+        .pagination4 a:hover:not(.active3) {
+            background-color: #ddd;
+        }
+
+        /* 5. Bordered Pagination */
+        .pagination5 {
+            display: inline-block;
+        }
+
+        .pagination5 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+        }
+
+        .pagination5 a.active4 {
+            background-color: peru;
+            color: white;
+            border: 1px solid peru;
+        }
+
+        .pagination5 a.active4:hover {
+            background-color: rgb(141, 72, 2);
+        }
+
+        .pagination5 a:hover:not(.active4) {
+            background-color: #ddd;
+        }
+
+        /* 6. Rounded Borders */
+        .pagination6 {
+            display: inline-block;
+        }
+
+        .pagination6 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+        }
+
+        .pagination6 a.active5 {
+            background-color: cadetblue;
+            color: white;
+            border: 1px solid cadetblue;
+        }
+
+        .pagination6 a.active5:hover {
+            background-color: rgb(1, 113, 117);
+        }
+
+        .pagination6 a:hover:not(.active5) {
+            background-color: #ddd;
+        }
+
+        .pagination6 a:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .pagination6 a:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* 7. Space Between Links */
+        .pagination7 {
+            display: inline-block;
+        }
+
+        .pagination7 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .pagination7 a.active6 {
+            background-color: orangered;
+            color: white;
+            border: 1px solid orangered;
+        }
+
+        .pagination7 a.active6:hover {
+            background-color: rgb(193, 65, 19);
+        }
+
+        .pagination7 a:hover:not(.active6) {
+            background-color: #ddd;
+        }
+
+        /* 8. Pagination Size */
+        .pagination8 {
+            display: inline-block;
+        }
+
+        .pagination8 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            font-size: 25px;
+        }
+
+        .pagination8 a.active7 {
+            background-color: olive;
+            color: white;
+            border: 1px solid olive;
+        }
+
+        .pagination8 a.active7:hover {
+            background-color: rgb(86, 86, 1);
+        }
+
+        .pagination8 a:hover:not(.active7) {
+            background-color: #ddd;
+        }
+
+        /* 9. Centered Pagination */
+        .center {
+            text-align: center;
+        }
+
+        .pagination9 {
+            display: inline-block;
+        }
+
+        .pagination9 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .pagination9 a.active8 {
+            background-color: royalblue;
+            color: white;
+            border: 1px solid royalblue;
+        }
+
+        .pagination9 a.active8:hover {
+            background-color: rgb(2, 41, 156);
+        }
+
+        .pagination9 a:hover:not(.active8) {
+            background-color: #ddd;
+        }
+
+        /* 10. More Examples */
+        .pagination10 {
+            display: inline-block;
+        }
+
+        .pagination10 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+        }
+
+        .pagination10 a.active9 {
+            background-color: rgb(222, 109, 222);
+            color: white;
+            border: 1px solid rgb(222, 109, 222);
+        }
+
+        .pagination10 a.active9:hover {
+            background-color: rgb(211, 3, 211);
+        }
+
+        .pagination10 a:hover:not(.active9) {
+            background-color: #ddd;
+        }
+
+        /* 11. Breadcrumb Pagination */
+        ul.breadcrumb {
+            padding: 8px 16px;
+            list-style: none;
+            background-color: #eee;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+        }
+
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: rgb(83, 159, 83);
+        }
+
+        ul.breadcrumb li a:hover {
+            color: rgb(1, 83, 1);
+        }        
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        <h1>Pagination</h1>
+
+        <!-- 1. Simple Pagination -->
+        <div>
+            <h3>1. Simple Pagination:</h3>
+            <div class="pagination1">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- 2.Active and Hoverable Pagination -->
+        <div>
+            <h3>2. Active and Hoverable Pagination:</h3>
+            <div class="pagination2">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active1"  href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- 3. Rounded Active and Hoverable Buttons -->
+        <div>
+            <h3>3. Rounded Active and Hoverable Buttons:</h3>
+            <div class="pagination3">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active2">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- 4. Hoverable Transition Effect -->
+        <div>
+            <h3>4. Hoverable Transition Effect:</h3>
+            <div class="pagination4">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active3">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- 5. Bordered Pagination -->
+        <div>
+            <h3>5. Bordered Pagination:</h3>
+            <div class="pagination5">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active4">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- 6. Rounded Borders -->
+        <div>
+            <h3>6.Rounded Borders:</h3>
+            <div class="pagination6">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active5" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+              </div>
+        </div>
+
+        <!-- 7. Space Between Links -->
+        <div>
+            <h3>7. Space Between Links:</h3>            
+            <div class="pagination7">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active6">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- 8. Pagination Size -->
+        <div>
+            <h3>8. Pagination Size:</h3>
+            <div class="pagination8">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active7">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+        <!-- 9. Centered Pagination -->
+        <div>
+            <h3>9. Centered Pagination:</h3>
+            <div class="center">
+                <div class="pagination9">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active8">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. More Examples -->
+        <div>
+            <h3>10. More Examples:</h3>
+            <p>Next/Previous buttons -</p>
+            <div class="pagination10">
+                <a href="#">❮</a>
+                <a href="#">❯</a>
+            </div>
+            <p>Navigation pagination -</p>
+            <div class="pagination10">
+                <a href="#" class="active9">Home</a>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <!-- 11. Breadcrumb Pagination -->
+        <div>
+            <h3>11. Breadcrumb Pagination:</h3>
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pictures</a></li>
+                <li><a href="#">Summer 15</a></li>
+                <li style="color: crimson;">Italy</li>
+            </ul>              
+        </div>
+
+    </div>
+
+</body>
+</html>
