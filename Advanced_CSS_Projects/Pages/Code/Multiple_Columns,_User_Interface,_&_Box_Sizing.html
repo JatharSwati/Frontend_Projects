@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Columns, User Interface, & Box Sizing.</title>
+
+    <style>
+
+        /* Multiple Columns */
+        .newspaper {
+            column-count: 3;
+            column-gap: 40px;
+            column-rule: 3px solid mediumvioletred;
+            column-width: 100px;
+        }
+
+        h4 {
+            column-span: all;
+        }
+
+        /* User Interface */
+
+        p.bold {
+            font-weight: bold;
+        }
+
+
+        /* 1.The Horizontal Resize Property */
+        .div1 {
+            border: 2px solid;
+            padding: 20px; 
+            width: 300px;
+            resize: horizontal;
+            overflow: auto;
+        }
+
+        /* 2. The Vertical Resize Property */
+        .div2 {
+            border: 2px solid;
+            padding: 20px; 
+            width: 300px;
+            resize: vertical;
+            overflow: auto;
+        }
+
+        /* 3. The Horizontal & Vertical Resize Property */
+        .div3 {
+            border: 2px solid;
+            padding: 20px; 
+            width: 300px;
+            resize: both;
+            overflow: auto;
+        }
+
+        /* 4. The Resize None Property */
+        textarea#test {
+            resize: none;
+        }
+
+        /* 5. Outline Offset */
+        div.ex1 {
+            margin: 20px;
+            border: 1px solid black;
+            outline: 3px solid orange;
+            outline-offset: 15px;
+        } 
+
+        div.ex2 {
+            margin: 10px;
+            border: 1px solid black;
+            outline: 3px dashed green;
+            outline-offset: 5px;
+        } 
+
+        /* Box Sizing */
+
+        /* 1. Without box-sizing */
+        .box1 {
+            width: 300px;
+            height: 100px;
+            border: 1px dotted blue;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 100px;  
+            padding: 30px;
+            border: 1px dotted red;
+        }
+
+        /* 2. With box-sizing */
+        .box3 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid darkcyan;
+            box-sizing: border-box;
+        }
+
+        .box4 {
+            width: 300px;
+            height: 100px;  
+            padding: 50px;
+            border: 1px solid palevioletred;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <h1>Multiple Columns, User Interface, & Box Sizing.</h1>
+
+        <!-- Multiple Columns -->
+        <div>
+            <h2>Multiple Columns</h2>
+            <div class="newspaper">
+                <h4>CSS Multiple Columns</h4>
+                The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.
+                The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.
+                The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.
+                The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.
+                The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.
+                The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.
+                The CSS multi-column layout allows easy definition of multiple columns of text - just like in newspapers.
+            </div>
+        </div>
+        
+        <!-- User Interface -->
+        <div>
+
+            <h2 style="margin-top: 50px;">User Interface</h2>
+
+            <!-- 1.The Horizontal Resize Property -->
+            <div>
+                <p class="bold">1.The Horizontal Resize Property:</p>
+                <div class="div1">
+                    <p>Let the user resize only the width of this div element.</p>
+                    <p>To resize: Click and drag the bottom right corner of this div element.</p>
+                </div>
+            </div>
+
+            <!-- 2. The vertical Resize Property -->
+            <div>
+                <p class="bold">2. The Vertical Resize Property:</p>
+                <div class="div2">
+                    <p>Let the user resize only the height of this div element.</p>
+                    <p>To resize: Click and drag the bottom right corner of this div element.</p>
+                </div>
+            </div>
+
+            <!-- 3. The Horizontal & Vertical Resize Property -->
+            <div>
+                <p class="bold">3. The Horizontal & Vertical Resize Property:</p>
+                <div class="div3">
+                    <p>Let the user resize both the height and the width of this div element.</p>
+                    <p>To resize: Click and drag the bottom right corner of this div element.</p>
+                </div>
+            </div>
+
+            <!-- 4. The Resize None Property -->
+            <div>
+                <p class="bold">4. The Resize None Property:</p>
+                <p>In many browsers, textarea elements are resizable by default. In this example, we have used the resize property to disable the resizability:</p>                          
+                <textarea>Textarea - Resizable (default)</textarea>
+                <br><br>
+                <textarea id="test">Textarea - Not resizable</textarea>
+            </div>
+
+            <!-- 5. Outline Offset -->
+            <div>
+                <p class="bold">5. Outline Offset:</p>
+                <div class="ex1">This div has a 4 pixels solid red outline 15 pixels outside the border edge.</div>
+                <br>
+                <div class="ex2">This div has a 5 pixels dashed blue outline 5 pixels outside the border edge.</div>
+            </div>
+            
+        </div> 
+        
+        <!-- Box Sizing -->
+        <div>
+
+            <h2 style="margin-top: 50px;">Box Sizing</h2>
+
+            <!-- 1. Without box-sizing -->
+            <div>
+                <p class="bold">1. Without box-sizing:</p>
+                <div class="box1">This div is smaller (Witout Padding).</div>
+                <br>
+                <div class="box2">This div is bigger (With Padding).</div>
+            </div>
+
+            <div>
+                <p class="bold">2. With box-sizing:</p>
+                <p>Both divs are the same size now!</p>
+                <div class="box3">Welcome! (Witout Padding).</div>
+                <br>
+                <div class="box4">Welcome! (With Padding).</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
