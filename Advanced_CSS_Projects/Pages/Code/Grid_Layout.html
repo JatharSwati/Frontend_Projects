@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+
+        /* 1. Grid Elements */
+        .grid-container1 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: olive;
+            padding: 10px;
+        }
+        .grid-item1 {
+            background-color: rgb(250, 250, 222);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* 2. Display Property */
+
+            /* (a) display: grid */
+            .grid-containerDisGrid {
+              display: grid;
+              grid-template-columns: auto auto auto;
+              background-color: olive;
+              padding: 10px;
+            }
+
+            .grid-itemDisGrid {
+              background-color: rgb(250, 250, 222);
+              border: 1px solid rgba(0, 0, 0, 0.8);
+              padding: 20px;
+              font-size: 30px;
+              text-align: center;
+            }
+
+            /* (b) display: inline-grid */
+            .grid-containerDisInline {
+                display: inline-grid;
+                grid-template-columns: auto auto auto;
+                background-color: olive;
+                padding: 10px;
+            }
+
+            .grid-itemDisInline {
+                background-color: rgb(250, 250, 222);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+        /* 3. Grid Gaps */
+
+            /* (a) column-gap Property */
+            .grid-containerColGap {
+                display: grid;
+                column-gap: 50px;
+                grid-template-columns: auto auto auto;
+                background-color: olive;
+                padding: 10px;
+            }
+
+            .grid-itemColGap {
+                background-color: rgb(250, 250, 222);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            /* (b) row-gap Property */
+            .grid-containerRowGap {
+                display: grid;
+                row-gap: 50px;
+                grid-template-columns: auto auto auto;
+                background-color: olive;
+                padding: 10px;
+            }
+
+            .grid-itemRowGap {
+                background-color: rgb(250, 250, 222);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            /* (c) gap Property */
+            .grid-containerGap {
+                display: grid;
+                gap: 50px 50px;
+                grid-template-columns: auto auto auto;
+                background-color: olive;
+                padding: 10px;
+            }
+
+            .grid-itemGap {
+                background-color: rgb(250, 250, 222);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+        /* 4. Grid Lines*/ 
+        
+            /* (a) Column lines */
+            .grid-containerLines {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: olive;
+                padding: 10px;
+            }
+
+            .grid-containerLines > div {
+                background-color: rgb(250, 250, 222);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            .item1Lines {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            /* (b) Row lines */
+            .grid-containerRow {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: olive;
+                padding: 10px;
+            }
+
+            .grid-containerRow > div {
+                background-color: rgb(250, 250, 222);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            .item1Row {
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Grid Layout</h1>
+
+        <!-- 1. Grid Elements -->
+        <div>
+            <h3>1. Grid Elements</h3>
+            <div class="grid-container1">
+                <div class="grid-item1">1</div>
+                <div class="grid-item1">2</div>
+                <div class="grid-item1">3</div>  
+                <div class="grid-item1">4</div>
+                <div class="grid-item1">5</div>
+                <div class="grid-item1">6</div>  
+                <div class="grid-item1">7</div>
+                <div class="grid-item1">8</div>
+                <div class="grid-item1">9</div>  
+            </div>
+        </div>
+
+        <!-- 2. Display Property -->
+        <div>
+
+            <h3 style="margin-top: 50px;">2. Display Property</h3>
+
+            <div>
+                <!-- (a) display: grid; -->
+                <p style="font-weight: bold;"> (a) display: grid -</p>
+                <p>Use display: grid; to make a block-level grid container.</p>
+                <div class="grid-containerDisGrid">
+                    <div class="grid-itemDisGrid">1</div>
+                    <div class="grid-itemDisGrid">2</div>
+                    <div class="grid-itemDisGrid">3</div>  
+                    <div class="grid-itemDisGrid">4</div>
+                    <div class="grid-itemDisGrid">5</div>
+                    <div class="grid-itemDisGrid">6</div>  
+                    <div class="grid-itemDisGrid">7</div>
+                    <div class="grid-itemDisGrid">8</div>
+                    <div class="grid-itemDisGrid">9</div>  
+                </div>
+            </div>
+
+            <div>
+                <!-- display: inline-grid -->
+                <p style="font-weight: bold;">(b) display: inline-grid -</p>
+                <p>Use display: inline-grid; to make an inline grid container.</p>
+                <div class="grid-containerDisInline">
+                    <div class="grid-itemDisInline">1</div>
+                    <div class="grid-itemDisInline">2</div>
+                    <div class="grid-itemDisInline">3</div>  
+                    <div class="grid-itemDisInline">4</div>
+                    <div class="grid-itemDisInline">5</div>
+                    <div class="grid-itemDisInline">6</div>  
+                    <div class="grid-itemDisInline">7</div>
+                    <div class="grid-itemDisInline">8</div>
+                    <div class="grid-itemDisInline">9</div>  
+                </div>
+            </div>           
+
+        </div>
+
+        <!-- 3. Grid Gaps -->
+        <div>
+
+            <h3 style="margin-top: 50px;">3. Grid Gaps</h3>
+
+            <!-- (a) column-gap Property -->
+            <div>
+                <P style="font-weight: bold;">(a) column-gap Property -</P>
+                <p>The column-gap property sets the gap between the columns.</p>
+                <div class="grid-containerColGap">
+                    <div class="grid-itemColGap">1</div>
+                    <div class="grid-itemColGap">2</div>
+                    <div class="grid-itemColGap">3</div>  
+                    <div class="grid-itemColGap">4</div>
+                    <div class="grid-itemColGap">5</div>
+                    <div class="grid-itemColGap">6</div>  
+                    <div class="grid-itemColGap">7</div>
+                    <div class="grid-itemColGap">8</div>
+                    <div class="grid-itemColGap">9</div>  
+                </div>
+            </div>
+
+            <!-- (b) row-gap Property -->
+            <div>
+                <p style="font-weight: bold;">(b) row-gap Property-</p>
+                <p>The row-gap property sets the gap between the rows.</p>
+                <div class="grid-containerRowGap">
+                    <div class="grid-itemRowGap">1</div>
+                    <div class="grid-itemRowGap">2</div>
+                    <div class="grid-itemRowGap">3</div>  
+                    <div class="grid-itemRowGap">4</div>
+                    <div class="grid-itemRowGap">5</div>
+                    <div class="grid-itemRowGap">6</div>  
+                    <div class="grid-itemRowGap">7</div>
+                    <div class="grid-itemRowGap">8</div>
+                    <div class="grid-itemRowGap">9</div>  
+                </div>                  
+            </div>
+
+            <!-- (c) gap Property -->
+            <div>
+                <p style="font-weight: bold;">(c) gap Property -</p>
+                <p>The gap property is a shorthand property for the row-gap and the column-gap properties.</p>
+                <div class="grid-containerGap">
+                    <div class="grid-itemGap">1</div>
+                    <div class="grid-itemGap">2</div>
+                    <div class="grid-itemGap">3</div>  
+                    <div class="grid-itemGap">4</div>
+                    <div class="grid-itemGap">5</div>
+                    <div class="grid-itemGap">6</div>  
+                    <div class="grid-itemGap">7</div>
+                    <div class="grid-itemGap">8</div>
+                    <div class="grid-itemGap">9</div>  
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+
+            <!-- 4. Grid Lines -->
+            <h3 style="margin-top: 50px;">4. Grid Lines</h3>
+
+            <!-- (a) Column lines -->
+            <div>
+                <p style="font-weight: bold;">(a) Column lines -</p>
+                <p>Place a grid item at column line 1, and let it end on column line 3.</p>
+                <div class="grid-containerLines">
+                    <div class="item1Lines">1</div>
+                    <div class="item2Lines">2</div>
+                    <div class="item3Lines">3</div>  
+                    <div class="item4Lines">4</div>
+                    <div class="item5Lines">5</div>
+                    <div class="item6Lines">6</div>
+                    <div class="item7Lines">7</div>
+                    <div class="item8Lines">8</div>  
+                </div>
+            </div>
+
+            <!-- (b) Row lines -->
+            <div>
+                <p style="font-weight: bold;">(b) Row lines -</p>
+                <p>Place a grid item at row line 1, and let it end on row line 3.</p>
+                <div class="grid-containerRow">
+                    <div class="item1Row">1</div>
+                    <div class="item2Row">2</div>
+                    <div class="item3Row">3</div>  
+                    <div class="item4Row">4</div>
+                    <div class="item5Row">5</div>
+                    <div class="item6Row">6</div>
+                    <div class="item7Row">7</div>
+                    <div class="item8Row">8</div>  
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
