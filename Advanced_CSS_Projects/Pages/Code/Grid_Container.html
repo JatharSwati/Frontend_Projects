@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Container</title>
+
+    <style>
+
+        /* 1. The grid-template-columns Property */
+        .grid-containerColumns {
+          display: grid;
+          grid-template-columns: 100px auto 200px 100px;
+          gap: 10px;
+          background-color: palevioletred;
+          padding: 10px;
+        }
+
+        .grid-containerColumns > div {
+          background-color: rgb(245, 222, 230);
+          text-align: center;
+          padding: 20px 0;
+          font-size: 30px;
+        }
+
+        /* 2. The grid-template-rows Property */
+        .grid-containerRows {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 80px 200px;
+            gap: 10px;
+            background-color: indigo;
+            padding: 10px;
+        }
+
+        .grid-containerRows > div {
+            background-color: rgb(228, 200, 248);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        /* 3. The justify-content Property */             
+
+            /* (a) justify-content: center*/
+            .grid-containerJC1 {
+              display: grid;
+              justify-content: center;
+              grid-template-columns: 50px 50px 50px; 
+              gap: 30px;
+              background-color: peru;
+              padding: 10px;
+            }
+
+            .grid-containerJC1 > div {
+              background-color: rgb(245, 225, 206);
+              text-align: center;
+              padding: 20px 0;
+              font-size: 30px;
+            }
+
+            /* (b) justify-content: start */
+            .grid-containerJC2 {
+                display: grid;
+                justify-content: start;
+                grid-template-columns: 50px 50px 50px;
+                gap: 30px;
+                background-color: peru;
+                padding: 10px;
+            }
+
+            .grid-containerJC2 > div {
+                background-color: rgb(245, 225, 206);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (c) justify-content: end */
+            .grid-containerJC3 {
+                display: grid;
+                justify-content: end;
+                grid-template-columns: 50px 50px 50px; 
+                gap: 30px;
+                background-color: peru;
+                padding: 10px;
+            }
+
+            .grid-containerJC3 > div {
+                background-color: rgb(245, 225, 206);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (d) justify-content: space-between */
+            .grid-containerJC4 {
+                display: grid;
+                justify-content: space-between;
+                grid-template-columns: 50px 50px 50px; 
+                gap: 30px;
+                background-color: peru;
+                padding: 10px;
+            }
+
+            .grid-containerJC4 > div {
+                background-color: rgb(245, 225, 206);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (e) justify-content: space-around */
+            .grid-containerJC5 {
+                display: grid;
+                justify-content: space-around;
+                grid-template-columns: 50px 50px 50px; 
+                gap: 30px;
+                background-color: peru;
+                padding: 10px;
+            }
+
+            .grid-containerJC5 > div {
+                background-color: rgb(245, 225, 206);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (f) justify-content: space-evenly */
+            .grid-containerJC6 {
+                display: grid;
+                justify-content: space-evenly;
+                grid-template-columns: 50px 50px 50px; 
+                gap: 30px;
+                background-color: peru;
+                padding: 10px;
+            }
+
+            .grid-containerJC6 > div {
+                background-color: rgb(245, 225, 206);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+        /* 4. The justify-content Property */
+            
+            /* (a) align-content: center */
+            .grid-containerAC1 {
+                display: grid;
+                height: 400px;
+                align-content: center;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: darkcyan;
+                padding: 10px;
+            }
+
+            .grid-containerAC1 > div {
+                background-color: rgb(198, 241, 241);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (b) align-content: start*/
+            .grid-containerAC2 {
+                display: grid;
+                height: 400px;
+                align-content: start;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: darkcyan;
+                padding: 10px;
+            }
+
+            .grid-containerAC2 > div {
+                background-color: rgb(198, 241, 241);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /*  (c) align-content: end */
+            .grid-containerAC3 {
+                display: grid;
+                height: 400px;
+                align-content: end;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: darkcyan;
+                padding: 10px;
+            }
+
+            .grid-containerAC3 > div {
+                background-color: rgb(198, 241, 241);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /*  (d) align-content: space-between */
+            .grid-containerAC4 {
+                display: grid;
+                height: 400px;
+                align-content: space-between;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: darkcyan;
+                padding: 10px;
+            }
+
+            .grid-containerAC4 > div {
+                background-color: rgb(198, 241, 241);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (e) align-content: space-around */
+            .grid-containerAC5 {
+                display: grid;
+                height: 400px;
+                align-content: space-around;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: darkcyan;
+                padding: 10px;
+            }
+
+            .grid-containerAC5 > div {
+                background-color: rgb(198, 241, 241);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (f) align-content: space-evenly */
+            .grid-containerAC6 {
+                display: grid;
+                height: 400px;
+                align-content: space-evenly;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: darkcyan;
+                padding: 10px;
+            }
+
+            .grid-containerAC6 > div {
+                background-color: rgb(198, 241, 241);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+            /* (g) align-content: stretch */
+            .grid-containerAC7 {
+                display: grid;
+                height: 400px;
+                align-content: stretch;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+                background-color: darkcyan;
+                padding: 10px;
+            }
+
+            .grid-containerAC7 > div {
+                background-color: rgb(198, 241, 241);
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <h1>Grid Container</h1>
+
+        <!-- 1. The grid-template-columns Property -->
+        <div>
+            <h3 style="margin-top: 50px;">1. The grid-template-columns Property:</h3>
+            <p>The grid-template-columns property defines the width of each column.</p>
+            <div class="grid-containerColumns">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>  
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>  
+                <div>7</div>
+                <div>8</div>
+            </div>
+        </div>        
+
+        <!-- 2. The grid-template-rows Property -->
+        <div>
+            <h3 style="margin-top: 50px;">2. The grid-template-rows Property:</h3>
+            <p>The grid-template-rows property defines the height of each row.</p>
+            <div class="grid-containerRows">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>  
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>  
+            </div>
+        </div>
+
+        <!-- 3. The justify-content Property -->
+        <div>
+
+            <h3 style="margin-top: 50px;">3. The justify-content Property:</h3>
+            <p>The justify-content property is used to align the whole grid inside the container.</p>
+
+            <!-- (a) justify-content: center -->
+            <div>
+                <p style="font-weight: bold;">(a) justify-content: center</p>
+                <div class="grid-containerJC1">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (b) justify-content: start -->
+            <div>
+                <p style="font-weight: bold;">(b) justify-content: start</p>
+                <div class="grid-containerJC2">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (c) justify-content: end -->
+            <div>
+                <p style="font-weight: bold;">(c) justify-content: end</p>
+                <div class="grid-containerJC3">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (d) justify-content: space-between -->
+            <div>
+                <p style="font-weight: bold;">(d) justify-content: space-between</p>
+                <div class="grid-containerJC4">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (e) justify-content: space-around -->
+            <div>
+                <p style="font-weight: bold;">(e) justify-content: space-around</p>
+                <div class="grid-containerJC5">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (f) justify-content: space-evenly -->
+            <div>
+                <p style="font-weight: bold;">(f) justify-content: space-evenly</p>
+                <div class="grid-containerJC6">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+        </div>
+
+        <!-- $. The align-content Property -->
+        <div>
+
+            <h2>$. The align-content Property:</h2>
+            <p>The align-content property is used to vertically align the whole grid inside the container.</p>
+
+            <!-- (a)align-content: center -->
+            <div>
+                <p style="font-weight: bold;">(a) align-content: center</p>
+                <div class="grid-containerAC1">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (b) align-content: start -->
+            <div>
+                <p style="font-weight: bold;">(b) align-content: start</p>
+                <div class="grid-containerAC2">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (c) align-content: end -->
+            <div>
+                <p style="font-weight: bold;">(c) align-content: end</p>
+                <div class="grid-containerAC3">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (d) align-content: space-between -->
+            <div>
+                <p style="font-weight: bold;">(d) align-content: space-between</p>
+                <div class="grid-containerAC4">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                  </div>                  
+            </div>
+
+            <!-- (e) align-content: space-around -->
+            <div>
+                <p style="font-weight: bold;">(e) align-content: space-around</p>
+                <div class="grid-containerAC5">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>
+            </div>
+
+            <!-- (f) align-content: space-evenly -->
+            <div>
+                <p style="font-weight: bold;">(f) align-content: space-evenly</p>
+                <div class="grid-containerAC6">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>                  
+            </div>
+
+            <!-- (g) align-content: stretch -->
+            <div>
+                <p style="font-weight: bold;">(g) align-content: stretch</p>
+                <div class="grid-containerAC7">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>  
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>  
+                </div>   
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
