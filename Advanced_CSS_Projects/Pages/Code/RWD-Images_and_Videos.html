@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD - Images and Videos</title>
+
+    <style>
+
+        /* 1. Using The width Property */
+        .img1 {
+            width: 100%;
+            height: auto;
+        }
+
+        /* 2. Using The max-width Property */
+        .img2 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 3. Background Images */
+        .imgBG1 {
+            width: 100%;
+            height: 300px;
+            background-image: url('../Images/RWD_Image1.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 3px solid palevioletred;
+        }
+
+        .imgBG2 {
+            width: 100%;
+            height: 400px;
+            background-image: url('../Images/RWD_Image1.jpg');
+            background-size: 100% 100%;
+            border: 3px solid palevioletred;
+        }
+
+        .imgBG3 {
+            width: 100%;
+            height: 400px;
+            background-image: url('../Images/RWD_Image1.jpg');
+            background-size: cover;
+            border: 3px solid palevioletred;
+        }
+
+        /* 5.Using The width Property */
+        .video1 {
+            width: 100%;
+            height: auto;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <h1>RWD - Images and Videos</h1>
+        <p>Resize the browser window to see the effect.</p>
+
+        <!-- 1. Using The width Property -->
+        <div>
+            <h3>1. Using The width Property:</h3>
+            <img class="img1" src="../Images/RWD_Image1.jpg" width="460" height="345">
+        </div>
+
+        <!-- 2. Using The max-width Property -->
+        <div>
+            <h3>2. Using The max-width Property:</h3>
+            <img class="img2" src="../Images/RWD_Image1.jpg" width="460" height="345">
+        </div>
+
+        <!-- 3. Background Images -->
+        <div>
+
+            <h3>3. Background Images:</h3>
+
+            <p>background-size: contain;</p>
+            <div class="imgBG1"></div>
+
+            <p>background-size: 100% 100%;</p>
+            <div class="imgBG2"></div>
+
+            <p>background-size: cover;</p>
+            <div class="imgBG3"></div>
+        </div>
+
+        <!-- 4. The HTML "picture" Element -->
+        <div>
+            <h3>4. The HTML "picture" Element</h3>
+            <picture>
+                <source srcset="../Images/RWD_Image2.jpg" media="(max-width: 700px)">
+                <source srcset="../Images/RWD_Image1.jpg">
+                <img src="../Images/RWD_Image1.jpg" alt="Flowers" style="width:auto;">
+            </picture>
+        </div>
+
+        <!-- 5.Using The width Property -->
+        <div>
+            <h3>5.Using The width Property:</h3>
+            <video width="400" controls>
+                <source src="../Videos/mov_bbb.mp4" type="video/mp4">
+                <source src="../Videos/mov_bbb.ogv" type="video/ogv">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+    </div>
+
+</body>
+</html>
